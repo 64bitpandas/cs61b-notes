@@ -1,0 +1,24 @@
+# References, Objects, and Types in Java
+
+
+### Primitive Variables
+ - **There are 8 primitive types in Java:** byte, short, int, long, float, double, boolean, char
+ - Different types require different amounts of memory- e.g. ints take 32 bits, doubles take 64 bits
+ - Internal table maps names to locations in memory
+ - Uninitialized variables **cannot** be accessed
+ - Variable data is stored in binary
+
+### Golden Rule of Equals
+ - For primitives, `y = x` means "**copy** the bits from y into a new location, then call them x"
+ - For reference types, the **address** gets copied to a new location. Both addresses point to the same location
+ - For passing parameters, all parameters are also copied to the new scope (*pass by value*)
+
+### Reference Types
+ - A **reference type** is any non-primitive type (e.g. arrays, strings)
+ - Reference types are **objects**
+ - Each instance variable takes up a set amount of memory, and the object points to where these variables may be found in memory
+ - Reference can be set to *null* (all 0's) or a specific 64-bit address returned by the **new** keyword
+ - Objects can be *lost** if an address is reassigned to something else and no longer points to the previous object
+
+### Arrays
+ - Instantiation: `int[] a = new int[] {1, 2, 3, 4, 5}` 
