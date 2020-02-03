@@ -19,6 +19,4 @@
  - Each instance variable takes up a set amount of memory, and the object points to where these variables may be found in memory
  - Reference can be set to *null* (all 0's) or a specific 64-bit address returned by the **new** keyword
  - Objects can be *lost** if an address is reassigned to something else and no longer points to the previous object
-
-### Arrays
- - Instantiation: `int[] a = new int[] {1, 2, 3, 4, 5}` 
+ 
