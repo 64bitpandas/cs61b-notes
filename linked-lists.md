@@ -18,3 +18,15 @@ A recursive data structure that allows storage and access of an arbitrary amount
  - `addLast(T x)` adds a node to the back of the list.
  - `size()` returns the number of nodes in the list.
  - `removeLast()` destroys the last node in the list.
+
+### Limitation: Arbitrary Retrieval
+ - It takes O(n) time to retrieve arbitrary values from the list
+ - Really long list = really slow!
+ - Arrays are better for this
+
+### Array Lists
+ - Allows for fast retrieval by using an array under the hood
+ - Removing last item: not necessary to destroy that item because the `size` value is changed to set that value as out of bounds. (Will be reassigned anyway when a new value is added)
+ - Resizing arrays: When original array length is reached, multiply length by some factor and copy all values to new array.
+    - Adding a constant value is VERY slow due to the frequency of copying
+    - Must balance between time and space efficiency

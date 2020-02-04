@@ -7,6 +7,7 @@
  - Zero-indexed
  - Do not have methods
  - Indices can be computed at runtime
+ - Retrieval is independent of size
 
 
 **Instantiation:**
@@ -20,3 +21,7 @@
 
 **Multidimensional Arrays**
 `int[][] 2d = new int[4][4];` or `int[][] 2d = new int[][] {{1}, {2, 3}, {4, 5, 6}};`
+
+**Generic Arrays**
+ - Arrays of generic objects are NOT allowed!
+ - Must use `Type[] items = (Type[]) new Object[length]`
