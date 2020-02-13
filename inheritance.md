@@ -62,3 +62,59 @@
      }
  }
  ```
+
+### Implementation Inheritance (Extends)
+ - Used to specify a **hyponym** of an interface
+ - Adds new functionality to a superclass
+ - What is inherited:
+    - All instance and static variables
+    - All methods
+    - All nested classes
+ - What is NOT inherited:
+    - Private variables/methods
+    - Constructors
+ - Constructors will **automatically** run the constructor of superclasses even if it is not explicitly called!!!
+    - Will not run twice if explicitly called: can access non-default constructors this way
+ - **IMPORTANT:** Any class which does not explicitly extend another class will implicitly extend the Object class
+
+```java
+public class A {
+    public void doSomething() { ... }
+}
+
+public class B extends A {
+    @Override
+    public void doSomething() {
+        super.doSomething();
+        // Do more things
+    }
+
+    public void doSomethingElse() { ... }
+}
+
+public static void main(String[] args) {
+    A aa = new A();
+    aa.doSomething(); // OK
+    aa.doSomethingElse(); // ERROR
+    B bb = new B();
+    bb.doSomething(); // OK
+    bb.doSomethingElse(); // OK
+}
+```
+
+### Compile-Time Type Checking
+ - Compiler is more conservative about type checking than is actually allowed based on dynamic type checking
+ - Example:
+ ```java
+ B bb = new B();
+ A aa = bb; // ALLOWED at compile time, since B is a subclass of A
+ aa.doSomethingElse(); // NOT ALLOWED at compile time even though this would work!
+ B AnotherBB = aa; // NOT ALLOWED at compile time because aa is assigned type A, and a static-type subclass cannot be dynamically assigned a superclass!
+ ```
+ - Can be resolved using **Casting:** Telling Java to treat an expression like having a different compile-time type. In the example above, the last line can be changed to
+ ```
+ B AnotherBB = (B)aa;
+ ```
+ which tells Java to treat aa like a B type class. Since aa is indeed type B, it will compile and run as expected.
+ 
+ However, aa cannot be casted into an unrelated type, e.g. `String`. Doing so will result in a `ClassCastException` at runtime.
