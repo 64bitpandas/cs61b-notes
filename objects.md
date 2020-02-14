@@ -20,3 +20,12 @@
  - Reference can be set to *null* (all 0's) or a specific 64-bit address returned by the **new** keyword
  - Objects can be *lost** if an address is reassigned to something else and no longer points to the previous object
  
+### The Object Class
+ - **All classes are hyponyms of Object.**
+ - Object has these methods:
+    - String toString(): By default, prints out the class name followed by the memory address (e.g. `Object@192c38f`)
+    - boolean equals(Object obj): By default, checks if the two objects are actually the same object (same memory address).
+    - Class<?> getClass()
+    - int hashCode()
+    - Others: clone, finalize, notify, notifyAll, wait
+ - To override these, use the `@Override` tag
