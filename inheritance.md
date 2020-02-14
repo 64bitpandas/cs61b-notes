@@ -118,3 +118,47 @@ public static void main(String[] args) {
  which tells Java to treat aa like a B type class. Since aa is indeed type B, it will compile and run as expected.
  
  However, aa cannot be casted into an unrelated type, e.g. `String`. Doing so will result in a `ClassCastException` at runtime.
+
+### Subtype Polymorphism
+
+**Polymorphism:** Providing a single interface to entities of different types
+ - Common example: making objects extend a 'comparable' interface which specifies greater than, equals, etc. behaviors
+
+**Dynamic method selection:** When using polymorphisms, Java selects the correct behavior based on the dynamic type, not the static type
+
+### Comparable
+
+**Comparable:** Generic type that allows standardized comparisons between objects
+
+Defining a Comparable subclass:
+```java
+public class MyComparable implements Comparable<MyComparable> {
+    public int foo;
+    ...
+
+    /** Instance method that has nothing to do with comparable */
+    public void doSomething() {
+        ...
+    }
+
+    /** Comparable method used to compare objects of this type */
+    public int compareTo(Object o) {
+        MyComparable mc = (MyComparable) o;
+        return ...
+    }
+}
+```
+
+ - Many Java libraries already implement Comparable (e.g. `Collection`, `String`)
+ - Avoids casting
+
+**Comparators**
+ - Used instead of higher order functions in order to provide a **callback** function to methods
+ - Interface is
+ ```java
+ public interface Comparable<T> {
+    int compare(T o1, T o2);
+ }
+```
+
+ - Comparable is used to compare itself to other objects; a Comparator compares two other objects but not itself
