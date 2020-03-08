@@ -30,3 +30,9 @@ A recursive data structure that allows storage and access of an arbitrary amount
  - Resizing arrays: When original array length is reached, multiply length by some factor and copy all values to new array.
     - Adding a constant value is VERY slow due to the frequency of copying
     - Must balance between time and space efficiency
+
+### The Java List Interface
+ - Extends `Collection`
+ - Membership tests `indexOf` and `lastIndexOf`
+ - Retreival `get` `listIterator`, `sublist`
+ - Modifiers: `add`, `addAll`, ...

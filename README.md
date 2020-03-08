@@ -1,2 +1,3 @@
 # cs61b-notes
-ya notes and stuff idk
+
+Notes for CS61B (Data Structures) in Java, Spring 2020.
