@@ -50,3 +50,25 @@ public BST find(BST T, Key sk) {
     - New root is not necessarily a direct child of root node
     - Choose either predecessor or successor (must have either 0 or 1 children) and replace root node with this (Hibbard deletion)
         - The value immediately less than or greater than the node
+
+
+### Asymptotic Analysis
+
+**Best Case:** "Bushy" - every parent has exactly 2 children
+ - Height will be O(log N)
+ - Randomly inserting nodes will be close to this. Worst case is still O(log N) for this
+    - Problem: in real life, data doesn't all come in at the same time so we can't always randomize insertion
+
+**Worst Case:** "Spindly" - every parent has exactly 1 child
+ - Height will be O(N)
+
+
+### B Tree
+ - **Definition:** A self-balancing sorted tree with multiple children and multiple values per node
+ - **Idea:** Allow nodes to contain multiple consecutive values
+ - When a node contains too many values, split the node by moving one to its parent
+ - Then, split the remaining values into new children (no longer binary tree!)
+ - All leaves will be the same distance from the source
+ - A non-leaf node with k items must have exactly k+1 children
+ - **Best Case:** Every node has 2 values (log2(N))
+ - **Worst Case:** Every node has 1 value (log L+1(N))
