@@ -72,3 +72,7 @@ public BST find(BST T, Key sk) {
  - A non-leaf node with k items must have exactly k+1 children
  - **Best Case:** Every node has 2 values (log2(N))
  - **Worst Case:** Every node has 1 value (log L+1(N))
+
+### Limits of Trees
+ - Tree based sets require all items to be comparable
+ - Limited to O(log N) at best
