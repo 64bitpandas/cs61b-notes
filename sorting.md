@@ -73,3 +73,40 @@ for (int i = 0; i < A.length; i += 1) {
  3. Subtract 1 from k
  4. Continue steps 1 and 2 until k==1
  3. Run a traditional insertion sort (should be very fast)
+
+## Heap Sort
+ - A type of selection sort
+ - Idea: Keep selecting the smallest element (bad idea in a normal list, but find on heaps)
+ - O(NlogN)
+ - Separate list into heapified part and sorted part; heap decreases in size while sorted area increases
+ - Better O(N) heapifying: (for a bushy heap)
+ ```java
+ int N = arr.length;
+ for (int k = N/2; k >= 0; k -= 1) { //start in the middle
+    for (int p = k, c = 0; 2*p + 1 < N; p = c) {
+        // set c to the largest value in children (if in minheap)
+        // swap c and k if necessary
+        // heap will now be correct from point k downward in the heap so we can go up in the heap and only look at immediate children
+        // e.g. reheapifyDown only, no need to reheapifyUp
+    }
+ }
+ ```
+
+## Merge Sort
+ - Idea: divide data into 2 equal parts and recursively sort them. Then merge them together at the end
+ - O(NlogN)
+ - Good for external sorting
+
+## Quicksort
+ - Idea: speed through probability
+ - O(NlogN) if good pivots, O(N^2) if bad pivot
+ - Better for random sets, but not that good for nearly ordered sets
+ 1. Partition data into pieces based on a pivot value
+    - e.g. pivot value could be median of first, middle, and last value
+ 2. Recursively divide into high and low pieces
+ 3. When the pieces are small enough, do insertion sort
+
+ **Quick Selection:**
+  - Select element #k in a sorted list using quick methods
+  - Principle: choose a pivot. Since we know how many are less than and greater than k, we can adjust accordingly and throw away the other side
+  - Continue until number is satisfied
