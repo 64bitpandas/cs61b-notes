@@ -31,7 +31,8 @@
 
 ## Sorting
 
-* [Sorting Basics](sorting/sorting.md)
+* [Sorting](sorting/sorting-basics.md)
+* [Bubble Sort](sorting/bubble-sort.md)
 
 ## Algorithms
 
@@ -51,4 +52,5 @@
 
 * [Modular Arithmetic and Bit Manipulation](misc-topics/modular-arithmetic.md)
 * [Exceptions](misc-topics/exceptions.md)
+* [More Resources](misc-topics/more-resources.md)
 
