@@ -1,5 +1,9 @@
 # References, Objects, and Types in Java
 
+{% hint style="warning" %}
+This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
+{% endhint %}
+
 ## Primitive Variables
 
 * **There are 8 primitive types in Java:** byte, short, int, long, float, double, boolean, char

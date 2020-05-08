@@ -1,4 +1,8 @@
-# Balanced Search Structures
+# Balanced BSTs
+
+{% hint style="warning" %}
+This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
+{% endhint %}
 
 ## B Trees \(2-4 Trees\)
 

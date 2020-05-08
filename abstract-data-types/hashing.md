@@ -1,5 +1,9 @@
 # Hashing and Hash Tables
 
+{% hint style="warning" %}
+This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
+{% endhint %}
+
 ## Data Indexed Sets
 
 * Essentially putting all data into a massive array and keeping track of the index based on the value

@@ -11,10 +11,13 @@ This is a **non-comprehensive** guide to data structures, specifically topics co
 * Search algorithms
 * And some more miscellaneous topics thrown in!
 
+This guide is written to be as easy to follow and digestible as possible😀I've included lots of diagrams and more intuitive explanations instead of the more straightforward approach most textbooks use. **This isn't a replacement for lectures and other course content.** You probably need to look at those first, and come here if something isn't sticking!
+
 ### Who is this for?
 
-Mostly me; making unnecessarily detailed guides is my goto method of making sure I understand everything😁   
-But you are welcome to use it as well for reviewing for 61B exams, touching up on data structures knowledge, or whatever you want!\*
+Mostly me; making unnecessarily detailed guides is my goto method of making sure I understand everything😁But you are welcome to use it as well for reviewing for 61B exams, touching up on data structures knowledge, or whatever you want!\*
+
+**Do note that basic knowledge gained from** [**CS61A**](https://cs61a.org/) **or equivalent is assumed.** [Click here](https://64bitpandas.github.io/cs61a) for my notes for that!
 
 \*Must comply with [WTF license terms](https://github.com/64bitpandas/cs61b-notes/blob/master/LICENSE.md)
 

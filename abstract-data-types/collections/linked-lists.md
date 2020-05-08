@@ -1,5 +1,13 @@
 # Linked Lists
 
+{% hint style="warning" %}
+This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
+{% endhint %}
+
+{% hint style="info" %}
+This page assumes prior knowledge of linked lists from CS61A or equivalent.
+{% endhint %}
+
 A recursive data structure that allows storage and access of an arbitrary amount of data.
 
 ## Feature List

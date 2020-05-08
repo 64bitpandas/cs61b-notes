@@ -1,5 +1,9 @@
 # Tries
 
+{% hint style="warning" %}
+This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
+{% endhint %}
+
 ## Main Ideas
 
 * A specific implementation of a set and map \(like hash table or BST\)

@@ -1,5 +1,9 @@
 # Collections
 
+{% hint style="warning" %}
+This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
+{% endhint %}
+
 **Collection** is an interface for common abstract data types
 
 **Abstract Data Type:** A data type that is defined purely by operations, not by their implementation

@@ -1,5 +1,9 @@
 # Access Control
 
+{% hint style="warning" %}
+This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
+{% endhint %}
+
 **Definition:** Specifying the specific level of access of methods and variables.
 
 **Benefits**
@@ -13,4 +17,6 @@
 * Putting a class inside of another class
 * Nested classes can be set to `private` in order to do access control
 * Static classes cannot access the outside class
+
+
 
