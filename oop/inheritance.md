@@ -1,22 +1,100 @@
 # Inheritance
 
-{% hint style="warning" %}
-This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
-{% endhint %}
+## What is inheritance?
 
-## Method Overloading
+Essentially, it's a way of putting similar objects together to **generalize behavior.** Inheritance is best used with relating **subtypes** to larger categories. For example, an 🍊orange **is a** fruit \(so it's a **subtype** of fruit\). 
 
-* When there are multiple methods with the same name, but different parameters
-* A very crude solution towards generality:
-  * Repetitive
-  * Requires maintaining more code \(a change to one requires a change to the others\)
-  * Doesn't handle data types outside of those specified
+Let's say that a supermarket named _Jrader Toe's_ asks us to simulate fruits for them in an online system. We could do it like this:
 
-## Hypernyms and Hyponyms
+![The naive approach.](../.gitbook/assets/image%20%283%29.png)
 
-* **Hypernym:** a more general word that can be used to replace a more specific one. A **Hyponym** is the opposite \(a specific word that can be replaced by a general one\)
-* Example: A dog is a hypernym of poodle; a husky is a hyponym of dog. 
-* A hyponym **is-a** hypernym: A dog **is-a** canine.
+Now, every fruit would need some of the same properties- like cost, weight, and name! So we would need to do something like:
+
+```java
+public class Orange {
+    private String name = "Orange";
+    private int cost;
+    ...
+    public Orange(int cost, ...) {
+        this.cost = cost;
+        ...
+    }
+    // lots of methods
+    public String getName() { ...
+```
+
+This would be _really annoying_ to do for every single fruit! And they're all the same properties for every fruit so it would also be incredibly inefficient code-wise. **Inheritance gives a much better solution!**
+
+Let's make a **Fruit** class and have all of our fruits **inherit from** that class.
+
+![uwu inheritance is cool and good](../.gitbook/assets/image%20%281%29.png)
+
+This does amazing things because we can just create one single Fruit class that has all of the properties we need, and simply make our specific fruits inherit those properties.
+
+```java
+public class Fruit {
+    private String name;
+    private int cost;
+    ...
+    public Orange(String name, int cost, ...) {
+        this.name = name;
+        this.cost = cost;
+        ...
+    }
+    // lots of methods
+    public String getName() { ...
+}
+
+// Now for a very simple Orange method!
+public class Orange extends Fruit {
+    public Orange(int cost,...) {
+        super("Orange", cost, ...);
+    }
+}
+```
+
+With only those 4 lines, 🍊Orange now has all of the same methods and properties that Fruit has!
+
+## Method Overriding
+
+Let's say that _Jrader Toe's_ is running a promotion for 🍐pears and wants to make them 20% off normal pears! This poses a problem because **we want to inherit everything that normal pears have, but change only one behavior** \(getPrice\). Well I've got the solution for you!!! And it's called **overriding.**
+
+```java
+public class PromoPear extends Pear {
+    public PromoPear(int cost, ...) {
+        super(cost, ...);
+    }
+    
+    // Overriding the getPrice to have a new behavior only for PromoPears!
+    @Override
+    public int getPrice() {
+        return super.getPrice() * 0.8;
+    }
+    ...
+}   
+```
+
+The `@Override` tag is technically optional, but it's highly suggested because it makes sure that you are indeed overriding something and not just making a new method! \(Remember, it has to have the **same name and parameters as a method in one of its parents**.\)
+
+## **Method Overloading**
+
+Sometimes, you want to take in **different parameters** into the **same method.** For instance, what if we wanted to create a method `getCount(Fruit fruit)` that counts how many fruits of that type we have? We might also want to allow users to pass in the name of the fruit to do the same thing- `getCount(String fruit)`. Java will allow us to make **both** of these methods in the same class!
+
+However, this has some major downsides that should be considered. 
+
+* It's repetitive.
+* It requires maintaining more code- changing one overload won't change the others!
+* You can't handle any data types other than the ones you explicitly specify will work.
+
+We'll discuss better solutions further down the page as well as in the [Generic Types](generics.md) page!
+
+### How is overriding different from overloading?
+
+They have very similar names but pretty different uses!
+
+Overriding is for methods of the same name, **same parameters**, and **different classes.** If you can remember when you use the `@Override` tag, you can relate it back to this concept!
+
+Overloading is for methods of the same name, **different parameters**, in the **same class**. 
 
 ## Interfaces
 
@@ -69,6 +147,8 @@ This page is from my original notes and is not up to the latest quality standard
     }
   }
   ```
+
+![](../.gitbook/assets/image.png)
 
 ## Implementation Inheritance \(Extends\)
 
@@ -140,43 +220,9 @@ public static void main(String[] args) {
 
 **Dynamic method selection:** When using polymorphisms, Java selects the correct behavior based on the dynamic type, not the static type
 
-## Comparable
 
-**Comparable:** Generic type that allows standardized comparisons between objects
 
-Defining a Comparable subclass:
+### Still not satisfied?
 
-```java
-public class MyComparable implements Comparable<MyComparable> {
-    public int foo;
-    ...
-
-    /** Instance method that has nothing to do with comparable */
-    public void doSomething() {
-        ...
-    }
-
-    /** Comparable method used to compare objects of this type */
-    public int compareTo(Object o) {
-        MyComparable mc = (MyComparable) o;
-        return ...
-    }
-}
-```
-
-* Many Java libraries already implement Comparable \(e.g. `Collection`, `String`\)
-* Avoids casting
-
-**Comparators**
-
-* Used instead of higher order functions in order to provide a **callback** function to methods
-* Interface is
-
-  ```java
-  public interface Comparable<T> {
-   int compare(T o1, T o2);
-  }
-  ```
-
-* Comparable is used to compare itself to other objects; a Comparator compares two other objects but not itself
+Watch [Josh Hug's video lecture](https://www.youtube.com/watch?v=IaEq_fogI08&list=PL8FaHk7qbOD6km6LlaHLWgRl9SbhlTHk2) about inheritance.
 

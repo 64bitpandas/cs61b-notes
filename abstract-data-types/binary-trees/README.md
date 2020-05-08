@@ -4,7 +4,9 @@
 This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
 {% endhint %}
 
+{% hint style="success" %}
 "The most important concept in computer science" - Josh Hug
+{% endhint %}
 
 **Similarities to Linked Lists**
 
@@ -72,17 +74,6 @@ public BST find(BST T, Key sk) {
 **Worst Case:** "Spindly" - every parent has exactly 1 child
 
 * Height will be O\(N\)
-
-## B Tree
-
-* **Definition:** A self-balancing sorted tree with multiple children and multiple values per node
-* **Idea:** Allow nodes to contain multiple consecutive values
-* When a node contains too many values, split the node by moving one to its parent
-* Then, split the remaining values into new children \(no longer binary tree!\)
-* All leaves will be the same distance from the source
-* A non-leaf node with k items must have exactly k+1 children
-* **Best Case:** Every node has 2 values \(log2\(N\)\)
-* **Worst Case:** Every node has 1 value \(log L+1\(N\)\)
 
 ## Limits of Trees
 

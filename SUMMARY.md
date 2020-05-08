@@ -4,9 +4,10 @@
 
 ## Object Oriented Programming <a id="oop"></a>
 
-* [Access Control](oop/access-control.md)
-* [References, Objects, and Types in Java](oop/objects.md)
 * [Inheritance](oop/inheritance.md)
+* [Access Control](oop/access-control.md)
+* [Dynamic Method Selection](oop/dynamic-method-selection.md)
+* [References, Objects, and Types in Java](oop/objects.md)
 * [Generic Types](oop/generics.md)
 
 ## Abstract Data Types
@@ -22,6 +23,7 @@
 * [Graphs](abstract-data-types/graphs.md)
 * [Hashing and Hash Tables](abstract-data-types/hashing.md)
 * [Union Find \(Disjoint Sets\)](abstract-data-types/union-find-disjoint-sets.md)
+* [Comparables and Comparators](abstract-data-types/comparables-and-comparators.md)
 
 ## Asymptotics
 

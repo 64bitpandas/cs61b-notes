@@ -4,6 +4,8 @@
 This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
 {% endhint %}
 
+![A chart comparing the different access modifiers. The black bar is the default \(&quot;package protected&quot;\).](../.gitbook/assets/image%20%284%29.png)
+
 **Definition:** Specifying the specific level of access of methods and variables.
 
 **Benefits**
