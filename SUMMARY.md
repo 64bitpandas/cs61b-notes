@@ -10,6 +10,12 @@
 * [References, Objects, and Types in Java](oop/objects.md)
 * [Generic Types](oop/generics.md)
 
+## Asymptotics
+
+* [Runtime Analysis Basics](asymptotics/asymptotics.md)
+* [Amortization](asymptotics/amortization.md)
+* [The Master Method](asymptotics/the-master-method.md)
+
 ## Abstract Data Types
 
 * [Binary Trees](abstract-data-types/binary-trees/README.md)
@@ -24,12 +30,6 @@
 * [Hashing and Hash Tables](abstract-data-types/hashing.md)
 * [Union Find \(Disjoint Sets\)](abstract-data-types/union-find-disjoint-sets.md)
 * [Comparables and Comparators](abstract-data-types/comparables-and-comparators.md)
-
-## Asymptotics
-
-* [Runtime Analysis Basics](asymptotics/asymptotics.md)
-* [Amortization](asymptotics/amortization.md)
-* [The Master Method](asymptotics/the-master-method.md)
 
 ## Sorting
 

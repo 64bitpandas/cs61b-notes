@@ -1,6 +1,6 @@
 # Welcome
 
-### Welcome to 64bitpanda's CS61B Guide!
+## Welcome to 64bitpanda's CS61B Guide!
 
 \(If you are looking at this in github, go to [cs61b.bencuan.me](https://cs61b.bencuan.me) for a much better experience!\)
 
@@ -15,7 +15,11 @@ This is a **non-comprehensive** guide to data structures, specifically topics co
 
 This guide is written to be as easy to follow and digestible as possible😀I've included lots of diagrams and more intuitive explanations instead of the more straightforward approach most textbooks use. **This isn't a replacement for lectures and other course content.** You probably need to look at those first, and come here if something isn't sticking!
 
-### Who is this for?
+### The 61B Concept Map
+
+![](.gitbook/assets/image%20%285%29.png)
+
+## Who is this for?
 
 Mostly me; making unnecessarily detailed guides is my goto method of making sure I understand everything😁But you are welcome to use it as well for reviewing for 61B exams, touching up on data structures knowledge, or whatever you want!\*
 
@@ -23,7 +27,7 @@ Mostly me; making unnecessarily detailed guides is my goto method of making sure
 
 \*Must comply with [WTF license terms](https://github.com/64bitpandas/cs61b-notes/blob/master/LICENSE.md)
 
-### How to contribute
+## How to contribute
 
 Fork the [GitHub repository](https://github.com/64bitpandas/cs61b-notes) and create a pull request. All contributions are welcome! Pages are formatted in [Markdown syntax](https://developer.lightbend.com/docs/paradox/current/directives/includes.html).
 

@@ -23,13 +23,13 @@ public class Orange {
     public String getName() { ...
 ```
 
-This would be _really annoying_ to do for every single fruit! And they're all the same properties for every fruit so it would also be incredibly inefficient code-wise. **Inheritance gives a much better solution!**
+This would be _really annoying_ to do for every single fruit. And they're all the same properties for every fruit so it would also be incredibly inefficient code-wise. **Inheritance gives a much better solution!**
 
 Let's make a **Fruit** class and have all of our fruits **inherit from** that class.
 
 ![uwu inheritance is cool and good](../.gitbook/assets/image%20%281%29.png)
 
-This does amazing things because we can just create one single Fruit class that has all of the properties we need, and simply make our specific fruits inherit those properties.
+This does amazing things because we can just create one single Fruit class that has all of the properties we need, and simply make our specific fruits inherit those properties. \(Side note: making multiple things inherit from one generic interface like this is called **polymorphism.**\)
 
 ```java
 public class Fruit {
@@ -54,6 +54,62 @@ public class Orange extends Fruit {
 ```
 
 With only those 4 lines, 🍊Orange now has all of the same methods and properties that Fruit has!
+
+## Implementation Inheritance \("Extends"\)
+
+You may have noticed the `extends` keyword being used to specify that an object **inherits** from another object. This is called **implementation inheritance** since an object takes all of the behaviors from its parent and can use them like its own.
+
+When `extends` is used, these are the things that are inherited:
+
+* All instance and static variables that are **not private** \(see [Access Control](access-control.md) for more information\)
+* All non-private methods
+* All nested classes
+
+These are **not** inherited:
+
+* Any **private** variables and methods
+* All constructors
+
+{% hint style="info" %}
+**Quick sidenote!**  
+All objects automatically extend the `Object` class whether you like it or not. See [References, Objects, and Types in Java](objects.md) ****for more about this behavior.
+{% endhint %}
+
+### Constructor magic 🏗
+
+When an object `extends` another object, its constructor will **automatically call the parent's constructor.** However, this does have some limitations:
+
+* It will only call the **default** \(no-argument\) constructor in the parent.
+* Calling the constructor is the **first thing that is done** in the child constructor.
+
+But what if we want to call another constructor? That's where the `super` keyword comes in! When `super` is called, Java will know to **not** call the default constructor anymore. Here's an example:
+
+```java
+public class Parent {
+    public Parent() {
+        System.out.println("Default constructor");
+    }
+    public Parent(String say) {
+        System.out.println(say);
+    }
+    void doStuff() { ... }
+}
+
+// Child inherits doStuff(), but not the constructors.
+public class Child extends Parent {
+    public Child() {
+        System.out.println("Child")
+    }
+    public Child(String say) {
+        super(say);
+    }
+}
+    
+public static void Main(String[] args) {
+    Child c1 = new Child(); // will print "Default constructor" then "Child" !!!
+    Child c2 = new Child("Hi"); // will print "Hi"
+}
+```
 
 ## Method Overriding
 
@@ -98,131 +154,96 @@ Overloading is for methods of the same name, **different parameters**, in the **
 
 ## Interfaces
 
-* Declared in the same way as classes: `public interface InterfaceName {}`
-* Specifies the methods and variables contained, but not their implementation 
-  * Can use **default** keyword to go around this restriction, but not recommended \(**Implementation inheritance**\)
-    * Harder to keep track of implementation
-    * Overly complex
-    * Breaks encapsulation rules
-* Allows generic types to be used in methods without overloading \(as long as they have the same methods\)
-* **Method Overriding:** redefining the same methods in subclass as in superclass.
-  * Priority will be given to subclass methods
-  * Optional `@Override` tag helps with error checking and readability
-  * **IMPORTANT:** Overridden methods MUST have the same signature!
-* **Interface inheritance:** Term for specifying capabilities of subclasses using an interface
-  * Subclasses must implement/override **all** of the interface methods!!
-* **If X is a superclass of Y, then a variable of type X can hold a reference to Y!**
-  * Uses methods from subclass
-  * **Dynamic method selection:** Dynamic \(runtime\) types take priority over Static \(compiled\) types
-* Example:
+Interfaces are like **blueprints 📘** for objects- they tell you what an object needs, but not how to implement them. 
 
-  ```java
-  public interface AnInterface<Item> {
-    public void doStuff(Item x);
-    public Item getItem();
-    default public void defaultStuff() {
-        // Do stuff
-    }
-    ...
-  }
+They are very similar to normal classes except for some major differences:
 
-  public class Something implements AnInterface<Item> {
-   @Override
-   public void doStuff(Item x) {
-       // implement method
-   }
+* **All variables are constants** \(public static final\).
+* **Methods have no body**- just a signature \(like `void doStuff();`\)
+* **Classes can inherit from multiple interfaces.**
 
-   @Override
-   public void getItem() {
-       // implement method
-   }
-  }
+Typically, interfaces will not have any implemented methods whatsoever. This limitation can technically be removed using the [default keyword](https://stackoverflow.com/questions/31578427/what-is-the-purpose-of-the-default-keyword-in-java/31579210), but this is **not recommended** because abstract classes handle this much better.
 
-  public class MainClass {
-    public static void main(String[] args) {
-        AnInterface<String> smth = new AnInterface<>();
-        AnInterface<String> smthElse = new Something<String>(); // Will not error!
-        smth.getItem();
-        ...
-    }
-  }
-  ```
-
-![](../.gitbook/assets/image.png)
-
-## Implementation Inheritance \(Extends\)
-
-* Used to specify a **hyponym** of an interface
-* Adds new functionality to a superclass
-* What is inherited:
-  * All instance and static variables
-  * All methods
-  * All nested classes
-* What is NOT inherited:
-  * Private variables/methods
-  * Constructors
-* Constructors will **automatically** run the constructor of superclasses even if it is not explicitly called!!!
-  * Will not run twice if explicitly called: can access non-default constructors this way
-* **IMPORTANT:** Any class which does not explicitly extend another class will implicitly extend the Object class
+Here's an example of interfaces in the wild:
 
 ```java
-public class A {
-    public void doSomething() { ... }
+public interface AnInterface<Item> {
+  public void doStuff(Item x);
+  public Item getItem();
+  ...
 }
 
-public class B extends A {
-    @Override
-    public void doSomething() {
-        super.doSomething();
-        // Do more things
-    }
+public class Something implements AnInterface<Item> { // Note the IMPLEMENTS!
+ @Override
+ public void doStuff(Item x) {
+     // implement method
+ }
 
-    public void doSomethingElse() { ... }
+ @Override
+ public void getItem() {
+     // implement method
+ }
 }
 
-public static void main(String[] args) {
-    A aa = new A();
-    aa.doSomething(); // OK
-    aa.doSomethingElse(); // ERROR
-    B bb = new B();
-    bb.doSomething(); // OK
-    bb.doSomethingElse(); // OK
+public class MainClass {
+  public static void main(String[] args) {
+      AnInterface<String> smth = new AnInterface<>(); // ERROR!!
+      // (new can't be used with interfaces.)
+      AnInterface<String> smthElse = new Something<String>(); // Will not error!
+      smth.getItem();
+      ...
+  }
 }
 ```
 
-## Compile-Time Type Checking
+## Abstract Classes
 
-* Compiler is more conservative about type checking than is actually allowed based on dynamic type checking
-* Example:
+Abstract classes live in the place **in between** interfaces and concrete classes. In a way, they get the best of both worlds- you can implement whichever methods you want, and leave the rest as **abstract** methods \(same behavior as interface methods\)! 
 
-  ```java
-  B bb = new B();
-  A aa = bb; // ALLOWED at compile time, since B is a subclass of A
-  aa.doSomethingElse(); // NOT ALLOWED at compile time even though this would work!
-  B AnotherBB = aa; // NOT ALLOWED at compile time because aa is assigned type A, and a static-type subclass cannot be dynamically assigned a superclass!
-  ```
+Here are some properties:
 
-* Can be resolved using **Casting:** Telling Java to treat an expression like having a different compile-time type. In the example above, the last line can be changed to
+* **Variables behave just like a concrete class.**
+* **Normal methods can be created like any other concrete class.**
+* **Abstract methods** \(`abstract void doSomething()`\) **behave just like methods in interfaces.**
+* Classes can only inherit from **one** abstract class.
 
-  ```text
-  B AnotherBB = (B)aa;
-  ```
+Here's the same example from the interfaces section, but implemented using an abstract class.
 
-  which tells Java to treat aa like a B type class. Since aa is indeed type B, it will compile and run as expected.
+```java
+public abstract class AnAbstract<Item> {
+  public abstract void doStuff(Item x);
+  public abstract Item getItem();
+  ...
+}
 
-  However, aa cannot be casted into an unrelated type, e.g. `String`. Doing so will result in a `ClassCastException` at runtime.
+public class Something extends AnAbstract<Item> { // EXTENDS, not implements!
+ @Override
+ public void doStuff(Item x) {
+     // implement method
+ }
 
-## Subtype Polymorphism
+ @Override
+ public void getItem() {
+     // implement method
+ }
+}
 
-**Polymorphism:** Providing a single interface to entities of different types
+public class MainClass {
+  public static void main(String[] args) {
+      AnAbstract<String> smth = new AnAbstract<>(); // ERROR!!
+      // (new can't be used with abstract classes, just like interfaces.)
+      AnAbstract<String> smthElse = new Something<String>(); // Will not error!
+      smth.getItem();
+      ...
+  }
+}
+```
 
-* Common example: making objects extend a 'comparable' interface which specifies greater than, equals, etc. behaviors
+![A chart comparing the differences between the types of classes.](../.gitbook/assets/image.png)
 
-**Dynamic method selection:** When using polymorphisms, Java selects the correct behavior based on the dynamic type, not the static type
-
-
-
-### Still not satisfied?
+## Still not satisfied?
 
 Watch [Josh Hug's video lecture](https://www.youtube.com/watch?v=IaEq_fogI08&list=PL8FaHk7qbOD6km6LlaHLWgRl9SbhlTHk2) about inheritance.
+
+Or, move onto an advanced application of inheritance concepts, [Dynamic Method Selection](dynamic-method-selection.md).
 
