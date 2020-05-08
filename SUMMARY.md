@@ -34,7 +34,6 @@
 ## Sorting
 
 * [Sorting](sorting/sorting-basics.md)
-* [Bubble Sort](sorting/bubble-sort.md)
 
 ## Algorithms
 
