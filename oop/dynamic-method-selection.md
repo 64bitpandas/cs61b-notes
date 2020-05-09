@@ -25,7 +25,7 @@ public class Shiba extends Dog {
 
 {% tabs %}
 {% tab title="Question 1" %}
-Which is called when we run**:**
+Which method is called when we run**:**
 
 ```java
 Dog rarePupper = new Dog();
@@ -87,7 +87,7 @@ public class Shiba extends Dog {
 
 {% tabs %}
 {% tab title="Question 3" %}
-What happens when we call:
+Which method\(s\) run when we call:
 
 ```java
 Dog rarePupper = new Shiba();
@@ -101,8 +101,6 @@ rarePupper.playWith(rarePupper); // aww rarePupper is lonely :(
 ![rarePupper in action](../.gitbook/assets/image.png)
 {% endtab %}
 {% endtabs %}
-
-
 
 {% tabs %}
 {% tab title="Question 4" %}
@@ -192,7 +190,7 @@ System.out.println(s);
 
 {% tabs %}
 {% tab title="Question 7" %}
-What gets printed when we run:
+What prints out when we run:
 
 ```java
 Dog d = new Shiba();

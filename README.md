@@ -13,7 +13,7 @@ This is a **non-comprehensive** guide to data structures, specifically topics co
 * Search algorithms
 * And some more miscellaneous topics thrown in!
 
-This guide is written to be as easy to follow and digestible as possible😀I've included lots of diagrams and more intuitive explanations instead of the more straightforward approach most textbooks use. **This isn't a replacement for lectures and other course content.** You probably need to look at those first, and come here if something isn't sticking!
+This guide is written to be as easy to follow and digestible as possible😀I've included lots of diagrams, practice problems, and more intuitive explanations instead of the more straightforward approach most textbooks use. **This isn't a replacement for lectures and other course content.** You probably need to look at those first, and come here if something isn't sticking!
 
 ### The 61B Concept Map
 

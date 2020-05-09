@@ -7,7 +7,7 @@
 * [Inheritance](oop/inheritance.md)
 * [Access Control](oop/access-control.md)
 * [Dynamic Method Selection](oop/dynamic-method-selection.md)
-* [References, Objects, and Types in Java](oop/objects.md)
+* [Java Objects](oop/objects.md)
 * [Generic Types](oop/generics.md)
 
 ## Asymptotics
