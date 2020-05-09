@@ -1,3 +1,7 @@
+---
+description: ft. Doge and RarePupper
+---
+
 # Dynamic Method Selection
 
 {% hint style="warning" %}
