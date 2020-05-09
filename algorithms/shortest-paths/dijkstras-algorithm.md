@@ -12,7 +12,7 @@ Before continuing, review [Graphs](../../abstract-data-types/graphs.md), [Stacks
 
 **One sentence overview:** Visit vertices in order of best-known distance from source; on visit, relax every edge from the visited vertex.
 
-**Relaxing** the edges of a vertex v just refers to the process of adding an edge to be part of our solution according to distTo[n] for each n in v.neighbors. If adding the edge yields a better result than the current edge in edgeTo[n], then relax the edge.
+**Relaxing** the edges of a vertex v just refers to the process of adding an edge to be part of our solution according to distTo\[n\] for each n in v.neighbors. If adding the edge yields a better result than the current edge in edgeTo\[n\], then relax the edge.
 
 ### Dijkstra's vs. BFS
 
@@ -34,8 +34,6 @@ BFS returns the shortest paths in an unweighted graph, where the shortest path i
 * solution always creates a **tree form**, true also for undirected graphs
 * can think of as **union of shortest paths to all vertices**
 * **edges in solution tree always has V-1 edges**, where V = the number of vertices. This is because every vertex in the tree except the root should have **exactly one input.**
-
-
 
 ## Pseudocode
 
@@ -69,7 +67,6 @@ public Class Djikstra() {
         }
     }
 }
-
 ```
 
 ## Runtime Analysis
@@ -85,8 +82,6 @@ $$
 $$
 \theta(E * log(V))
 $$
-
-
 
 **Explanation:**
 

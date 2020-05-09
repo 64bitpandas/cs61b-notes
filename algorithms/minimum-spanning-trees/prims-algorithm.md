@@ -1,20 +1,27 @@
+---
+description: Special thanks to Arin for writing this page!
+---
+
 # Prim's Algorithm
 
 {% hint style="warning" %}
-Before reading, review Minimum Spanning Trees, as that is the foundation of Prim's algorithm!
+Before reading, review [Minimum Spanning Trees](./), as that is the foundation of Prim's algorithm!
 {% endhint %}
 
 ## Conceptual Overview
-Prim's algorithm is an optimal way to construct a **minimum spanning tree**. It basically starts from an arbitrary vertex, then considers all its immediate neighbors and picks the edge with smallest weight to be part of the MST. **Note:** this creates a cut in the graph, where the two nodes in the MST being constructed are in one set, and every other vertex of the graph is in another set. 
+
+Prim's algorithm is an optimal way to construct a **minimum spanning tree**. It basically starts from an arbitrary vertex, then considers all its immediate neighbors and picks the edge with smallest weight to be part of the MST. **Note:** this creates a cut in the graph, where the two nodes in the MST being constructed are in one set, and every other vertex of the graph is in another set.
 
 Now, the edges taken into consideration include all immediate neighbors of every node in the MST. Add the edge that has the smallest weight to the MST. Repeat until every vertex has been visited. The result is an MST for the graph.
 
 ## Detailed Breakdown
-The way Prim's algorithm is usually implemented is via PriorityQueue, edgeTo array, and distTo array. You will soon see its similarities to Dijkstra's. 
 
-First, insert all vertices into the PriorityQueue, storing vertices in order of **distance from MST**. Then, remove vertex with highest priority in the PriorityQueue and relax its edges. In each of these iterations, the distTo and edgeTo arrays will be updated for each vertex v if the **weight of the edge is smaller than the current value in distTo[v]**. In other words, only update if the distance from the MST to the vertex is the best seen so far. This is a very important point, and is one of the subtleties that makes Prim's algorithm fundamentally different from Dijkstra's. 
+The way Prim's algorithm is usually implemented is via PriorityQueue, edgeTo array, and distTo array. You will soon see its similarities to Dijkstra's.
+
+First, insert all vertices into the PriorityQueue, storing vertices in order of **distance from MST**. Then, remove vertex with highest priority in the PriorityQueue and relax its edges. In each of these iterations, the distTo and edgeTo arrays will be updated for each vertex v if the **weight of the edge is smaller than the current value in distTo\[v\]**. In other words, only update if the distance from the MST to the vertex is the best seen so far. This is a very important point, and is one of the subtleties that makes Prim's algorithm fundamentally different from Dijkstra's.
 
 ## Pseudocode
+
 ```java
 public class Prims() {
 
@@ -24,7 +31,7 @@ public class Prims() {
         distTo = new Dist[numVertices];
         marked = new boolean[numVertices];
     }
-    
+
     public void doPrims() {
         PQ.add(sourceVertex, 0);
         for(v : allOtherVertices) {
@@ -48,10 +55,9 @@ public class Prims() {
         }
     }
 }
-
 ```
 
-Looking at this pseudocode, the resemblance to Dijkstra's makes them seem nearly identical. But hopefully you've read the conceptual overviews first, and you understand the remarkable subtlety that leads to two very fundamentally different algorithms. 
+Looking at this pseudocode, the resemblance to Dijkstra's makes them seem nearly identical. But hopefully you've read the conceptual overviews first, and you understand the remarkable subtlety that leads to two very fundamentally different algorithms.
 
 ## Runtime Analysis
 
@@ -67,8 +73,6 @@ $$
 \theta(E * log(V))
 $$
 
-
-
 **Explanation:**
 
 * each add operation to PQ takes log\(V\), and perform this V times
@@ -77,8 +81,7 @@ $$
 * everything else = O\(1\)
 * usually, there are more or equal edges compared to the number of vertices.
 
+## Demo
 
-
-## Demo 
-https://docs.google.com/presentation/d/1GPizbySYMsUhnXSXKvbqV4UhPCvrt750MiqPPgU-eCY/edit#slide=id.g9a60b2f52_0_0
+[https://docs.google.com/presentation/d/1GPizbySYMsUhnXSXKvbqV4UhPCvrt750MiqPPgU-eCY/edit\#slide=id.g9a60b2f52\_0\_0](https://docs.google.com/presentation/d/1GPizbySYMsUhnXSXKvbqV4UhPCvrt750MiqPPgU-eCY/edit#slide=id.g9a60b2f52_0_0)
 
