@@ -29,7 +29,7 @@ Mostly me; making unnecessarily detailed guides is my goto method of making sure
 
 ## How to contribute
 
-Fork the [GitHub repository](https://github.com/64bitpandas/cs61b-notes) and create a pull request. All contributions are welcome! Pages are formatted in [Markdown syntax](https://developer.lightbend.com/docs/paradox/current/directives/includes.html).
+Fork the [GitHub repository](https://github.com/64bitpandas/cs61b-notes) and create a pull request. All contributions are welcome! Pages are formatted in [Markdown syntax](https://docs.gitbook.com/editing-content/markdown). Please **edit existing pages only** unless you have [created an issue](https://github.com/64bitpandas/cs61b-notes/issues) and I have gotten back to you about making a new page. Thanks 😄
 
 ### Credits
 
