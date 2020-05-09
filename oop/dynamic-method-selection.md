@@ -21,7 +21,6 @@ public class Shiba extends Dog {
     @Override
     public void eat() { ... } // C
 }
-
 ```
 
 {% tabs %}
@@ -79,7 +78,6 @@ public class Dog {
     public void playWith(Dog d) { ... } // D
 }
 
-
 public class Shiba extends Dog {
     @Override
     public void playWith(Dog d) { ... } // E
@@ -94,7 +92,6 @@ What happens when we call:
 ```java
 Dog rarePupper = new Shiba();
 rarePupper.playWith(rarePupper); // aww rarePupper is lonely :(
-
 ```
 {% endtab %}
 
@@ -121,7 +118,7 @@ rarePupper.playWith(doge); // rarePupper is happy :) borks all around
 {% tab title="Q4 Answer" %}
 **E** is called again! Bet ya didn't see that coming 😎
 
-**Why is it not F? I thought doge and rarePupper were both** `Chiba`**?**  
+**Why is it not F? I thought doge and rarePupper were both** `Shiba`**?**  
 When the compiler chooses a method, it **always** starts at the **static method.** Then, it keeps going down the inheritance tree until it hits the **dynamic method.** Since F has a **different signature** than D, it isn't an **overriding method** and thus the compiler won't see it. But E is \(since it has the same signature as D\), so that is why it is chosen instead.
 
 ![bork bork bork :DDD](../.gitbook/assets/image%20%284%29.png)
@@ -155,13 +152,11 @@ public class Dog {
     }
 }
 
-
 public class Shiba extends Dog {
     public static String getType() {
         return "shiba inu";
     }
 }
-
 ```
 
 {% tabs %}
