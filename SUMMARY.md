@@ -42,12 +42,12 @@
   * [Binary Search](algorithms/searching/binary-search.md)
   * [Depth First Search \(DFS\)](algorithms/searching/depth-first-search-dfs.md)
   * [Breadth First Search \(BFS\)](algorithms/searching/breadth-first-search-bfs.md)
-* [Minimum Spanning Trees](algorithms/minimum-spanning-trees/README.md)
-  * [Prim's Algorithm](algorithms/minimum-spanning-trees/prims-algorithm.md)
-  * [Kruskal's Algorithm](algorithms/minimum-spanning-trees/kruskals-algorithm.md)
 * [Shortest Paths](algorithms/shortest-paths/README.md)
   * [Dijkstra's Algorithm](algorithms/shortest-paths/dijkstras-algorithm.md)
   * [A\* Search](algorithms/shortest-paths/a-search.md)
+* [Minimum Spanning Trees](algorithms/minimum-spanning-trees/README.md)
+  * [Prim's Algorithm](algorithms/minimum-spanning-trees/prims-algorithm.md)
+  * [Kruskal's Algorithm](algorithms/minimum-spanning-trees/kruskals-algorithm.md)
 
 ## Misc Topics
 
