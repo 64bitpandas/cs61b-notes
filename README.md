@@ -33,5 +33,8 @@ Fork the [GitHub repository](https://github.com/64bitpandas/cs61b-notes) and cre
 
 ### Credits
 
-[Ben Cuan \(64bitpandas\)](https://github.com/64bitpandas)
+* [Ben Cuan \(64bitpandas\)](https://github.com/64bitpandas)
+* [Arin Chang](https://github.com/arinchang)
+
+
 
