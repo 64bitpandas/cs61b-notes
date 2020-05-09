@@ -4,7 +4,7 @@
 
 \(If you are looking at this in github, go to [cs61b.bencuan.me](https://cs61b.bencuan.me) for a much better experience!\)
 
-This is a **non-comprehensive** guide to data structures, specifically topics covered in [CS61B](https://inst.eecs.berkeley.edu/~cs61b). Main topics include:
+This is a **non-comprehensive** guide to data structures written with an intention to supplement learning and reviewing of Berkeley's [CS61B](https://inst.eecs.berkeley.edu/~cs61b) material. Main topics include:
 
 * Object oriented programming basics
 * Abstract data types
