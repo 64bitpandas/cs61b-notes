@@ -72,12 +72,6 @@ Will **line 5** error?
 {% endtab %}
 {% endtabs %}
 
-{% tabs %}
-{% tab title="Question 3" %}
-Will **line 5** error?
-{% endtab %}
-{% endtabs %}
-
 {% hint style="info" %}
 Arrays have slightly different behavior than this and will throw an `ArrayStoreException` if types are mismatched in any way. 
 {% endhint %}
