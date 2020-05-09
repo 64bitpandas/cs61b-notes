@@ -19,6 +19,7 @@ BFS returns the shortest paths in an unweighted graph, where the shortest path i
 2. distTo[v] contains best known distance from source to v
 3. PQ contains all unvisited vertices in order of distTo
 
+
 ##PseudoCode:
     PQ.add(sourceVertex, 0)
     For v in allOtherVertices:
