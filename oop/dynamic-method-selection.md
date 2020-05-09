@@ -34,7 +34,7 @@ rarePupper.eat();
 ```
 {% endtab %}
 
-{% tab title="Answer" %}
+{% tab title="Q1 Answer" %}
 Of course, it's A 😛 Dog doesn't know anything about `Shiba` or any other classes, so we can just look at the Dog.
 {% endtab %}
 {% endtabs %}
@@ -49,7 +49,7 @@ rarePupper.eat();
 ```
 {% endtab %}
 
-{% tab title="Answer" %}
+{% tab title="Q2 Answer" %}
 This calls C! This should make intuitive sense because `Shiba` overrides `Dog` so all `Shibas` will use C instead of A.
 
 ![](../.gitbook/assets/image%20%2812%29.png)
@@ -98,7 +98,7 @@ rarePupper.playWith(rarePupper); // aww rarePupper is lonely :(
 ```
 {% endtab %}
 
-{% tab title="Answer" %}
+{% tab title="Q3 Answer" %}
 **E** is called! What happens is that the **dynamic type** is chosen to **select the method from,** but the **static type** is used to **select the parameters.** `rarePupper`'s ****dynamic type is `Shiba` but its static type is `Dog` so `Shiba.playWith(Dog)` is chosen as the method.
 
 ![rarePupper in action](../.gitbook/assets/image.png)
@@ -118,7 +118,7 @@ rarePupper.playWith(doge); // rarePupper is happy :) borks all around
 ```
 {% endtab %}
 
-{% tab title="Answer" %}
+{% tab title="Q4 Answer" %}
 **E** is called again! Bet ya didn't see that coming 😎
 
 **Why is it not F? I thought doge and rarePupper were both** `Chiba`**?**  
@@ -174,7 +174,7 @@ System.out.println(d.getType());
 ```
 {% endtab %}
 
-{% tab title="Answer" %}
+{% tab title="Q5 Answer" %}
 `cute doggo` gets printed because `getType()` is a static method! Therefore, Java looks at the **static type** of `d`, which is `Dog`.   
 \(If `getType()` weren't static, then `shiba inu` would have been printed as usual.\)
 {% endtab %}
@@ -190,7 +190,7 @@ System.out.println(s);
 ```
 {% endtab %}
 
-{% tab title="Answer" %}
+{% tab title="Q6 Answer" %}
 `cute doggo` also gets printed!! This is because static methods **cannot be overridden.** When `toString()` is called in `Dog`, it doesn't choose `Shiba`'s `getType()` because `getType()` is static and the static type is `Dog`.
 {% endtab %}
 {% endtabs %}
@@ -205,7 +205,7 @@ System.out.println(((Shiba)d).getType());
 ```
 {% endtab %}
 
-{% tab title="Answer" %}
+{% tab title="Q7 Answer" %}
 This time, `shiba inu` gets printed. This is because casting temporarily changes the **static type:** since the static type of `d` is  ****`Shiba` in line 2, it chooses the `getType()` from `Shiba`.
 {% endtab %}
 {% endtabs %}
