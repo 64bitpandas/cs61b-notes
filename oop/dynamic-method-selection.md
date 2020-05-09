@@ -48,7 +48,7 @@ rarePupper.eat();
 {% tab title="Answer" %}
 This calls C! This should make intuitive sense because `Shiba` overrides `Dog` so all `Shibas` will use C instead of A.
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%2812%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -84,34 +84,43 @@ public class Shiba extends Dog {
 ```
 
 {% tabs %}
-{% tab title="Question 1" %}
-Which is called when we run**:**
+{% tab title="Question 3" %}
+What happens when we call:
 
 ```java
-Dog rarePupper = new Dog();
-rarePupper.eat();
+Dog rarePupper = new Shiba();
+rarePupper.playWith(rarePupper); // aww rarePupper is lonely :(
+
 ```
 {% endtab %}
 
 {% tab title="Answer" %}
-Of course, it's A 😛 Wouldn't make any sense for Dog to do anything with NotDog since they're not related in any way.
+**E** is called! What happens is that the **dynamic type** is chosen to **select the method from,** but the **static type** is used to **select the parameters.** `rarePupper`'s ****dynamic type is `Shiba` but its static type is `Dog` so `Shiba.playWith(Dog)` is chosen as the method.
+
+![rarePupper in action](../.gitbook/assets/image.png)
 {% endtab %}
 {% endtabs %}
 
+
+
 {% tabs %}
-{% tab title="Question 2" %}
-What about when we call:
+{% tab title="Question 4" %}
+Which is called when we run**:**
 
 ```java
+Dog rarePupper = new Shiba();
 Shiba doge = new Shiba();
-rarePupper.eat();
+rarePupper.playWith(doge); // rarePupper is happy :) borks all around
 ```
 {% endtab %}
 
 {% tab title="Answer" %}
-This calls C! This should make intuitive sense because `Shiba` overrides `Dog` so all `Shibas` will use C instead of A.
+**E** is called again! Bet ya didn't see that coming 😎
 
-![](../.gitbook/assets/image%20%288%29.png)
+**Why is it not F? I thought doge and rarePupper were both** `Chiba`**?**  
+When the compiler chooses a method, it **always** starts at the **static method.** Then, it keeps going down the inheritance tree until it hits the **dynamic method.** Since F has a **different signature** than D, it isn't an **overriding method** and thus the compiler won't see it. But E is \(since it has the same signature as D\), so that is why it is chosen instead.
+
+![bork bork bork :DDD](../.gitbook/assets/image%20%284%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -152,7 +161,7 @@ public class Shiba extends Dog {
 ```
 
 {% tabs %}
-{% tab title="Question 1" %}
+{% tab title="Question 5" %}
 What prints out when we run:
 
 ```java
@@ -168,7 +177,7 @@ System.out.println(d.getType());
 {% endtabs %}
 
 {% tabs %}
-{% tab title="Question 2" %}
+{% tab title="Question 6" %}
 What prints out when we run:
 
 ```java
@@ -183,7 +192,7 @@ System.out.println(s);
 {% endtabs %}
 
 {% tabs %}
-{% tab title="Question 3" %}
+{% tab title="Question 7" %}
 What gets printed when we run:
 
 ```java
@@ -200,4 +209,6 @@ This time, `shiba inu` gets printed. This is because casting temporarily changes
 ## That's all, folks!
 
 If you want some **even harder** problems, [check this out](https://inst.eecs.berkeley.edu/~cs61b/sp20/materials/disc/examprep5.pdf) and also [this](https://inst.eecs.berkeley.edu/~cs61b/sp20/materials/disc/examprep6.pdf).
+
+![bai bai!](../.gitbook/assets/image%20%285%29.png)
 
