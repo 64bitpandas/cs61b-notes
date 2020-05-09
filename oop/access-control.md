@@ -23,7 +23,7 @@ Access control works really well with other OOP concepts to help structure progr
 
 ## Practice
 
-Let's see how access control can get a bit convoluted with this example:
+Let's see how access control can be used to hide variables in different situations:
 
 ```java
 package P;
