@@ -4,11 +4,13 @@
 
 The Minimax algorithm is often used for making AI's for turn-based games. It relies on the use of a type of **game tree,** which maps out all of the possible moves that players can make.
 
-## \*\*\*\*
+\*\*\*\*
 
 ## **Alpha-Beta Pruning** 
 
 ## A Story of Minimax Nodes: An Intuitive Understanding
+
+Minimax is quite difficult to understand just by studying its rules. In order to really know what's going on, we need to know why we have all of these rules and what everything represents. Here's how I think about it:
 
 ![](../.gitbook/assets/image%20%2828%29.png)
 

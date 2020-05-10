@@ -18,14 +18,15 @@
 
 ## Abstract Data Types
 
-* [Binary Trees](abstract-data-types/binary-trees/README.md)
-  * [Balanced BSTs](abstract-data-types/binary-trees/balanced-search-structures.md)
-  * [Tries](abstract-data-types/binary-trees/tries.md)
 * [Collections](abstract-data-types/collections/README.md)
   * [Arrays](abstract-data-types/collections/arrays.md)
   * [Linked Lists](abstract-data-types/collections/linked-lists.md)
   * [Sets](abstract-data-types/collections/sets.md)
   * [Stacks and Queues](abstract-data-types/collections/stacks-and-queues.md)
+* [Binary Trees](abstract-data-types/binary-trees/README.md)
+  * [Heaps](abstract-data-types/binary-trees/heaps.md)
+  * [Balanced BSTs](abstract-data-types/binary-trees/balanced-search-structures.md)
+  * [Tries](abstract-data-types/binary-trees/tries.md)
 * [Graphs](abstract-data-types/graphs.md)
 * [Hashing and Hash Tables](abstract-data-types/hashing.md)
 * [Union Find \(Disjoint Sets\)](abstract-data-types/union-find-disjoint-sets.md)

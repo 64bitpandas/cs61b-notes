@@ -4,27 +4,6 @@
 This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
 {% endhint %}
 
-## Tree Traversals
-
-Example:
-
-```text
-    D
-B       F
-```
-
-A C E G
-
-* **level order:** top to bottom, left to right: DBFACEG
-
-  **Depth First Traversals**
-
-  * Inorder: ABCDEFG
-  * Preorder: DBACFEG
-    * Good for printing directory listings
-  * Postorder: ACBEGFD
-    * Good for collecting file sizes
-
 ## Intro to Graphs
 
 * Represents a set of relationships that is not necessarily hierarchical

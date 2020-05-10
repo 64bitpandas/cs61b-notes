@@ -8,12 +8,16 @@ This page is from my original notes and is not up to the latest quality standard
 "The most important concept in computer science" - Josh Hug
 {% endhint %}
 
-**Similarities to Linked Lists**
+## Humble Origins
 
 * Start with a linked list
 * Put the start pointer in the middle
 * Make next pointers point to the middle value in each the left and right sides
 * Continue process recursively
+
+## Types of Trees
+
+
 
 **Definitions:**
 
@@ -30,30 +34,44 @@ This page is from my original notes and is not up to the latest quality standard
     * Must have well defined comparisons between any values \(either less than or greater than\)
     * If p &lt; q and q &lt; r, p must be less than r as well
 
-## Binary Search
+## Tree Operations
+
+There are **three important operations** that trees should support: **find, insert, and delete.**
+
+### **Find**
+
+Finding a value in a tree uses Binary Search. Click the link below to read up on it!
+
+{% page-ref page="../../algorithms/searching/binary-search.md" %}
+
+### Insert
+
+The insert algorithm is **very similar to binary search.** Here are the steps to take:
+
+* Search for the item. **If it's found, then do nothing** since the value is already in the tree.
+* If it's not found \(search would return null in this case\), then create a node and put it where it should be found. If using recursion, this last step is already done- all we need to do is return a new node!
+
+Here's the algorithm:
 
 ```java
-public BST find(BST T, Key sk) {
+public BST insert(BST T, Key sk) {
     if (T == null) {
-        return null;
+        // Create new leaf with given key. Different from search
+        return new BST(sk, null, null); 
     }
     if (sk.equals(T.key)) {
         return T;
     } else if (sk < T.key) {
-        return find(T.left, sk);
+        T.left = find(T.left, sk); // Different from search
     } else {
-        return find(T.right, sk);
+        T.right = find(T.right, sk); // Different from search
     }
 }
 ```
 
-* Very fast! O\(log n\)
+### Delete
 
-## Insert
-
-* Very similar algorithm to search
-* Search for item. If found, do nothing
-* If not found, create a new node and put it where it should be found
+This one's a bit trickier because we need to make sure that the new tree still **preserves the binary search tree structure.** That means that we might have to shuffle around 
 
 ## Delete
 
@@ -79,4 +97,27 @@ public BST find(BST T, Key sk) {
 
 * Tree based sets require all items to be comparable
 * Limited to O\(log N\) at best
+
+
+
+## Tree Traversals
+
+Example:
+
+```text
+    D
+B       F
+```
+
+A C E G
+
+* **level order:** top to bottom, left to right: DBFACEG
+
+  **Depth First Traversals**
+
+  * Inorder: ABCDEFG
+  * Preorder: DBACFEG
+    * Good for printing directory listings
+  * Postorder: ACBEGFD
+    * Good for collecting file sizes
 
