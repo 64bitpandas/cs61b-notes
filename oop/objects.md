@@ -8,7 +8,7 @@ There are two main categories of objects in Java: **Primitive Types** and **Refe
 
 If you remember [environment diagrams](http://albertwu.org/cs61a/notes/environments), you may recall that some variables are put straight into the boxes, while others have an arrow pointing to them. The reason for this is that it actually denotes primitive vs. reference types! **Primitive types go straight in the box** because they aren't mutable \(i.e. you can't change the objects contained in the box since they're just constant literals like numbers\).
 
-**There are 8 primitive types in Java.** Here's a table of their properties!
+**There are 8 primitive types in Java.** Here's a table of their properties! \(If you don't know what "signed" means, go to [Modular Arithmetic and Bit Manipulation](../misc-topics/modular-arithmetic.md).\)
 
 | Type | Bits | Signed | Default | Examples |
 | :--- | :--- | :--- | :--- | :--- |
@@ -25,6 +25,16 @@ If you remember [environment diagrams](http://albertwu.org/cs61a/notes/environme
 **A quick aside on Strings 🧵**  
 You may have noticed that strings are not on this list. That is because unlike in Python, they aren't a primitive type! Under the hood, Strings are a reference type that are very similar to a char array.
 {% endhint %}
+
+## Type Conversion
+
+Java will automatically convert between primitive types if **no information is lost** \(e.g. from byte to int\). 
+
+If converting the other direction \(from a larger to smaller container\), an explicit cast is required \(e.g. `(char)int`\).
+
+**Assignment statements are an exception to this**: `aByte = 10` is fine even though 10 is an int literal. This is because arithmetic operations \(+,  \*, ...\) automatically __promote operands \(e.g. `'A' + 2` is equivalent to `(int)'A' + 2`\)
+
+However, **this doesn't work if you are trying to add a larger type to a smaller type** \(e.g. `aByte = aByte + 1` since operands become an int type which cannot be set equal to a byte type. **But += works**!
 
 ## Reference Types
 
