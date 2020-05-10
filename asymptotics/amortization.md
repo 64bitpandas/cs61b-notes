@@ -1,17 +1,63 @@
 # Amortization
 
-{% hint style="warning" %}
-This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
-{% endhint %}
+**Amortization** means **spreading out.** 
 
-**Definition of Amortization:** "Spreading out"
+Sometimes, an operation takes different amounts of time for different values of $$n$$. Rather than having to report runtimes for each different case, we can instead average all of them out and report the **amortized runtime.** 
 
-* Getting the average cost for each operation from 1 to N
-* Good analysis for when most actions have low cost but a few have very high cost
-  * Example: Resizing arrays by doubling costs a lot of time/space every 2^nth action, but costs no extra space for every other action
+This is especially good for functions where most actions have a low cost, but a few have a high cost. We'll see an example of this further down the page!
 
-**Potential**
+## A Case Study: Resizing Arrays
 
-* Using a generalized operation \(e.g. adding a constant\) to demonstrate amortized costs
-* If \(actual - potential\) + \(previous differential\) &gt;= 0 for all operations, the amortized function is valid
+As you probably know, normal Java arrays don't resize. If we create a `new int[5]` then that array will always have a length of 5.
+
+But what if we wanted to make an array resize itself every time it reaches capacity? \(Like a `List`!\) Let's see what happens when we **add one to the array size:**
+
+First, we have to make a new array with a new size:
+
+![](../.gitbook/assets/image%20%2812%29.png)
+
+Then, we have to copy over all of the old elements over:
+
+![](../.gitbook/assets/image%20%288%29.png)
+
+Finally, we can add in the new element!
+
+![](../.gitbook/assets/image%20%284%29.png)
+
+**Let's analyze the runtime of this operation.** 
+
+* A single resizing will take $$\Theta(n)$$ time**.**
+* Adding a single element will take $$\Theta(1)$$ time**.**
+* Together, a single operation will take $$\Theta(n+1)$$ time, which simplifies into  $$\Theta(n)$$ .
+* Since we're doing a n-operation n times, **the end result is a resizing function that is**$$\Theta(n^2)$$. **We can do better with the power of amortization!**
+
+### **What if we doubled the size instead of adding one?**
+
+* A single resizing will take $$\Theta(2n)$$ time ****which simplifies into $$\Theta(n)$$ time.
+  * We do this every time the array hits a power of 2 \(2, 4, 8, 16, 32 ...\). 
+* Adding a single element will take $$\Theta(1)$$ time.
+  * We do this every time we add a new element, so in all we add n elements. Therefore, this is an 
+    * $$\Theta(n) $$operation.
+
+**Therefore, the unsimplified function is:** $$\Theta(n + (2 + 4 + 8  ... +2^i)) $$ where $$2^i$$ is the largest power of two less than n. This might not seem clear on its own, so let's rewrite it:
+
+$$
+\theta(n + (\frac{n}{2} + \frac{n}{4} + ... + 8 + 4 + 2))
+$$
+
+Intuitively, this looks like this:
+
+![](https://www.interviewcake.com/images/svgs/amortized_analysis_m_over_8.svg?bust=205)
+
+Mathematically, it looks like this:
+
+$$
+n + n\sum_{i=1}(\frac{1}{2})^n
+$$
+
+Which simplifies to $$2n$$ . **Therefore, this approach is** $$\Theta(n)$$ **!!**
+
+![Runtime graph for increasing values of n when doubling.](../.gitbook/assets/image%20%2811%29.png)
+
+\*\*\*\*
 

@@ -1,9 +1,5 @@
 # Generic Types
 
-{% hint style="warning" %}
-This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
-{% endhint %}
-
 Sometimes, we want things to support **any type**, including user defined types that we don't know about! For example, it would make sense that we don't care what type we make a `List` out of, since it's just a whole bunch of objects put together.
 
 The Java solution is **generics!** Generic types are denoted by a `<>` and can be appended to **methods and classes.** Here's an example with classes:
