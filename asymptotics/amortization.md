@@ -14,7 +14,7 @@ But what if we wanted to make an array resize itself every time it reaches capac
 
 First, we have to make a new array with a new size:
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../.gitbook/assets/image%20%2820%29.png)
 
 Then, we have to copy over all of the old elements over:
 

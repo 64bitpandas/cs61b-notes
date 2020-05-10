@@ -51,7 +51,7 @@ rarePupper.eat();
 {% tab title="Q2 Answer" %}
 This calls C! This should make intuitive sense because `Shiba` overrides `Dog` so all `Shibas` will use C instead of A.
 
-![](../.gitbook/assets/image%20%2833%29.png)
+![](../.gitbook/assets/image%20%2835%29.png)
 {% endtab %}
 {% endtabs %}
 

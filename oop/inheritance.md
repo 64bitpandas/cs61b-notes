@@ -6,7 +6,7 @@ Essentially, it's a way of putting similar objects together to **generalize beha
 
 Let's say that a supermarket named _Jrader Toe's_ asks us to simulate fruits for them in an online system. We could do it like this:
 
-![The naive approach.](../.gitbook/assets/image%20%2824%29.png)
+![The naive approach.](../.gitbook/assets/image%20%2825%29.png)
 
 Now, every fruit would need some of the same properties- like cost, weight, and name! So we would need to do something like:
 
