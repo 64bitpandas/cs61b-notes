@@ -16,12 +16,13 @@ Now, the edges taken into consideration include all immediate neighbors of every
 
 ## Detailed Breakdown
 
-The way Prim's algorithm is usually implemented is via PriorityQueue, edgeTo array, and distTo array. You will soon see its similarities to Dijkstra's.
+The way Prim's algorithm is usually implemented is via [PriorityQueue](../../abstract-data-types/collections/stacks-and-queues.md), `edgeTo` array, and `distTo` array. You will soon see its similarities to [Dijkstra's](../shortest-paths/dijkstras-algorithm.md).
 
 First, insert all vertices into the PriorityQueue, storing vertices in order of **distance from MST**. Then, remove vertex with highest priority in the PriorityQueue and relax its edges. In each of these iterations, the distTo and edgeTo arrays will be updated for each vertex v if the **weight of the edge is smaller than the current value in distTo\[v\]**. In other words, only update if the distance from the MST to the vertex is the best seen so far. This is a very important point, and is one of the subtleties that makes Prim's algorithm fundamentally different from Dijkstra's.
 
 ## Useful Properties/Invariants
-- The MST under construction is always connected 
+
+The MST under construction is **always connected.**
 
 ## Pseudocode
 
@@ -63,6 +64,8 @@ public class Prims() {
 Looking at this pseudocode, the resemblance to Dijkstra's makes them seem nearly identical. But hopefully you've read the conceptual overviews first, and you understand the remarkable subtlety that leads to two very fundamentally different algorithms.
 
 ## Runtime Analysis
+
+This is the same as for Dijkstra's Algorithm.
 
 **Unsimplified:**
 

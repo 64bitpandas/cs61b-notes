@@ -23,7 +23,7 @@ This page is from my original notes and is not up to the latest quality standard
 **Definition of Hash Code:** a representation of a value from a set with many/infinite members using a value from a fixed/finite number of members
 
 * Ideally would prevent collisions and integer overflow
-* **Note:** Two objects obj1 and obj2 that have the same hashcode are not necesarily equal. obj1.equals(obj2) also does not necesarily mean obj1 and obj2 have the same hashcode. The only true relation is if obj1 and obj2 have **different** hashcodes, then obj1 and obj2 are **not equal**.
+* **Note:** Two objects obj1 and obj2 that have the same hashcode are not necesarily equal. obj1.equals\(obj2\) also does not necesarily mean obj1 and obj2 have the same hashcode. The only true relation is if obj1 and obj2 have **different** hashcodes, then obj1 and obj2 are **not equal**.
 
 **Pidgeonhole Principle** Collisions are inevitable if you have more values than indices available
 

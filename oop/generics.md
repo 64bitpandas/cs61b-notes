@@ -23,13 +23,13 @@ public class SomeClass<SomeType> {
 SomeClass<String> aClass = new SomeClass<>();
 ```
 
-In this example, `SomeType` is a **Generic Type Variable** that is not a real type, but can still be used inside the class as normal. 
+In this example, `SomeType` is a **Generic Type Variable** that is not a real type, but can still be used inside the class as normal.
 
 On the other hand, `String` is an **Actual Type Argument** that replaces `SomeType` during runtime. Now, every time `SomeType` is used in `SomeClass` Java treats it exactly like a `String`.
 
 ## Generic Subtypes
 
-Like in ****[Dynamic Method Selection](dynamic-method-selection.md), adding inheritance makes things tricky! Let's look at an example:
+Like in _\*\*_[Dynamic Method Selection](dynamic-method-selection.md), adding inheritance makes things tricky! Let's look at an example:
 
 ```java
 List<String> LS = new ArrayList<String>();
@@ -69,12 +69,12 @@ Will **line 5** error?
 {% endtabs %}
 
 {% hint style="info" %}
-Arrays have slightly different behavior than this and will throw an `ArrayStoreException` if types are mismatched in any way. 
+Arrays have slightly different behavior than this and will throw an `ArrayStoreException` if types are mismatched in any way.
 {% endhint %}
 
 ## Type Bounds
 
-Sometimes, we want to **put constraints** on what kinds of types can be passed into a generic type. 
+Sometimes, we want to **put constraints** on what kinds of types can be passed into a generic type.
 
 One way of doing is is to specify that a generic type must fit within a **type bound**: here, T must be some subtype of a specified type `Number`.
 
@@ -92,7 +92,7 @@ class SomeClass<T extends Number> {
 
 The biggest limitation is that **primitive types cannot be used as generic types.** For example, `List<int>` is invalid and will not work!
 
-One workaround to this is to use the reference-type counterparts to primitives, such as `Integer`, `Boolean`,  `Character` and so on. However, converting between these types and primitive types, which is called **autoboxing,** has significant performance penalties that must be taken into consideration.
+One workaround to this is to use the reference-type counterparts to primitives, such as `Integer`, `Boolean`, `Character` and so on. However, converting between these types and primitive types, which is called **autoboxing,** has significant performance penalties that must be taken into consideration.
 
 Another limitation is that **instanceof** does not work properly with generic types. For instance, `new List<X>() instanceof List<Y>` will always be true regardless of what types X and Y are.
 
