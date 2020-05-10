@@ -12,9 +12,9 @@
 
 ## Asymptotics
 
-* [Runtime Analysis Basics](asymptotics/asymptotics.md)
+* [Asymptotic Analysis Basics](asymptotics/asymptotics.md)
 * [Amortization](asymptotics/amortization.md)
-* [The Master Method](asymptotics/the-master-method.md)
+* [Asymptotics Practice](asymptotics/asymptotics-practice.md)
 
 ## Abstract Data Types
 

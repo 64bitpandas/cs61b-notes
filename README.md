@@ -17,7 +17,7 @@ This guide is written to be as easy to follow and digestible as possible😀I've
 
 ### The 61B Concept Map
 
-![](.gitbook/assets/image%20%289%29.png)
+![](.gitbook/assets/image%20%2811%29.png)
 
 ## Who is this for?
 
@@ -26,6 +26,21 @@ Mostly me; making unnecessarily detailed guides is my goto method of making sure
 **Do note that basic knowledge gained from** [**CS61A**](https://cs61a.org/) **or equivalent is assumed.** [Click here](https://64bitpandas.github.io/cs61a) for my notes for that!
 
 \*Must comply with [WTF license terms](https://github.com/64bitpandas/cs61b-notes/blob/master/LICENSE.md)
+
+## How to use this guide
+
+Again, I will emphasize that this **isn't a textbook.** While I try to be as comprehensive as possible, I'm sure I missed plenty of important concepts or assume you know others. I don't have an army of peer reviewers and guinea pigs to test-read the thing, so it's also not guaranteed that everything is 100% accurate. Please [open an issue](https://github.com/64bitpandas/cs61b-notes/issues) if you think something's wrong!
+
+{% hint style="warning" %}
+For more difficult topics, I'll put a warning like this at the top of the page with links to prerequisites or supporting topics so that you won't feel completely lost 😉
+{% endhint %}
+
+There are also plenty of practice problems to try out! Here's an non-exhaustive list of pages with those if you are mostly interested in them and not the conceptual content.
+
+* [Access Control](oop/access-control.md#practice)
+* [Dynamic Method Selection](oop/dynamic-method-selection.md)
+* [Generic Types](oop/generics.md#generic-subtypes)
+* [Asymptotics Practice](asymptotics/asymptotics-practice.md)
 
 ## How to contribute
 
