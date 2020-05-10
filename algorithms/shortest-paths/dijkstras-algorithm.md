@@ -14,9 +14,9 @@ Before continuing, review [Graphs](../../abstract-data-types/graphs.md), [Stacks
 
 **Relaxing** the edges of a vertex v just refers to the process of adding an edge to be part of our solution according to distTo\[n\] for each n in v.neighbors. If adding the edge yields a better result than the current edge in edgeTo\[n\], then relax the edge.
 
-### Dijkstra's vs. BFS
+Djikstras uses a **PriorityQueue** to maintain the path with lowest cost from the starting node to every other node.
 
-BFS returns the shortest paths in an unweighted graph, where the shortest path is just defined to be the fewest number of edges traveled along a path. In Djikstra's, we can generalize the breadth-first traversal to find the path with the lowest cost, where the cost is determined by different weights on the edges. Djikstras uses a PriorityQueue to maintain the path with lowest cost from the starting node to every other node.
+
 
 ## Properties of Dijkstra's Algorithm
 
