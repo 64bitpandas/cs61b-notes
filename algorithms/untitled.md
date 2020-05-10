@@ -1,8 +1,55 @@
 # Minimax Algorithm
 
-{% hint style="danger" %}
-This page is incomplete. [Help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
-{% endhint %}
+## Game Trees
 
+The Minimax algorithm is often used for making AI's for turn-based games. It relies on the use of a type of **game tree,** which maps out all of the possible moves that players can make.
 
+## \*\*\*\*
+
+## **Alpha-Beta Pruning** 
+
+## A Story of Minimax Nodes: An Intuitive Understanding
+
+![](../.gitbook/assets/image%20%2828%29.png)
+
+![](../.gitbook/assets/image%20%2816%29.png)
+
+![](../.gitbook/assets/image%20%281%29.png)
+
+![](../.gitbook/assets/image%20%2826%29.png)
+
+![](../.gitbook/assets/image%20%2815%29.png)
+
+![](../.gitbook/assets/image%20%289%29.png)
+
+![](../.gitbook/assets/image%20%287%29.png)
+
+![](../.gitbook/assets/image%20%285%29.png)
+
+## Practice Problems
+
+{% tabs %}
+{% tab title="Question 1" %}
+Here's a tree. Figure out:
+
+* What values each of the nodes report
+* Which branches are pruned
+* The alpha and beta values at each visited node
+
+![](../.gitbook/assets/image%20%2829%29.png)
+{% endtab %}
+
+{% tab title="Q1 Answer" %}
+Here's my answer! The green arrows denote the order in which the nodes are visited. Note that the branches are pruned every time **alpha is greater than beta.** 
+
+![](../.gitbook/assets/image%20%2834%29.png)
+{% endtab %}
+{% endtabs %}
+
+This was just an ordinary problem and **might not be enough to ensure that you fully understand minimax trees**! Here are some checks you can do to ensure that your understanding is strong:
+
+* Figure out what the tree returns and prunes intuitively _without_ finding any alpha or beta values.
+* Make your own minimax tree problem like the one above and solve it. Are you confident in your answer \(since no answer key exists\)?
+* Make a minimax tree that's missing some values, and try to find all possible values that fit in there such that the branch will become pruned.
+* Implement the minimax algorithm in Java.
 

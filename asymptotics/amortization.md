@@ -14,15 +14,15 @@ But what if we wanted to make an array resize itself every time it reaches capac
 
 First, we have to make a new array with a new size:
 
-![](../.gitbook/assets/image%20%2812%29.png)
+![](../.gitbook/assets/image%20%2819%29.png)
 
 Then, we have to copy over all of the old elements over:
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%2813%29.png)
 
 Finally, we can add in the new element!
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 **Let's analyze the runtime of this operation.** 
 
@@ -57,7 +57,7 @@ $$
 
 Which simplifies to $$2n$$ . **Therefore, this approach is** $$\Theta(n)$$ **!!**
 
-![Runtime graph for increasing values of n when doubling.](../.gitbook/assets/image%20%2811%29.png)
+![Runtime graph for increasing values of n when doubling.](../.gitbook/assets/image%20%2818%29.png)
 
 \*\*\*\*
 
