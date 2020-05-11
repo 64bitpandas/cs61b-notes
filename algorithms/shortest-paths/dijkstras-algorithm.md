@@ -8,15 +8,15 @@ description: Special thanks to Arin for writing this page!
 Before continuing, review [Graphs](../../abstract-data-types/graphs.md), [Stacks and Queues](../../abstract-data-types/collections/stacks-and-queues.md), and [Shortest Paths](./). This topic isn't for the faint of heart!
 {% endhint %}
 
-## Dijkstra's Algorithm
+## One sentence overview
+Visit vertices in order of best-known distance from source; on visit, relax every edge from the visited vertex.
 
-**One sentence overview:** Visit vertices in order of best-known distance from source; on visit, relax every edge from the visited vertex.
+## Detailed Breakdown
+Djikstras uses a **PriorityQueue** to maintain the path with lowest cost from the starting node to every other node, an **edgeTo** array to keep track of the best known predecessor for each vertex, and a **distTo** array to keep track of the best known distance from the source vertex to every other vertex. 
 
-**Relaxing** the edges of a vertex v just refers to the process of adding an edge to be part of our solution according to distTo\[n\] for each n in v.neighbors. If adding the edge yields a better result than the current edge in edgeTo\[n\], then relax the edge.
+**Relaxing** the edges of a vertex v just refers to the process of updating edgeTo[n] for each neighbor n to v. 
 
-### Dijkstra's vs. BFS
-
-BFS returns the shortest paths in an unweighted graph, where the shortest path is just defined to be the fewest number of edges traveled along a path. In Djikstra's, we can generalize the breadth-first traversal to find the path with the lowest cost, where the cost is determined by different weights on the edges. Djikstras uses a PriorityQueue to maintain the path with lowest cost from the starting node to every other node.
+You'll see in the pseudocode and diagrams below that succesful relaxation only occurs when the edge connecting the vertex being visited to one of its neighbors yields a smaller total distance than the current shortest path to that neighboring vertex that the algorithm has seen.
 
 ## Properties of Dijkstra's Algorithm
 
