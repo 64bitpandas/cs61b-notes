@@ -51,7 +51,7 @@ rarePupper.eat();
 {% tab title="Q2 Answer" %}
 This calls C! This should make intuitive sense because `Shiba` overrides `Dog` so all `Shibas` will use C instead of A.
 
-![](../.gitbook/assets/image%20%2833%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -119,7 +119,7 @@ rarePupper.playWith(doge); // rarePupper is happy :) borks all around
 **Why is it not F? I thought doge and rarePupper were both** `Shiba`**?**  
 When the compiler chooses a method, it **always** starts at the **static method.** Then, it keeps going down the inheritance tree until it hits the **dynamic method.** Since F has a **different signature** than D, it isn't an **overriding method** and thus the compiler won't see it. But E is \(since it has the same signature as D\), so that is why it is chosen instead.
 
-![bork bork bork :DDD](../.gitbook/assets/image%20%2814%29.png)
+![bork bork bork :DDD](../.gitbook/assets/image%20%2822%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -207,5 +207,5 @@ This time, `shiba inu` gets printed. This is because casting temporarily changes
 
 If you want some **even harder** problems, [check this out](https://inst.eecs.berkeley.edu/~cs61b/sp20/materials/disc/examprep5.pdf) and also [this](https://inst.eecs.berkeley.edu/~cs61b/sp20/materials/disc/examprep6.pdf).
 
-![bai bai!](../.gitbook/assets/image%20%2817%29.png)
+![bai bai!](../.gitbook/assets/image%20%2825%29.png)
 

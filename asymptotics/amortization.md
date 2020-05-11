@@ -1,5 +1,9 @@
 # Amortization
 
+{% hint style="warning" %}
+Please read [Asymptotic Analysis Basics](asymptotics.md) first. If you don't, none of this will make any sense!
+{% endhint %}
+
 **Amortization** means **spreading out.** 
 
 Sometimes, an operation takes different amounts of time for different values of $$n$$. Rather than having to report runtimes for each different case, we can instead average all of them out and report the **amortized runtime.** 
@@ -14,15 +18,15 @@ But what if we wanted to make an array resize itself every time it reaches capac
 
 First, we have to make a new array with a new size:
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../.gitbook/assets/image%20%2829%29.png)
 
 Then, we have to copy over all of the old elements over:
 
-![](../.gitbook/assets/image%20%2813%29.png)
+![](../.gitbook/assets/image%20%2821%29.png)
 
 Finally, we can add in the new element!
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%2813%29.png)
 
 **Let's analyze the runtime of this operation.** 
 
@@ -47,7 +51,7 @@ $$
 
 Intuitively, this looks like this:
 
-![](https://www.interviewcake.com/images/svgs/amortized_analysis_m_over_8.svg?bust=205)
+![](../.gitbook/assets/image%20%2834%29.png)
 
 Mathematically, it looks like this:
 
@@ -55,9 +59,9 @@ $$
 n + n\sum_{i=1}(\frac{1}{2})^n
 $$
 
-Which simplifies to $$2n$$ . **Therefore, this approach is** $$\Theta(n)$$ **!!**
+Which simplifies to $$2n$$if you recall your power series properties . **Therefore, this approach is** $$\Theta(n)$$ **!!**
 
-![Runtime graph for increasing values of n when doubling.](../.gitbook/assets/image%20%2818%29.png)
+![Runtime graph for increasing values of n when doubling.](../.gitbook/assets/image%20%2827%29.png)
 
 \*\*\*\*
 

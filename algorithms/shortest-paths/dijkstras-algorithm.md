@@ -9,12 +9,14 @@ Before continuing, review [Graphs](../../abstract-data-types/graphs.md), [Stacks
 {% endhint %}
 
 ## One sentence overview
+
 Visit vertices in order of best-known distance from source; on visit, relax every edge from the visited vertex.
 
 ## Detailed Breakdown
-Djikstras uses a **PriorityQueue** to maintain the path with lowest cost from the starting node to every other node, an **edgeTo** array to keep track of the best known predecessor for each vertex, and a **distTo** array to keep track of the best known distance from the source vertex to every other vertex. 
 
-**Relaxing** the edges of a vertex v just refers to the process of updating edgeTo[n] for each neighbor n to v. 
+Djikstras uses a **PriorityQueue** to maintain the path with lowest cost from the starting node to every other node, an **edgeTo** array to keep track of the best known predecessor for each vertex, and a **distTo** array to keep track of the best known distance from the source vertex to every other vertex.
+
+**Relaxing** the edges of a vertex v just refers to the process of updating edgeTo\[n\] for each neighbor n to v.
 
 You'll see in the pseudocode and diagrams below that succesful relaxation only occurs when the edge connecting the vertex being visited to one of its neighbors yields a smaller total distance than the current shortest path to that neighboring vertex that the algorithm has seen.
 

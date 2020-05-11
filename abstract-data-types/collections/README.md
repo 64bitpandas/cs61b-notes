@@ -4,28 +4,26 @@
 This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
 {% endhint %}
 
-![An overview of all the Collections in Java.](../../.gitbook/assets/image%20%2832%29.png)
+![An overview of all the Collections in Java.](../../.gitbook/assets/image%20%2848%29.png)
 
-**Collection** is an interface for common abstract data types
+**Collection** is a Java interface for common abstract data types that store multiple items in them.
 
-**Abstract Data Type:** A data type that is defined purely by operations, not by their implementation
+## Sub-Interfaces
 
-**Sub-interfaces:**
+* **Lists** are indexed sequences with duplication. The two most common types are [**ArrayLists**](arrays.md#array-lists) ****and [**Linked Lists**](linked-lists.md)**.** 
+* \*\*\*\*[**Sets**](sets.md) ****are non-indexed sequences with no duplication. \(That is, every value in a set is unique.\)
+* **Maps** are key-value pairs. See [Hashing and Hash Tables](../hashing.md) for a description on one common map implementation, the HashMap. All keys in a map must be unique, but values can be duplicated.
+* \*\*\*\*[**Stacks and Queues**](stacks-and-queues.md) ****are two ordered collections that have two core behaviors:
+  * push\(T x\): puts x on the top.
+  * pop\(\): Removes the first item. \(See the stacks and queues page for more information.\)
 
-* List: indexed sequences with duplication
-* Set, SortedSet: No duplication or indices
-* Map, SortedMap: Dictionaries \(key-value pairs\)
-* Stack:
-  * push\(T x\): puts x on top of the stack
-  * pop\(\): Removes and returns the top item from the stack
+## Common Functions
 
-**Functions and Behaviors**
-
-* Membership tests `contains()` and `containsAll()`
-* size
-* isEmpty
-* iterator\(\)
-* toArray\(\)
-* Optional: add, addAll, clear, remove, removeAll, retainAll \(intersection\)
-  * Throws `UnsupportedOperationException` if not implemented
+* **Membership tests** `contains()` and `containsAll()` that can determine whether or not an element is in the collection.
+* `size()` to get the number of items in the collection.
+* `isEmpty()` returns true if there is nothing in the collection.
+* `iterator()` returns an Iterator object to go through all the values in the collection.
+* `toArray()` converts the collection to a standard Java array.
+* **Optional** functions that aren't implemented in the interface: `add, addAll, clear, remove, removeAll, retainAll (intersection)`
+  * Throws `UnsupportedOperationException` if not implemented.
 

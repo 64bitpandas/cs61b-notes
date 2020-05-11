@@ -42,9 +42,9 @@ If you want to see firsthand why simply flipping the signed bit doesn't work, tr
 
 ## Modular Arithmetic
 
-Since primitive types have a fixed number of bits, it is possible to **overflow** them if we add numbers that are too large. For example, if we add `01000000`\(a byte\) with itself, we'd need 9 bits to store the result! 
+Since primitive types have a fixed number of bits, it is possible to **overflow** them if we add numbers that are too large. For example, if we add `01000000`\(a byte\) with itself, we'd need 9 bits to store the result!
 
-This will cause lots of issues, so we use **modular arithmetic** to **wrap around to the largest negative version** and keep the number in bounds. For example, `(byte)128 == (byte)(127+1) == (byte)(-128)`**.** 
+This will cause lots of issues, so we use **modular arithmetic** to **wrap around to the largest negative version** and keep the number in bounds. For example, `(byte)128 == (byte)(127+1) == (byte)(-128)`**.**
 
 ## Bit Operations
 
@@ -91,7 +91,7 @@ This will cause lots of issues, so we use **modular arithmetic** to **wrap aroun
 
 ## Why is this useful?
 
-Just looking at these obscure operations, it may be unclear as to why we need to use these at all. 
+Just looking at these obscure operations, it may be unclear as to why we need to use these at all.
 
 Well, [here's a massive list of bit twiddling hacks](https://graphics.stanford.edu/~seander/bithacks.html) that should demonstrate plenty of ways to use these simple operations to do some things really efficiently.
 

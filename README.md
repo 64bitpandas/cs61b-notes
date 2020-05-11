@@ -17,7 +17,7 @@ This guide is written to be as easy to follow and digestible as possible😀I've
 
 ### The 61B Concept Map
 
-![](.gitbook/assets/image%20%2827%29.png)
+![](.gitbook/assets/image%20%2842%29.png)
 
 ## Who is this for?
 

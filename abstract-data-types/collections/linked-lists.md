@@ -1,16 +1,12 @@
 # Linked Lists
 
-{% hint style="warning" %}
-This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
-{% endhint %}
-
 {% hint style="info" %}
-This page assumes prior knowledge of linked lists from CS61A or equivalent.
+This page assumes prior knowledge of linked lists from CS61A or equivalent. I'll assume you have already worked with basic singly linked lists before.
 {% endhint %}
 
-A recursive data structure that allows storage and access of an arbitrary amount of data.
+The linked list is an extremely common recursive data structure that allows storage and access of an arbitrary amount of data.
 
-## Feature List
+## Feature List of an Effective Linked List
 
 1. **Rebranding**- represents Node as an individual object rather than having one monolithic List type.
 2. **Bureacracy:** Create an abstraction barrier so that users do not need to know how methods or Nodes work, only how to call them.
@@ -21,32 +17,79 @@ A recursive data structure that allows storage and access of an arbitrary amount
 7. **Doubly Linked:** Nodes have both first and last pointers for even faster traversal.
 8. **Circular list:** Sentinel last pointer points to the last value in the node, allowing for fast removeLast\(\).
 
+![An illustration of an effective linked list.](../../.gitbook/assets/image%20%2828%29.png)
+
 ## Method List
 
-* `addFirst(T x)` adds a node to the front of the list.
-* `getFirst()` returns the value at the first node.
-* `addLast(T x)` adds a node to the back of the list.
-* `size()` returns the number of nodes in the list.
-* `removeLast()` destroys the last node in the list.
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Optimal Runtime</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p><code>addFirst(T x)</code>
+        </p>
+        <p><code>addLast(T x)</code>
+        </p>
+      </td>
+      <td style="text-align:left">Adds a node to the front/back of the list.</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p><code>getFirst()</code>
+        </p>
+        <p><code>getLast()</code>
+        </p>
+      </td>
+      <td style="text-align:left">Gets the node at the front/back of the list.</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p><code>removeFirst()</code>
+        </p>
+        <p><code>removeLast()</code>
+        </p>
+      </td>
+      <td style="text-align:left">Removes the node at the front/back of the list.</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>size()</code>
+      </td>
+      <td style="text-align:left">Returns the number of nodes in the list.</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>contains(T x)</code>
+      </td>
+      <td style="text-align:left">Returns true if the list contains element <code>x</code>.</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p><code>add(T x, int pos)</code>
+        </p>
+        <p><code>remove(T x)</code>
+        </p>
+      </td>
+      <td style="text-align:left">Adds/remove an element at an arbitrary location.</td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>## Limitation: Arbitrary Retrieval
 
-## Limitation: Arbitrary Retrieval
-
-* It takes O\(n\) time to retrieve arbitrary values from the list
-* Really long list = really slow!
-* Arrays are better for this
-
-## Array Lists
-
-* Allows for fast retrieval by using an array under the hood
-* Removing last item: not necessary to destroy that item because the `size` value is changed to set that value as out of bounds. \(Will be reassigned anyway when a new value is added\)
-* Resizing arrays: When original array length is reached, multiply length by some factor and copy all values to new array.
-  * Adding a constant value is VERY slow due to the frequency of copying
-  * Must balance between time and space efficiency
+You may have noticed in the chart above that it takes $$\Theta(n)$$  time to retrieve arbitrary values from the list. This will get really slow if the list is large! If arbitrary values need to be accessed frequently, [Arrays](arrays.md) are much better.
 
 ## The Java List Interface
 
-* Extends `Collection`
-* Membership tests `indexOf` and `lastIndexOf`
-* Retreival `get` `listIterator`, `sublist`
-* Modifiers: `add`, `addAll`, ...
+Java has a built-in `LinkedList` class so you don't have to implement it yourself! Read up on the [official docs](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html\) to learn more about the specific methods and behaviors provided.
+
+
 
