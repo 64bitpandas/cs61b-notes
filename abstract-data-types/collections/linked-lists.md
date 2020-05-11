@@ -1,7 +1,5 @@
 # Linked Lists
 
-
-
 {% hint style="info" %}
 This page assumes prior knowledge of linked lists from CS61A or equivalent. I'll assume you have already worked with basic singly linked lists before.
 {% endhint %}

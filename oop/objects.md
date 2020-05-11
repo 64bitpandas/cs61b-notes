@@ -28,11 +28,11 @@ You may have noticed that strings are not on this list. That is because unlike i
 
 ## Type Conversion
 
-Java will automatically convert between primitive types if **no information is lost** \(e.g. from byte to int\). 
+Java will automatically convert between primitive types if **no information is lost** \(e.g. from byte to int\).
 
 If converting the other direction \(from a larger to smaller container\), an explicit cast is required \(e.g. `(char)int`\).
 
-**Assignment statements are an exception to this**: `aByte = 10` is fine even though 10 is an int literal. This is because arithmetic operations \(+,  \*, ...\) automatically __promote operands \(e.g. `'A' + 2` is equivalent to `(int)'A' + 2`\)
+**Assignment statements are an exception to this**: `aByte = 10` is fine even though 10 is an int literal. This is because arithmetic operations \(+, \*, ...\) automatically \_\_promote operands \(e.g. `'A' + 2` is equivalent to `(int)'A' + 2`\)
 
 However, **this doesn't work if you are trying to add a larger type to a smaller type** \(e.g. `aByte = aByte + 1` since operands become an int type which cannot be set equal to a byte type. **But += works**!
 
