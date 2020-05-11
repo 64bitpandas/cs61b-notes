@@ -4,8 +4,6 @@ description: Special thanks to Arin for writing this page!
 
 # Dijkstra's Algorithm
 
-
-
 {% hint style="warning" %}
 Before continuing, review [Graphs](../../abstract-data-types/graphs.md), [Stacks and Queues](../../abstract-data-types/collections/stacks-and-queues.md), and [Shortest Paths](./). This topic isn't for the faint of heart!
 {% endhint %}

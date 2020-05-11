@@ -4,7 +4,7 @@
 This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
 {% endhint %}
 
-![An overview of all the Collections in Java.](../../.gitbook/assets/image%20%2845%29.png)
+![An overview of all the Collections in Java.](../../.gitbook/assets/image%20%2848%29.png)
 
 **Collection** is a Java interface for common abstract data types that store multiple items in them.
 
@@ -12,7 +12,7 @@ This page is from my original notes and is not up to the latest quality standard
 
 * **Lists** are indexed sequences with duplication. The two most common types are [**ArrayLists**](arrays.md#array-lists) ****and [**Linked Lists**](linked-lists.md)**.** 
 * \*\*\*\*[**Sets**](sets.md) ****are non-indexed sequences with no duplication. \(That is, every value in a set is unique.\)
-* **Maps** are key-value pairs. See [Hashing and Hash Tables](../hashing.md) for a description on one common map implementation, the HashMap.
+* **Maps** are key-value pairs. See [Hashing and Hash Tables](../hashing.md) for a description on one common map implementation, the HashMap. All keys in a map must be unique, but values can be duplicated.
 * \*\*\*\*[**Stacks and Queues**](stacks-and-queues.md) ****are two ordered collections that have two core behaviors:
   * push\(T x\): puts x on the top.
   * pop\(\): Removes the first item. \(See the stacks and queues page for more information.\)
