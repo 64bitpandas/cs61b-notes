@@ -56,7 +56,7 @@ Intuitively, this looks like this:
 Mathematically, it looks like this:
 
 $$
-n + n\sum_{i=1}(\frac{1}{2})^n
+n + n\sum_{n=1}{n}(\frac{1}{2})^n
 $$
 
 Which simplifies to $$2n$$if you recall your power series properties . **Therefore, this approach is** $$\Theta(n)$$ **!!**
