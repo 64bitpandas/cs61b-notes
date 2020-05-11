@@ -4,32 +4,40 @@
 This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
 {% endhint %}
 
-## Intro to Graphs
+## Introduction
 
-* Represents a set of relationships that is not necessarily hierarchical
-* Consists of nodes \(vertices\) and connections \(edges\)
+Graphs are simply a collection of **vertices** connected by **edges.** They're very similar to trees, but are much more versatile and don't require hierarchical relationships like trees do.
 
-  **Simple Graph**
+![A very simple graph.](../.gitbook/assets/image%20%2822%29.png)
 
-  * No loops \(a connection of a node to itself\)
-  * No parallel edges \(two edges that connect the same two vertices\)
-  * Most common form of graph
+For most purposes, we will be working with **simple graphs** that follow two rules:
 
-  **Graph Properties**
+* There are **no loops** \(a connection of a node to itself\).
+* There are **no parallel edges** \(two edges that connect the same two vertices\).
 
-  * Directed vs Undirected: whether or not edges have arrows pointing to a direction
-  * Cyclic vs Acyclic: whether or not the edges form a loop
-  * Edge labels: used to denote length, etc
-  * Weights: used to denote properties of vertices themselves
+![Don&apos;t make these graphs pls. Keep life simple!](../.gitbook/assets/image%20%2812%29.png)
 
-  **Terminology**
+## Graph Properties
 
-  * Adjacent: two vertices connected with one edge
-  * Path: a sequence of vertices connected by edges
-  * Cycle: path with the same first and last vertex
-  * Connected: two vertices that have a path between them; refers to graphs that have all connected vertices
+Graphs can be described by some properties that they could have. Here are the important ones:
+
+A graph can be **directed** if edges are arrows and have a direction, or **undirected** if you can cross edges in any direction.
+
+A graph is **cyclic** if the edges form a loop, or **acyclic** if there are no loops \(like in a tree\).
+
+![Direction vs. Cycles](../.gitbook/assets/image.png)
+
+Graphs can have **edge labels** if edges are numbered \(great for distances\). They can also have **vertex weights** if vertices are numbered \(great for priorities or costs\).
+
+![Edge labels vs. Weights](../.gitbook/assets/image%20%2810%29.png)
+
+Graphs are **connected** if all of the vertices are connected with edges, such that you can freely move from one vertex to any other vertex.
+
+![](../.gitbook/assets/image%20%2855%29.png)
 
 ## Graph Queries
+
+Here are some cool things you can do with graphs:
 
 * Is there a path between two vertices? \(s-t path\)
 * What is the shortest route between two vertices? \(shortest s-t path\)
@@ -38,16 +46,9 @@ This page is from my original notes and is not up to the latest quality standard
 * Is a graph connected? \(connectivity problem\)
 * Is a vertex that disconnects the graph when removed? \(single point of failure / biconnectivity\)
 * Are two graphs isomorphic?
-* Can a graph bee drawn with no crossing edges? \(planarity\)
+* Can a graph be drawn with no crossing edges? \(planarity\)
 
-## Graph Traversals
+## More on Graphs
 
-**Depth first traversal:** Explore an entire subgraph before moving onto the next subgraph
-
-* Keep an array of 'marks' \(true if node has been visited\) and, optionally, an edgeTo array that will automatically keep track of how to get to each connected node from a source node
-* When each vertex is visited:
-  * Mark the vertex
-  * For each adjacent unmarked vertex:
-    * Set edgeTo of that vertex equal to this current vertex
-    * Call the recursive method on that vertex
+[Depth First Search \(DFS\)](../algorithms/searching/depth-first-search-dfs.md), [Breadth First Search \(BFS\)](../algorithms/searching/breadth-first-search-bfs.md), [Minimum Spanning Trees](../algorithms/minimum-spanning-trees/), [Shortest Paths](../algorithms/shortest-paths/), [Dijkstra's Algorithm](../algorithms/shortest-paths/dijkstras-algorithm.md), [A\* Search](../algorithms/shortest-paths/a-search.md), [Prim's Algorithm](../algorithms/minimum-spanning-trees/prims-algorithm.md), and [Kruskal's Algorithm](../algorithms/minimum-spanning-trees/kruskals-algorithm.md) all rely on graphs. Graphs are a super useful concept!!!
 

@@ -4,7 +4,7 @@
 This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
 {% endhint %}
 
-![An overview of all the Collections in Java.](../../.gitbook/assets/image%20%2848%29.png)
+![An overview of all the Collections in Java.](../../.gitbook/assets/image%20%2852%29.png)
 
 **Collection** is a Java interface for common abstract data types that store multiple items in them.
 
