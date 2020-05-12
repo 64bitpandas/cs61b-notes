@@ -4,53 +4,61 @@
 This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
 {% endhint %}
 
-## Data Indexed Sets
+## Data Indexed Sets: Introduction
 
-* Essentially putting all data into a massive array and keeping track of the index based on the value
+So far, we've explored a whole bunch of ways we can store items, but they aren't really optimized for general searching. What if we could get searching in $$\Theta(1)$$ time??? Wouldn't that be nice!
 
-  **Benefits:**
+Let's try something: **putting all of our data in a massive array.** Let's say that we know all our data falls into the range from 0 to 10,000 and make an array of 10,000 length to hold stuff.
 
-  * Accessing a value at index is a constant-time operation
+![](../.gitbook/assets/image%20%2860%29.png)
 
-  **Concerns:**
+Here, it doesn't matter what index each item is stored in- if we want to get "eecs" which is stored at key 3, it will be as instantly accessible as "haas" which is all the way in 9998.
 
-  * Requires a large amount of memory
-  * Need to ensure that no collisions between two items having the same index occur
-  * Integer overflow for large indices
+Of course, this has a **major design flaw** that you can probably see right away. **It takes way too much memory!**
 
-## Hash Codes and Hash Tables
+## Hash Codes 
 
-**Definition of Hash Code:** a representation of a value from a set with many/infinite members using a value from a fixed/finite number of members
+Let's figure out a way to get around the issue of space, but still not lose our awesome constant-time property. One way we can do this is to represent each item with a **hash code** and store them into the index with that hash code.
 
-* Ideally would prevent collisions and integer overflow
-* **Note:** Two objects obj1 and obj2 that have the same hashcode are not necesarily equal. obj1.equals\(obj2\) also does not necesarily mean obj1 and obj2 have the same hashcode. The only true relation is if obj1 and obj2 have **different** hashcodes, then obj1 and obj2 are **not equal**.
+For instance, let's use the **first letter of a word** as the hash code. We have just turned a nearly infinite space of possibilities into something that can be stored in just **26** **buckets.**
 
-**Pidgeonhole Principle** Collisions are inevitable if you have more values than indices available
+![](../.gitbook/assets/image%20%2810%29.png)
 
-* Solution for collision handling: could use a collection at each index to hold all values with the same index
-* Using this solution, we can reduce the number of indices available by using a **reduce** algorithm that reduces values into N bins
+While this solution is great, it still has another **major drawback**, which can be illustrated with this example:
 
-**Runtime of Hash Tables**
+![](../.gitbook/assets/image%20%2873%29.png)
 
-* If we have a fixed number of buckets M and an arbitrary number of elements N: O\(N\) runtime
-* If we have an arbitrary M that increases with N and double M at a N/M ratio threshold: O\(1\)
+In the worst case, this just turns back into a **linked list!** That means the runtime just went from O\(1\) to O\(n\), and that's no good.
+
+## Good Hash Codes
+
+If we can somehow create a "good" hash code, we can prevent things like the example above from happening because there shouldn't be a clear pattern in what buckets different objects go to. More specifically, a good hash code:
+
+* Ensures that two objects that are **equal** have the **same hash code.**
+* Ensures that **no distinguishable pattern** can be made out of hash codes from different objects.
+* Returns a **wide variety** of hash codes \(not just putting everything into a single bucket, for example\).
+
+Luckily, Java already handles hash code generation for us using the `hashCode()` function in the Object class. This function returns an **integer** that can be used to create good hash tables.
+
+## Dynamic Resizing
+
+Let's add another feature to our hash table: **dynamic resizing.** This means that the number of buckets will increase proportionally to the number of items in the set.
+
+One fairly simple way to do this with a numerical hash code is to mod the hash code by the number of buckets to get which bucket an item is stored in. For example, if a item has hash code `129382981` and we have `10` buckets, then we put it in bucket `1`, or `129382981 % 10`.
+
+In order to do this, we'll choose a **load ratio** at which to resize. This load ratio is calculated as `N/M`, where N is the number of items and M is the number of buckets. For example, a load ratio of 2 will mean the table resizes when, on average, each bucket has 2 items in it.
+
+When resizing, we must **recompute all the hash codes** so that we can balance out all of the buckets again.
+
+This has some cool runtime implications that are closely related to [Amortization](../asymptotics/amortization.md). Like what happened in the dynamically resizing array, resizing hash tables like this is also a $$\Theta(1)$$ operation. Nice!
 
 ## Java Hash Tables
 
-* Most popular implementation of sets and maps
-* Great performance
-* Does not require comparable
-* Simple implementation
-* In Java: HashMap and HashSet
-* All Java objects have a `hashCode()` method
-* Negative hash codes wrap back to the end
-* Typical hash codes have a small prime base -&gt; more randomness
+In Java, hash tables are used in the data structures `HashSet` and `HashMap` which are the most popular implementation of sets and maps.
 
-  **Warning:** Never store mutable objects in HashSet/HashMap
+These two implementations provide **fantastic performance** and **don't require values to be comparable** like trees do.
 
-  * hash code changes -&gt; object will get lost
+However, they have a drawback that must be considered: **objects cannot be modified after they are put into the hash table.** This is because mutating an object will change its hash code, which means that the object will be lost forever since its bucket doesn't match the current hash code!
 
-  **Warning:** Never override equals without overriding hashCode
-
-  * HashMaps/Sets rely on equals to check hash codes
+If the built-in hash code generator isn't what is needed \(like you want two objects to be equal if they have the same size, for instance\), you can override the `hashCode()` method. **Be careful when doing this** because `hashCode()` relies on `equals()` to find which bucket objects are in! So, if hashCode is overridden, it is highly recommended to override equals as well to ensure that they are compatible.
 

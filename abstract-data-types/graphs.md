@@ -4,14 +4,14 @@
 
 Graphs are simply a collection of **vertices** connected by **edges.** They're very similar to trees, but are much more versatile and don't require hierarchical relationships like trees do.
 
-![A very simple graph.](../.gitbook/assets/image%20%2834%29.png)
+![A very simple graph.](../.gitbook/assets/image%20%2835%29.png)
 
 For most purposes, we will be working with **simple graphs** that follow two rules:
 
 * There are **no loops** \(a connection of a node to itself\).
 * There are **no parallel edges** \(two edges that connect the same two vertices\).
 
-![Don&apos;t make these graphs pls. Keep life simple!](../.gitbook/assets/image%20%2819%29.png)
+![Don&apos;t make these graphs pls. Keep life simple!](../.gitbook/assets/image%20%2820%29.png)
 
 ## Graph Properties
 
@@ -25,11 +25,11 @@ A graph is **cyclic** if the edges form a loop, or **acyclic** if there are no l
 
 Graphs can have **edge labels** if edges are numbered \(great for distances\). They can also have **vertex weights** if vertices are numbered \(great for priorities or costs\).
 
-![Edge labels vs. Weights](../.gitbook/assets/image%20%2816%29.png)
+![Edge labels vs. Weights](../.gitbook/assets/image%20%2817%29.png)
 
 Graphs are **connected** if all of the vertices are connected with edges, such that you can freely move from one vertex to any other vertex.
 
-![](../.gitbook/assets/image%20%2880%29.png)
+![](../.gitbook/assets/image%20%2883%29.png)
 
 ## Graph Queries
 

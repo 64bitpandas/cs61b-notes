@@ -12,21 +12,21 @@ The Minimax algorithm is often used for making AI's for turn-based games. It rel
 
 Minimax is quite difficult to understand just by studying its rules. In order to really know what's going on, we need to know why we have all of these rules and what everything represents. Here's how I think about it:
 
+![](../.gitbook/assets/image%20%2872%29.png)
+
+![](../.gitbook/assets/image%20%2844%29.png)
+
+![](../.gitbook/assets/image%20%288%29.png)
+
 ![](../.gitbook/assets/image%20%2870%29.png)
 
 ![](../.gitbook/assets/image%20%2843%29.png)
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%2829%29.png)
 
-![](../.gitbook/assets/image%20%2868%29.png)
+![](../.gitbook/assets/image%20%2822%29.png)
 
-![](../.gitbook/assets/image%20%2842%29.png)
-
-![](../.gitbook/assets/image%20%2828%29.png)
-
-![](../.gitbook/assets/image%20%2821%29.png)
-
-![](../.gitbook/assets/image%20%2817%29.png)
+![](../.gitbook/assets/image%20%2818%29.png)
 
 ## Practice Problems
 
@@ -38,13 +38,13 @@ Here's a tree. Figure out:
 * Which branches are pruned
 * The alpha and beta values at each visited node
 
-![](../.gitbook/assets/image%20%2871%29.png)
+![](../.gitbook/assets/image%20%2874%29.png)
 {% endtab %}
 
 {% tab title="Q1 Answer" %}
 Here's my answer! The green arrows denote the order in which the nodes are visited. Note that the branches are pruned every time **alpha is greater than beta.** 
 
-![](../.gitbook/assets/image%20%2883%29.png)
+![](../.gitbook/assets/image%20%2886%29.png)
 {% endtab %}
 {% endtabs %}
 
