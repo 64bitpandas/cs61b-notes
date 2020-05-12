@@ -52,7 +52,7 @@ Here's a list of the most complete, well-written pages that I would trust to enh
 * [Asymptotics Practice](asymptotics/asymptotics-practice.md)
 * [Binary Trees](abstract-data-types/binary-trees/)
 * [Sorting](sorting/sorting-basics.md)
-* [Minimax Algorithm](algorithms/untitled.md)
+* [Minimax Algorithm](algorithms/minimax.md)
 * [Dijkstra's Algorithm](algorithms/shortest-paths/dijkstras-algorithm.md)
 
 ## How to contribute

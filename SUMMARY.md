@@ -38,7 +38,7 @@
 
 ## Algorithms
 
-* [Minimax Algorithm](algorithms/untitled.md)
+* [Minimax Algorithm](algorithms/minimax.md)
 * [Searching](algorithms/searching/README.md)
   * [Binary Search](algorithms/searching/binary-search.md)
   * [Depth First Search \(DFS\)](algorithms/searching/depth-first-search-dfs.md)
