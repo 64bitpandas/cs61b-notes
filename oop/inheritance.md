@@ -6,7 +6,7 @@ Essentially, it's a way of putting similar objects together to **generalize beha
 
 Let's say that a supermarket named _Jrader Toe's_ asks us to simulate fruits for them in an online system. We could do it like this:
 
-![The naive approach.](../.gitbook/assets/image%20%2851%29.png)
+![The naive approach.](../.gitbook/assets/image%20%2853%29.png)
 
 Now, every fruit would need some of the same properties- like cost, weight, and name! So we would need to do something like:
 
@@ -27,7 +27,7 @@ This would be _really annoying_ to do for every single fruit. And they're all th
 
 Let's make a **Fruit** class and have all of our fruits **inherit from** that class.
 
-![uwu inheritance is cool and good](../.gitbook/assets/image%20%2827%29.png)
+![uwu inheritance is cool and good](../.gitbook/assets/image%20%2828%29.png)
 
 This does amazing things because we can just create one single Fruit class that has all of the properties we need, and simply make our specific fruits inherit those properties. \(Side note: making multiple things inherit from one generic interface like this is called **polymorphism.**\)
 
@@ -239,7 +239,7 @@ public class MainClass {
 }
 ```
 
-![A chart comparing the differences between the types of classes.](../.gitbook/assets/image%20%2818%29.png)
+![A chart comparing the differences between the types of classes.](../.gitbook/assets/image%20%2819%29.png)
 
 ## Still not satisfied?
 

@@ -6,16 +6,19 @@ This page is from my original notes and is not up to the latest quality standard
 
 ## Main Ideas
 
-* A specific implementation of a set and map \(like hash table or BST\)
-* Short for Retrieval Tree
-* If a set has a finite number of possible keys \(e.g. ASCII characters\), we can just represent a map as an array.
-* Then, if keys are made up of those keys \(e.g. strings\), we can create a tree structure where each node is one character. Adding the characters for each node together forms the original key
-* To handle values containing other values \(e.g. a vs. as\), mark each final node
+A **trie** is a specific implementation of a set and is short for **retrieval tree.** 
 
-## Characteristics
+It only works on sets with a **finite alphabet**, like digits or ASCII characters, for example. The idea is that each node can act like an **array containing all characters in the alphabet** and we can just access the branches super fast by indexing into them!
 
-* Each node has k links \(k = number of chars in alphabet\), all are null except the ones that are used
-  * In order to reduce the number of links, can use a hash table implementation instead of array implementation \(uses more time but less space\)
-* Runtime: O\(1\) for add and contains \(independent on number of keys, only dependent on length of key\)
-* Very good for special string operations \(e.g. prefix matching\)
+Tries are fantastic for searching to see if a word is contained in a set. Here's an example:
+
+![This trie contains the words &apos;batcat&apos;, &apos;batman&apos;, and &apos;banana&apos;.](../../.gitbook/assets/image%20%2812%29.png)
+
+This is great because it makes the `add()` and `contains()` functions run in $$\Theta(1)$$ time! Additionally, it makes special string operations like prefix matching or autocomplete very efficient.
+
+We can improve this data structure a lot- for instance, we can condense the leaves to reduce the number of nodes like this:
+
+![](../../.gitbook/assets/image%20%2851%29.png)
+
+I won't go into too much detail on how to optimize it further, or how to implement the actual functions efficiently, but hopefully you'll have a good sense of how to do it yourself after learning about concepts like [Hashing and Hash Tables](../hashing.md) or [Sets](../collections/sets.md) etc.
 
