@@ -7,7 +7,7 @@ This page assumes prior knowledge of Python lists from CS61A or equivalent.
 Arrays are a very popular data structure that stores an indexed list of data.   
 
 
-![An artistic interpretation of a new int\[5\] {6, 1, 2, 3, 99};](../../.gitbook/assets/image%20%2875%29.png)
+![An artistic interpretation of a new int\[5\] {6, 1, 2, 3, 99};](../../.gitbook/assets/image%20%2879%29.png)
 
 ## Properties
 

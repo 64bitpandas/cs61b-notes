@@ -6,7 +6,7 @@ So far, we've explored a whole bunch of ways we can store items, but they aren't
 
 Let's try something: **putting all of our data in a massive array.** Let's say that we know all our data falls into the range from 0 to 10,000 and make an array of 10,000 length to hold stuff.
 
-![](../.gitbook/assets/image%20%2866%29.png)
+![](../.gitbook/assets/image%20%2870%29.png)
 
 Here, it doesn't matter what index each item is stored in- if we want to get "eecs" which is stored at key 3, it will be as instantly accessible as "haas" which is all the way in 9998.
 
@@ -22,7 +22,7 @@ For instance, let's use the **first letter of a word** as the hash code. We have
 
 While this solution is great, it still has another **major drawback**, which can be illustrated with this example:
 
-![](../.gitbook/assets/image%20%2882%29.png)
+![](../.gitbook/assets/image%20%2886%29.png)
 
 In the worst case, this just turns back into a **linked list!** That means the runtime just went from O\(1\) to O\(n\), and that's no good.
 

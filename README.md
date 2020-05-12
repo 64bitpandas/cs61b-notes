@@ -17,7 +17,7 @@ This guide is written to be as easy to follow and digestible as possible😀I've
 
 ### The 61B Concept Map
 
-![](.gitbook/assets/image%20%2880%29.png)
+![](.gitbook/assets/image%20%2884%29.png)
 
 ## Who is this for?
 
@@ -41,6 +41,19 @@ There are also plenty of practice problems to try out! Here's an non-exhaustive 
 * [Dynamic Method Selection](oop/dynamic-method-selection.md)
 * [Generic Types](oop/generics.md#generic-subtypes)
 * [Asymptotics Practice](asymptotics/asymptotics-practice.md)
+
+### Best pages!
+
+Here's a list of the most complete, well-written pages that I would trust to enhance your understanding and intuition the most. If you're feeling pretty good about these topics already, these will definitely be worth it to read!
+
+* [Inheritance](oop/inheritance.md)
+* [Dynamic Method Selection](oop/dynamic-method-selection.md)
+* [Asymptotic Analysis Basics](asymptotics/asymptotics.md)
+* [Asymptotics Practice](asymptotics/asymptotics-practice.md)
+* [Binary Trees](abstract-data-types/binary-trees/)
+* [Sorting](sorting/sorting-basics.md)
+* [Minimax Algorithm](algorithms/untitled.md)
+* [Dijkstra's Algorithm](algorithms/shortest-paths/dijkstras-algorithm.md)
 
 ## How to contribute
 

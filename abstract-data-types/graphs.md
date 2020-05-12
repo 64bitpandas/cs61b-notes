@@ -4,7 +4,7 @@
 
 Graphs are simply a collection of **vertices** connected by **edges.** They're very similar to trees, but are much more versatile and don't require hierarchical relationships like trees do.
 
-![A very simple graph.](../.gitbook/assets/image%20%2837%29.png)
+![A very simple graph.](../.gitbook/assets/image%20%2838%29.png)
 
 For most purposes, we will be working with **simple graphs** that follow two rules:
 
@@ -29,7 +29,7 @@ Graphs can have **edge labels** if edges are numbered \(great for distances\). T
 
 Graphs are **connected** if all of the vertices are connected with edges, such that you can freely move from one vertex to any other vertex.
 
-![](../.gitbook/assets/image%20%2893%29.png)
+![](../.gitbook/assets/image%20%2897%29.png)
 
 ## Graph Queries
 

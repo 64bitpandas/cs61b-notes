@@ -11,7 +11,7 @@ There are **4** modifier levels that get progressively more open:
 * **Protected: Subclasses** \(that inherit from the parent\) can also see it.
 * **Public:** All classes in the program can see it.
 
-![A chart comparing the different access modifiers. The black bar is the default \(&quot;package protected&quot;\).](../.gitbook/assets/image%20%2876%29.png)
+![A chart comparing the different access modifiers. The black bar is the default \(&quot;package protected&quot;\).](../.gitbook/assets/image%20%2880%29.png)
 
 ## Why do we need access control?
 
