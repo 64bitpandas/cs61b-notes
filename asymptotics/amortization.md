@@ -4,9 +4,9 @@
 Please read [Asymptotic Analysis Basics](asymptotics.md) first. If you don't, none of this will make any sense!
 {% endhint %}
 
-**Amortization** means **spreading out.** 
+**Amortization** means **spreading out.**
 
-Sometimes, an operation takes different amounts of time for different values of $$n$$. Rather than having to report runtimes for each different case, we can instead average all of them out and report the **amortized runtime.** 
+Sometimes, an operation takes different amounts of time for different values of $$n$$. Rather than having to report runtimes for each different case, we can instead average all of them out and report the **amortized runtime.**
 
 This is especially good for functions where most actions have a low cost, but a few have a high cost. We'll see an example of this further down the page!
 
@@ -18,17 +18,17 @@ But what if we wanted to make an array resize itself every time it reaches capac
 
 First, we have to make a new array with a new size:
 
-![](../.gitbook/assets/image%20%2833%29.png)
+![](../.gitbook/assets/image%20%2834%29.png)
 
 Then, we have to copy over all of the old elements over:
 
-![](../.gitbook/assets/image%20%2825%29.png)
+![](../.gitbook/assets/image%20%2826%29.png)
 
 Finally, we can add in the new element!
 
-![](../.gitbook/assets/image%20%2816%29.png)
+![](../.gitbook/assets/image%20%2817%29.png)
 
-**Let's analyze the runtime of this operation.** 
+**Let's analyze the runtime of this operation.**
 
 * A single resizing will take $$\Theta(n)$$ time**.**
 * Adding a single element will take $$\Theta(1)$$ time**.**
@@ -37,13 +37,13 @@ Finally, we can add in the new element!
 
 ### **What if we doubled the size instead of adding one?**
 
-* A single resizing will take $$\Theta(2n)$$ time ****which simplifies into $$\Theta(n)$$ time.
+* A single resizing will take $$\Theta(2n)$$ time _\*\*_which simplifies into $$\Theta(n)$$ time.
   * We do this every time the array hits a power of 2 \(2, 4, 8, 16, 32 ...\). 
 * Adding a single element will take $$\Theta(1)$$ time.
   * We do this every time we add a new element, so in all we add n elements. Therefore, this is an 
-    * $$\Theta(n) $$operation.
+    * $$\Theta(n)$$operation.
 
-**Therefore, the unsimplified function is:** $$\Theta(n + (2 + 4 + 8  ... +2^i)) $$ where $$2^i$$ is the largest power of two less than n. This might not seem clear on its own, so let's rewrite it:
+**Therefore, the unsimplified function is:** $$\Theta(n + (2 + 4 + 8 ... +2^i))$$ where $$2^i$$ is the largest power of two less than n. This might not seem clear on its own, so let's rewrite it:
 
 $$
 \theta(n + (\frac{n}{2} + \frac{n}{4} + ... + 8 + 4 + 2))
@@ -51,7 +51,7 @@ $$
 
 Intuitively, this looks like this:
 
-![](../.gitbook/assets/image%20%2838%29.png)
+![](../.gitbook/assets/image%20%2839%29.png)
 
 Mathematically, it looks like this:
 
@@ -61,7 +61,7 @@ $$
 
 Which simplifies to $$2n$$if you recall your power series properties . **Therefore, this approach is** $$\Theta(n)$$ **!!**
 
-![Runtime graph for increasing values of n when doubling.](../.gitbook/assets/image%20%2831%29.png)
+![Runtime graph for increasing values of n when doubling.](../.gitbook/assets/image%20%2832%29.png)
 
 \*\*\*\*
 

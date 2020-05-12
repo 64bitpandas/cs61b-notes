@@ -37,7 +37,7 @@ $$
 
 **Explanation:** The method `throwItem()` runs `n/2` times. Using the simplification rules, we can extract the constant `1/2` to simply get `n`.
 
-![Keep the change, ya filthy animal.](../.gitbook/assets/image%20%2853%29.png)
+![Keep the change, ya filthy animal.](../.gitbook/assets/image%20%2856%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -66,7 +66,7 @@ $$
 **Explanation:** There are **three** nested loops in this problem. Whenever there are nested loops whose runtimes are independent of each other, we need to **multiply** the runtimes in each loop.  
 So, we get: $$\Theta(n * n * 64)$$ which simplifies into `n^2`
 
-![That&apos;s a lot of items to loot...](../.gitbook/assets/image%20%2815%29.png)
+![That&apos;s a lot of items to loot...](../.gitbook/assets/image%20%2816%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -92,13 +92,11 @@ $$
 \Theta(n)
 $$
 
-**Explanation:** Even though `stacksToLoot` is a user input, we're only concerned about finding the runtime for `n` so `stacksToLoot` can be treated like a constant! Therefore, we now have  $$\Theta(n * s* 64)$$ where `s = stacksToLoot` which simplifies into `n`.
+**Explanation:** Even though `stacksToLoot` is a user input, we're only concerned about finding the runtime for `n` so `stacksToLoot` can be treated like a constant! Therefore, we now have $$\Theta(n * s* 64)$$ where `s = stacksToLoot` which simplifies into `n`.
 
-![ok now this is getting a bit overboard](../.gitbook/assets/image%20%2849%29.png)
+![ok now this is getting a bit overboard](../.gitbook/assets/image%20%2852%29.png)
 {% endtab %}
 {% endtabs %}
-
-
 
 ## Recursion
 
@@ -126,7 +124,7 @@ $$
 
 **Explanation:** This tree recursion creates a tree with `n` layers. Each layer you go down, the number of calls multiplies by 4!
 
-![Tree diagram for method calls.](../.gitbook/assets/image%20%2834%29.png)
+![Tree diagram for method calls.](../.gitbook/assets/image%20%2835%29.png)
 
 This means that the number of calls in total will look like this:
 
@@ -162,7 +160,7 @@ $$
 
 **Explanation:** This tree recursion creates a tree with `n` layers. Each layer you go down, the number of calls multiplies by `n-1`...
 
-![What a mess \(!\)](../.gitbook/assets/image%20%2836%29.png)
+![What a mess \(!\)](../.gitbook/assets/image%20%2837%29.png)
 
 This means that the number of calls in total will look like this:
 
@@ -179,7 +177,6 @@ $$
 Hey, that looks a lot like the Taylor series for $$e$$! Since `e` is a constant, it simply reduces to `n!`.
 {% endtab %}
 {% endtabs %}
-
 
 ## Best and Worst Case Runtimes
 
@@ -206,11 +203,11 @@ Item[] hopperSort(Item[] items) {
 {% tab title="Q5 Answer" %}
 **Best Case:** $$\Theta(n)$$ if the array is nearly sorted except for a couple values. In this case, the `while` loop will only run a small number of times, so the only loop left is the for loop.
 
-**Worst Case:**  $$\Theta(n^2)$$if the array is totally reversed. This will cause the `while` loop to run on the order of `O(n)` times, resulting in a nested loop.  
-  
+**Worst Case:** $$\Theta(n^2)$$if the array is totally reversed. This will cause the `while` loop to run on the order of `O(n)` times, resulting in a nested loop.
+
 **Note:** HopperSort is literally just Insertion Sort 😎🤣
 
-![hoppers rate 64/64](../.gitbook/assets/image%20%2830%29.png)
+![hoppers rate 64/64](../.gitbook/assets/image%20%2831%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -240,14 +237,13 @@ void digDirts(int n, boolean isTNT) {
 {% tab title="Q6 Answer" %}
 **Best Case:** $$\Theta(\log(n))$$ if n is even. This will result in n being halved every function call.
 
-**Worst Case:**  $$\Theta(n)$$if n is odd. See the tree below for an illustration of what happens in this case- hopefully the diagram will make it clearer as to why it's O\(n\).
+**Worst Case:** $$\Theta(n)$$if n is odd. See the tree below for an illustration of what happens in this case- hopefully the diagram will make it clearer as to why it's O\(n\).
 
-![A diagram of what happens in the worst and best cases.](../.gitbook/assets/image%20%2854%29.png)
+![A diagram of what happens in the worst and best cases.](../.gitbook/assets/image%20%2857%29.png)
 
-![don&apos;t play with tnt, kids](../.gitbook/assets/image%20%2821%29.png)
+![don&apos;t play with tnt, kids](../.gitbook/assets/image%20%2822%29.png)
 {% endtab %}
 {% endtabs %}
-
 
 {% tabs %}
 {% tab title="Question 7" %}
@@ -276,14 +272,11 @@ public int PNH(char[] arr, int start, int end) {
 {% endtab %}
 
 {% tab title="Q7 Answer" %}
+**Best Case:** $$\Theta(n\log(n))$$ If none of the characters in char\[\] is 'a', then each call to PNH does $$\Theta(n)$$ work. Total work per layer is always N, with logN layers total.
 
-**Best Case:** $$\Theta(n\log(n))$$ If none of the characters in char[] is 'a', then each call to PNH does $$\Theta(n)$$ work. Total work per layer is always N, with logN layers total.
-
-**Worst Case:** $$\Theta(n!)$$ All of characters in char[] is 'a'. The rest is similar as Question 4. 
-
+**Worst Case:** $$\Theta(n!)$$ All of characters in char\[\] is 'a'. The rest is similar as Question 4.
 {% endtab %}
 {% endtabs %}
-
 
 {% tabs %}
 {% tab title="Question 8" %}
@@ -301,7 +294,7 @@ public int lastOne(char[] arr, int start, int end) {
         int temp = arr[start];
         arr[start] = arr[end];
         arr[end] = temp;
-    
+
         return lastOne(arr, start + 1, end) 
         + lastOne(arr, start, end - 1) 
         + lastOne(arr, start + 1, end - 1);
@@ -311,13 +304,9 @@ public int lastOne(char[] arr, int start, int end) {
 {% endtab %}
 
 {% tab title="Q8 Answer" %}
+**Best Case:** $$\Theta(n)$$ if the else if case is always true. This will produce a tree with height n/2, where each height does constant work.
 
-**Best Case:** $$\Theta(n)$$ if the else if case is always true. This will produce a tree with height n/2, where each height does constant work. 
-
-**Worst Case:** $$\Theta(3^n)$$ if else if case is never true. Sorry no diagram yet :((
-
+**Worst Case:** $$\Theta(3^n)$$ if else if case is never true. Sorry no diagram yet :\(\(
 {% endtab %}
 {% endtabs %}
-
-
 
