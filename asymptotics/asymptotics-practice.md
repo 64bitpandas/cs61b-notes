@@ -245,6 +245,10 @@ void digDirts(int n, boolean isTNT) {
 {% endtab %}
 {% endtabs %}
 
+## Challenge Problems
+
+These problems are quite difficult. Don't be concerned if you don't feel confident in solving them \(I certainly don't\).
+
 {% tabs %}
 {% tab title="Question 7" %}
 A huge disaster :ooo
