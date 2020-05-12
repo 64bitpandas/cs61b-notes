@@ -1,7 +1,7 @@
 # Sorting
 
-{% hint style="warning" %}
-This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
+{% hint style="info" %}
+This page is from my original notes, but will likely not upgrade it in the near future because I wrote a [20-page guide on sorting](https://docs.google.com/document/d/1dUfzdh5V3okrwFbB9o0PgtEBaLHyCqJFwpQWyQ53IeU/edit) that covers all of the sorts in far greater detail 🙂
 {% endhint %}
 
 ## Why sorting?

@@ -1,10 +1,10 @@
 # Binary Search
 
-{% hint style="danger" %}
-This page is incomplete. [Help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
-{% endhint %}
+Binary search is a way of finding a specific node in a tree. It only works on [binary trees](../../abstract-data-types/binary-trees/) due to its helpful sorted property. It simply traverses the tree, moving left if the current node is too large or right if it is too small.
 
-## Binary Search
+Binary search runs in $$\Theta(\log(n))$$ time for bushy trees, which is also the number of layers in a tree.
+
+## The Algorithm
 
 ```java
 public BST find(BST T, Key sk) {
@@ -20,6 +20,4 @@ public BST find(BST T, Key sk) {
     }
 }
 ```
-
-* Very fast! O\(log n\)
 

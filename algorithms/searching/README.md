@@ -1,6 +1,12 @@
 # Searching
 
-{% hint style="danger" %}
-This page is incomplete. [Help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
-{% endhint %}
+This section will cover some ways to find values in a set.
+
+{% page-ref page="binary-search.md" %}
+
+{% page-ref page="depth-first-search-dfs.md" %}
+
+{% page-ref page="breadth-first-search-bfs.md" %}
+
+
 
