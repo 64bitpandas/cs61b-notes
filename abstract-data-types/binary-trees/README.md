@@ -1,38 +1,47 @@
 # Binary Trees
 
-{% hint style="warning" %}
-This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
-{% endhint %}
-
 {% hint style="success" %}
 "The most important concept in computer science" - Josh Hug
 {% endhint %}
 
 ## Humble Origins
 
-* Start with a linked list
-* Put the start pointer in the middle
-* Make next pointers point to the middle value in each the left and right sides
-* Continue process recursively
+Linked lists are great, but we can do better! Let's try **rearranging the pointers** in an interesting way.
+
+Instead of starting at one end of the list, let's set our first pointer at the **middle** of the list!
+
+![](../../.gitbook/assets/image%20%2824%29.png)
+
+Now, let's make new pointers going to the **center** of each **sublist** on the left and right of the center.
+
+![](../../.gitbook/assets/image%20%2864%29.png)
+
+Let's do it again!
+
+![](../../.gitbook/assets/image%20%289%29.png)
+
+Would ya look at that, we've got a **tree**! 🌲
+
+![&#x1F332;&#x1F332;&#x1F332;&#x1F332;&#x1F332;](../../.gitbook/assets/image%20%2852%29.png)
 
 ## Types of Trees
 
+Right now, we can determine some properties that all trees have.
 
+* All trees have a **root node**.
+* All nodes can point to **child nodes.** Or, if they don't have any children, they are **leaves.** 
 
-**Definitions:**
+We can add more and more constraints to our tree to make them more useful!
 
-* **Tree:** An ADT with a node and branches.
-  * There must be exactly one path between any two nodes \(no looping pointers\)
-* **Rooted Tree:** One node is considered the root
-  * Every node except root has exactly one parent \(root has 0\)
-* **Binary Tree:** Every node has 0, 1, or 2 children
-* **Binary Search Tree:** A sorted binary tree
-  * Every key in the left subtree is less than the node key
-  * Every key in the right subtree is greater than the node key
-  * **Transitive, Complete, Antisymmetric**
-    * No duplicate keys allowed
-    * Must have well defined comparisons between any values \(either less than or greater than\)
-    * If p &lt; q and q &lt; r, p must be less than r as well
+First, let's add the constraint that **node can only have 2 or fewer children** to create a **binary tree.**
+
+Then, let's **ensure our tree is sorted** to create a **binary search tree.** A tree is sorted if it has these properties:
+
+* Every value in the **left subtree** of a node is **less than** the node's value.
+* Every value in the **right subtree** of a node is **greater than** the node's value.
+* Values are **transitive** - there are **no duplicate values**.
+* The tree is **complete** - it is possible to **compare any two values** in the tree and say that one is **either less than or greater than the other.**
+* The tree is **antisymmetric** - If `p < q` is true and `q < r` is also true, then it must follow that `p < r`.
 
 ## Tree Operations
 
@@ -71,53 +80,51 @@ public BST insert(BST T, Key sk) {
 
 ### Delete
 
-This one's a bit trickier because we need to make sure that the new tree still **preserves the binary search tree structure.** That means that we might have to shuffle around 
+This one's a bit trickier because we need to make sure that the new tree still **preserves the binary search tree structure.** That means that we might have to shuffle around nodes after the deletion. There are **three cases:**
 
-## Delete
+A\) The node to delete is a **leaf**. This is an easy case- just remove that node and you're done!
 
-* Must preserve tree structure as much as possible \(must find new root node!!\)
-* New root node must be greater than everything in left subtree and less than everything in right subtree
-  * New root is not necessarily a direct child of root node
-  * Choose either predecessor or successor \(must have either 0 or 1 children\) and replace root node with this \(Hibbard deletion\)
-    * The value immediately less than or greater than the node
+![Deleting a leaf.](../../.gitbook/assets/image%20%2821%29.png)
+
+B\) The node to delete has **one child.** In this case, **swap** the node with its child, then **delete the node.**
+
+![Deleting a node with one child.](../../.gitbook/assets/image%20%282%29.png)
+
+C\) The node to delete has **two children.** This one's trickier, because we still need to preserve the tree structure! In this case, we have to **traverse the node's children** to find the **next biggest value** and swap that up to replace the old node.
+
+![Deleting a node with two children.](../../.gitbook/assets/image%20%2816%29.png)
 
 ## Asymptotic Analysis
 
-**Best Case:** "Bushy" - every parent has exactly 2 children
+A binary tree can be **bushy** or **spindly.** These two cases have dramatically different performances!
 
-* Height will be O\(log N\)
-* Randomly inserting nodes will be close to this. Worst case is still O\(log N\) for this
-  * Problem: in real life, data doesn't all come in at the same time so we can't always randomize insertion
+**Bushy** trees are the **best case.** A tree is bushy if **every parent has exactly 2 children.**
 
-**Worst Case:** "Spindly" - every parent has exactly 1 child
+A bushy tree is guaranteed to have a height of $$\Theta(\log(n))$$ which means that the runtimes for adding and searching will also be $$\Theta(\log(n))$$ .
 
-* Height will be O\(N\)
+**Spindly** trees are the **worst case.** A tree is spindly if **every parent has exactly 1 child.** This makes the tree essentially just a linked list!
+
+A spindly tree has a height of  $$\Theta(n)$$ which means that the runtimes for adding and searching will also be $$\Theta(n)$$ .
+
+![](../../.gitbook/assets/image%20%2838%29.png)
+
+In [Balanced BSTs](balanced-search-structures.md), we will explore ways of guaranteeing that a tree is bushy!
 
 ## Limits of Trees
 
-* Tree based sets require all items to be comparable
-* Limited to O\(log N\) at best
+While trees are extremely versatile and fantastic for a variety of applications, trees have some limitations that make it difficult to use in some situations.
 
-
+* **All items in a tree need to be comparable.** We can't construct a binary tree out of categorical data, like models of cars, for example.
+* **The data must be hierarchical.** If data can be traversed through in multiple ways, or forms loops, [Graphs](../graphs.md) are probably better.
+* **The best case runtime is** $$\Theta(\log(n))$$ . This might seem good, but other data structures like [Tries](tries.md) and [Hash Tables](../hashing.md) can be as good as ****$$\Theta(1)$$ !
 
 ## Tree Traversals
 
-Example:
+Check out these pages for information on how to go through each element of a tree!
 
-```text
-    D
-B       F
-```
+{% page-ref page="../../algorithms/searching/depth-first-search-dfs.md" %}
 
-A C E G
+{% page-ref page="../../algorithms/searching/breadth-first-search-bfs.md" %}
 
-* **level order:** top to bottom, left to right: DBFACEG
 
-  **Depth First Traversals**
-
-  * Inorder: ABCDEFG
-  * Preorder: DBACFEG
-    * Good for printing directory listings
-  * Postorder: ACBEGFD
-    * Good for collecting file sizes
 

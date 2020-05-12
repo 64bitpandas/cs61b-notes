@@ -37,7 +37,7 @@ $$
 
 **Explanation:** The method `throwItem()` runs `n/2` times. Using the simplification rules, we can extract the constant `1/2` to simply get `n`.
 
-![Keep the change, ya filthy animal.](../.gitbook/assets/image%20%2856%29.png)
+![Keep the change, ya filthy animal.](../.gitbook/assets/image%20%2866%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -66,7 +66,7 @@ $$
 **Explanation:** There are **three** nested loops in this problem. Whenever there are nested loops whose runtimes are independent of each other, we need to **multiply** the runtimes in each loop.  
 So, we get: $$\Theta(n * n * 64)$$ which simplifies into `n^2`
 
-![That&apos;s a lot of items to loot...](../.gitbook/assets/image%20%2816%29.png)
+![That&apos;s a lot of items to loot...](../.gitbook/assets/image%20%2820%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -94,7 +94,7 @@ $$
 
 **Explanation:** Even though `stacksToLoot` is a user input, we're only concerned about finding the runtime for `n` so `stacksToLoot` can be treated like a constant! Therefore, we now have $$\Theta(n * s* 64)$$ where `s = stacksToLoot` which simplifies into `n`.
 
-![ok now this is getting a bit overboard](../.gitbook/assets/image%20%2852%29.png)
+![ok now this is getting a bit overboard](../.gitbook/assets/image%20%2861%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -124,7 +124,7 @@ $$
 
 **Explanation:** This tree recursion creates a tree with `n` layers. Each layer you go down, the number of calls multiplies by 4!
 
-![Tree diagram for method calls.](../.gitbook/assets/image%20%2835%29.png)
+![Tree diagram for method calls.](../.gitbook/assets/image%20%2843%29.png)
 
 This means that the number of calls in total will look like this:
 
@@ -134,7 +134,7 @@ $$
 
 And if you remember your power series, you'll know that this sum is equal to $$4^{n+1}-1$$ which simplifies into the final answer.
 
-![an image that makes you long for TreeCapacitator](../.gitbook/assets/image%20%286%29.png)
+![an image that makes you long for TreeCapacitator](../.gitbook/assets/image%20%288%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -160,7 +160,7 @@ $$
 
 **Explanation:** This tree recursion creates a tree with `n` layers. Each layer you go down, the number of calls multiplies by `n-1`...
 
-![What a mess \(!\)](../.gitbook/assets/image%20%2837%29.png)
+![What a mess \(!\)](../.gitbook/assets/image%20%2845%29.png)
 
 This means that the number of calls in total will look like this:
 
@@ -207,7 +207,7 @@ Item[] hopperSort(Item[] items) {
 
 **Note:** HopperSort is literally just Insertion Sort 😎🤣
 
-![hoppers rate 64/64](../.gitbook/assets/image%20%2831%29.png)
+![hoppers rate 64/64](../.gitbook/assets/image%20%2839%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -239,9 +239,9 @@ void digDirts(int n, boolean isTNT) {
 
 **Worst Case:** $$\Theta(n)$$if n is odd. See the tree below for an illustration of what happens in this case- hopefully the diagram will make it clearer as to why it's O\(n\).
 
-![A diagram of what happens in the worst and best cases.](../.gitbook/assets/image%20%2857%29.png)
+![A diagram of what happens in the worst and best cases.](../.gitbook/assets/image%20%2867%29.png)
 
-![don&apos;t play with tnt, kids](../.gitbook/assets/image%20%2822%29.png)
+![don&apos;t play with tnt, kids](../.gitbook/assets/image%20%2829%29.png)
 {% endtab %}
 {% endtabs %}
 

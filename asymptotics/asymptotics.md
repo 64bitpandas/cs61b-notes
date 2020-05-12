@@ -8,7 +8,7 @@ This concept is a big reason why a strong math background is helpful for compute
 
 The term **asymptotics,** or **asymptotic analysis,** refers to the idea of **analyzing functions when their inputs get really big.** This is like the **asymptotes** you might remember learning in math classes, where functions approach a value when they get very large inputs.
 
-![](../.gitbook/assets/image%20%2853%29.png)
+![](../.gitbook/assets/image%20%2862%29.png)
 
 Here, we can see that $$ y= \dfrac{x^3}{x^2 + 1}$$ looks basically identical to $$y = x$$ when x gets really big. Asymptotics is all about reducing functions to their eventual behaviors exactly like this!
 
@@ -54,7 +54,7 @@ There are **three** important types of runtime bounds that can be used to descri
 
 
 
-![A comparison of the three bounds.](../.gitbook/assets/image%20%2836%29.png)
+![A comparison of the three bounds.](../.gitbook/assets/image%20%2844%29.png)
 
 ## Orders of Growth
 
@@ -73,7 +73,7 @@ There are some **common functions** that many runtimes will simply into. Here th
 
 Don't worry about the examples you aren't familiar with- I will go into much more detail on their respective pages.
 
-![Source: bigocheatsheat.com. Check it out, it&apos;s great!](../.gitbook/assets/image%20%288%29.png)
+![Source: bigocheatsheat.com. Check it out, it&apos;s great!](../.gitbook/assets/image%20%2811%29.png)
 
 ## Asymptotic Analysis: Step by Step
 
