@@ -14,7 +14,7 @@ Instead of starting at one end of the list, let's set our first pointer at the *
 
 Now, let's make new pointers going to the **center** of each **sublist** on the left and right of the center.
 
-![](../../.gitbook/assets/image%20%2894%29.png)
+![](../../.gitbook/assets/image%20%2898%29.png)
 
 Let's do it again!
 
@@ -22,7 +22,7 @@ Let's do it again!
 
 Would ya look at that, we've got a **tree**! 🌲
 
-![&#x1F332;&#x1F332;&#x1F332;&#x1F332;&#x1F332;](../../.gitbook/assets/image%20%2879%29.png)
+![&#x1F332;&#x1F332;&#x1F332;&#x1F332;&#x1F332;](../../.gitbook/assets/image%20%2883%29.png)
 
 ## Types of Trees
 
@@ -106,7 +106,7 @@ A bushy tree is guaranteed to have a height of $$\Theta(\log(n))$$ which means t
 
 A spindly tree has a height of  $$\Theta(n)$$ which means that the runtimes for adding and searching will also be $$\Theta(n)$$ .
 
-![](../../.gitbook/assets/image%20%2856%29.png)
+![](../../.gitbook/assets/image%20%2859%29.png)
 
 In [Balanced BSTs](balanced-search-structures.md), we will explore ways of guaranteeing that a tree is bushy!
 

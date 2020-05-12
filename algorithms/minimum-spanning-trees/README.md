@@ -34,3 +34,5 @@ If the edges of the graph are not unique, there’s a chance that the MST is not
 
 The **Cut Property** states that the smallest crossing edge is always going to be in the MST, no matter how the cut is made.
 
+![](../../.gitbook/assets/image%20%2861%29.png)
+

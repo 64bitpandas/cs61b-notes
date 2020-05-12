@@ -29,7 +29,7 @@ Graphs can have **edge labels** if edges are numbered \(great for distances\). T
 
 Graphs are **connected** if all of the vertices are connected with edges, such that you can freely move from one vertex to any other vertex.
 
-![](../.gitbook/assets/image%20%28101%29.png)
+![](../.gitbook/assets/image%20%28105%29.png)
 
 ## Graph Queries
 

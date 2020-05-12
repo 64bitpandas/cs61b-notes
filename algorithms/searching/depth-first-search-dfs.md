@@ -12,7 +12,7 @@ Before we move on to searching, let's talk about **traversing. Traversal** is th
 
 For trees in particular, there are **three main ways** to traverse.
 
-![The example tree we will use for traversal illustrations.](../../.gitbook/assets/image%20%2884%29.png)
+![The example tree we will use for traversal illustrations.](../../.gitbook/assets/image%20%2888%29.png)
 
 The first way is **inorder** traversal, which visits **all left children**, then **the node itself,** then **all right children.** The end result should be that the nodes were visited in **sorted order.**
 

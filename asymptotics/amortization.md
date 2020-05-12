@@ -18,11 +18,11 @@ But what if we wanted to make an array resize itself every time it reaches capac
 
 First, we have to make a new array with a new size:
 
-![](../.gitbook/assets/image%20%2861%29.png)
+![](../.gitbook/assets/image%20%2865%29.png)
 
 Then, we have to copy over all of the old elements over:
 
-![](../.gitbook/assets/image%20%2847%29.png)
+![](../.gitbook/assets/image%20%2850%29.png)
 
 Finally, we can add in the new element!
 
@@ -51,7 +51,7 @@ $$
 
 Intuitively, this looks like this:
 
-![](../.gitbook/assets/image%20%2869%29.png)
+![](../.gitbook/assets/image%20%2873%29.png)
 
 Mathematically, it looks like this:
 
@@ -61,7 +61,7 @@ $$
 
 Which simplifies to $$2n$$if you recall your power series properties . **Therefore, this approach is** $$\Theta(n)$$ **!!**
 
-![Runtime graph for increasing values of n when doubling.](../.gitbook/assets/image%20%2858%29.png)
+![Runtime graph for increasing values of n when doubling.](../.gitbook/assets/image%20%2862%29.png)
 
 \*\*\*\*
 

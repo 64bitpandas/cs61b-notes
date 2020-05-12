@@ -26,23 +26,23 @@ Here, we start with a simple graph and have sorted all of its edges into a prior
 
 Since the edge **DE** is the shortest, we'll add that to our UnionFind first. In the process, we'll **remove DE from the priority queue.**
 
-![](../../.gitbook/assets/image%20%28102%29.png)
+![](../../.gitbook/assets/image%20%28106%29.png)
 
 We'll do the same thing with the next shortest path, **DC.**
 
-![](../../.gitbook/assets/image%20%2850%29.png)
+![](../../.gitbook/assets/image%20%2853%29.png)
 
 Now, let's move on to **AB.** Notice that this time, connecting A and B creates another **disjoint set!** Unlike Prim's Algorithm, Kruskal's Algorithm does not guarantee that a solution will form a tree structure until the very end.
 
-![](../../.gitbook/assets/image%20%2870%29.png)
+![](../../.gitbook/assets/image%20%2874%29.png)
 
 Now, let's connect **BC.**
 
-![](../../.gitbook/assets/image%20%2899%29.png)
+![](../../.gitbook/assets/image%20%28103%29.png)
 
 Since **CE** and **BD** would both form cycles if connected, **we are done 😄** Here's the final tree:
 
-![](../../.gitbook/assets/image%20%28103%29.png)
+![](../../.gitbook/assets/image%20%28108%29.png)
 
 ## PseudoCode
 

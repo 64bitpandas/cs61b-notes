@@ -19,11 +19,11 @@ In order to **join two values together,** we need to use the **union** function.
 
 There are lots of ways to represent this behavior. One possible method is to keep an **array of parent values** corresponding to each actual value. In the example above, for instance, we can choose 1 as our parent and make 2 fall under that. Let's see how this might work:
 
-![Parents list.](../.gitbook/assets/image%20%2865%29.png)
+![Parents list.](../.gitbook/assets/image%20%2869%29.png)
 
 Now, let's say we call `union(3,2)`. We can just set the parent of 3 to 2, as to create a structure like this:
 
-![union\(1,2\) followed by union\(3,2\)](../.gitbook/assets/image%20%2875%29.png)
+![union\(1,2\) followed by union\(3,2\)](../.gitbook/assets/image%20%2879%29.png)
 
 This looks a lot like a tree! 
 
