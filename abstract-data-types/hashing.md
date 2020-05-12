@@ -1,9 +1,5 @@
 # Hashing and Hash Tables
 
-{% hint style="warning" %}
-This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
-{% endhint %}
-
 ## Data Indexed Sets: Introduction
 
 So far, we've explored a whole bunch of ways we can store items, but they aren't really optimized for general searching. What if we could get searching in $$\Theta(1)$$ time??? Wouldn't that be nice!
