@@ -33,7 +33,7 @@ You'll see in the pseudocode and diagrams below that succesful relaxation only o
 * always visits vertices **in order of total distance from source**
 * relaxation always **fails on edges to visited vertices**
 * guarantees to work optimally **as long as** **edges are all non-negative**
-* solution always creates a **tree form**, true also for undirected graphs
+* solution always creates a **tree form.**
 * can think of as **union of shortest paths to all vertices**
 * **edges in solution tree always has V-1 edges**, where V = the number of vertices. This is because every vertex in the tree except the root should have **exactly one input.**
 

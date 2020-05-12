@@ -1,9 +1,5 @@
 # Graphs
 
-{% hint style="warning" %}
-This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
-{% endhint %}
-
 ## Introduction
 
 Graphs are simply a collection of **vertices** connected by **edges.** They're very similar to trees, but are much more versatile and don't require hierarchical relationships like trees do.
