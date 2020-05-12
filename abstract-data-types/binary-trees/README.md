@@ -10,19 +10,19 @@ Linked lists are great, but we can do better! Let's try **rearranging the pointe
 
 Instead of starting at one end of the list, let's set our first pointer at the **middle** of the list!
 
-![](../../.gitbook/assets/image%20%2829%29.png)
+![](../../.gitbook/assets/image%20%2830%29.png)
 
 Now, let's make new pointers going to the **center** of each **sublist** on the left and right of the center.
 
-![](../../.gitbook/assets/image%20%2885%29.png)
+![](../../.gitbook/assets/image%20%2887%29.png)
 
 Let's do it again!
 
-![](../../.gitbook/assets/image%20%2811%29.png)
+![](../../.gitbook/assets/image%20%2812%29.png)
 
 Would ya look at that, we've got a **tree**! 🌲
 
-![&#x1F332;&#x1F332;&#x1F332;&#x1F332;&#x1F332;](../../.gitbook/assets/image%20%2870%29.png)
+![&#x1F332;&#x1F332;&#x1F332;&#x1F332;&#x1F332;](../../.gitbook/assets/image%20%2872%29.png)
 
 ## Types of Trees
 
@@ -84,15 +84,15 @@ This one's a bit trickier because we need to make sure that the new tree still *
 
 A\) The node to delete is a **leaf**. This is an easy case- just remove that node and you're done!
 
-![Deleting a leaf.](../../.gitbook/assets/image%20%2825%29.png)
+![Deleting a leaf.](../../.gitbook/assets/image%20%2826%29.png)
 
 B\) The node to delete has **one child.** In this case, **swap** the node with its child, then **delete the node.**
 
-![Deleting a node with one child.](../../.gitbook/assets/image%20%283%29.png)
+![Deleting a node with one child.](../../.gitbook/assets/image%20%284%29.png)
 
 C\) The node to delete has **two children.** This one's trickier, because we still need to preserve the tree structure! In this case, we have to **traverse the node's children** to find the **next biggest value** and swap that up to replace the old node.
 
-![Deleting a node with two children.](../../.gitbook/assets/image%20%2819%29.png)
+![Deleting a node with two children.](../../.gitbook/assets/image%20%2820%29.png)
 
 ## Asymptotic Analysis
 
@@ -106,7 +106,7 @@ A bushy tree is guaranteed to have a height of $$\Theta(\log(n))$$ which means t
 
 A spindly tree has a height of  $$\Theta(n)$$ which means that the runtimes for adding and searching will also be $$\Theta(n)$$ .
 
-![](../../.gitbook/assets/image%20%2849%29.png)
+![](../../.gitbook/assets/image%20%2851%29.png)
 
 In [Balanced BSTs](balanced-search-structures.md), we will explore ways of guaranteeing that a tree is bushy!
 

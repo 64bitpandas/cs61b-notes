@@ -10,11 +10,11 @@ Adding an item to a stack or queue is called **pushing**. This will either put t
 
 You can think of a stack like a pile of pizza boxes- the one on the top is the first one you have to take off if you need one!
 
-![](../../.gitbook/assets/image%20%287%29.png)
+![](../../.gitbook/assets/image%20%288%29.png)
 
 On the other hand, you can think of a queue like lining up for a ride at Disneyland. The first person who gets in line will get to go first, and the last person who gets in will go last. \(Of course, we all know people cut and stuff- see [Priority Queues](stacks-and-queues.md#priority-queues) to see how this is better handled.\)
 
-![those lines tho](../../.gitbook/assets/image%20%284%29.png)
+![those lines tho](../../.gitbook/assets/image%20%285%29.png)
 
 ### Popping
 
@@ -30,5 +30,5 @@ Let's say you bought a VIP pass and get to cut to the front of the line for your
 
 A priority queue will solve this design need by introducing a new **priority** **tracking system** for each item in the queue! **If an item has a lower priority number, it will get to go first.** 
 
-![gotta grab those fastpasses yEEt &#x1F39F;](../../.gitbook/assets/image%20%2872%29.png)
+![gotta grab those fastpasses yEEt &#x1F39F;](../../.gitbook/assets/image%20%2874%29.png)
 

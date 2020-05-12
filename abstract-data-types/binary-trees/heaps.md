@@ -9,7 +9,7 @@ A heap is a **specific order of storing data,** often in a list. Heaps are very 
 
 When stored in a list, there is an **important rule** to figure out how to identify parent nodes and their children: **a node's parent has an index equal to half of that node's index.** More specifically, `parentIndex = nodeIndex / 2` where `/` has floor-division properties.
 
-![Converting a heapified list into a min-heap diagram.](../../.gitbook/assets/image%20%2816%29.png)
+![Converting a heapified list into a min-heap diagram.](../../.gitbook/assets/image%20%2817%29.png)
 
 ## The Heapify Algorithm
 
@@ -20,11 +20,11 @@ The most important heap algorithm is **heapify**, which converts any non-heap li
 
 Start with the element in the middle of the array \(which is the root of the heap\).
 
-![](../../.gitbook/assets/image%20%2871%29.png)
+![](../../.gitbook/assets/image%20%2873%29.png)
 
 If the root is smaller than either of its children \(larger for a min-heap\), swap it with its largest child \(smallest for a max-heap\).
 
-![](../../.gitbook/assets/image%20%2863%29.png)
+![](../../.gitbook/assets/image%20%2865%29.png)
 
 
 
@@ -32,7 +32,7 @@ If the root was swapped, recursively call heapify on the new position. Otherwise
 
 After heapify is complete, it should look like this:
 
-![](../../.gitbook/assets/image%20%2893%29.png)
+![](../../.gitbook/assets/image%20%2895%29.png)
 
 ## Practical Applications
 
