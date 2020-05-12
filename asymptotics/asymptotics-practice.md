@@ -180,6 +180,7 @@ Hey, that looks a lot like the Taylor series for $$e$$! Since `e` is a constant,
 {% endtab %}
 {% endtabs %}
 
+
 ## Best and Worst Case Runtimes
 
 {% tabs %}
@@ -244,6 +245,77 @@ void digDirts(int n, boolean isTNT) {
 ![A diagram of what happens in the worst and best cases.](../.gitbook/assets/image%20%2850%29.png)
 
 ![don&apos;t play with tnt, kids](../.gitbook/assets/image%20%2818%29.png)
+{% endtab %}
+{% endtabs %}
+
+
+{% tabs %}
+{% tab title="Question 7" %}
+Help me I'm not creative :ooo
+
+```java
+//initially start is 0, end is arr.length.
+public int PNH(char[] arr, int start, int end) {
+    if (end <= start) {
+        return 1;
+    }
+    int counter = 0; 
+    int result = 0;
+    for (int i = start; i < end; i += 1) {
+        if (arr[i] == 'a') {
+            counter += 1;
+        }
+    }
+    for (int i = 0; i < counter; i += 1) {
+        result += PNH(arr, start + 1, end);
+    }
+    int mid = start + (end - start) / 2;
+    return PNH(arr, start, mid) + PNH(arr, mid + 1, end);
+}
+```
+{% endtab %}
+
+{% tab title="Q7 Answer" %}
+
+**Best Case:** $$\Theta(n\log(n))$$ If none of the characters in char[] is 'a', then each call to PNH does $$\Theta(n)$$ work. Total work per layer is always N, with logN layers total.
+
+**Worst Case:** $$\Theta(n!)$$ All of characters in char[] is 'a'. The rest is similar as Question 4. 
+
+{% endtab %}
+{% endtabs %}
+
+
+{% tabs %}
+{% tab title="Question 8" %}
+Congrats for making it this far! By now you should be an expert in asymptotic analysis :P Here's one last problem:
+
+```java
+//initially start is 0, end is arr.length.
+public int lastOne(char[] arr, int start, int end) {
+    if (end <= start) {
+        return 1;
+    }
+    else if (arr[start] <= arr[end]) {
+        return lastOne(arr, start + 1, end - 1);
+    } else {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+    
+        return lastOne(arr, start + 1, end) 
+        + lastOne(arr, start, end - 1) 
+        + lastOne(arr, start + 1, end - 1);
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Q8 Answer" %}
+
+**Best Case:** $$\Theta(n)$$ if the else if case is always true. This will produce a tree with height n/2, where each height does constant work. 
+
+**Worst Case:** $$\Theta(3^n)$$ if else if case is never true. Sorry no diagram yet :((
+
 {% endtab %}
 {% endtabs %}
 
