@@ -30,5 +30,5 @@ Let's say you bought a VIP pass and get to cut to the front of the line for your
 
 A priority queue will solve this design need by introducing a new **priority** **tracking system** for each item in the queue! **If an item has a lower priority number, it will get to go first.** 
 
-![gotta grab those fastpasses yEEt &#x1F39F;](../../.gitbook/assets/image%20%2867%29.png)
+![gotta grab those fastpasses yEEt &#x1F39F;](../../.gitbook/assets/image%20%2872%29.png)
 
