@@ -35,3 +35,27 @@ Catching: TBD
 * Alternate to custom exceptions is to handle exception cases.
   * Example: Make code "null-safe" by checking to make sure inputs are not null before accessing them
 
+
+## Example:
+This example illustrates the order in which blocks are executed in a try-catch block.
+
+```java
+static String tryCatchFinally() {
+        try {
+            System.out.println("trying");
+            throw new Exception();
+        } catch (Exception e) {
+            System.out.println("catching");
+            return "done catch";
+        } finally {
+            System.out.println("finally");
+        }
+    }
+```
+  
+- System.out.println(tryCatchFinally()) prints trying, catching, finally, done catch
+- If the try block throws an uncaught Exception (i.e. if catch block does not exist or catch block does not handle the type of Exception that is thrown in the try block), Java halts execution of the try block, **executes the finally block**, then raises a runtime error 
+- **Important:** finally is always called!!
+
+
+

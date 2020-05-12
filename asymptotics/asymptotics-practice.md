@@ -247,7 +247,7 @@ void digDirts(int n, boolean isTNT) {
 
 {% tabs %}
 {% tab title="Question 7" %}
-Help me I'm not creative :ooo
+A huge disaster :ooo
 
 ```java
 //initially start is 0, end is arr.length.
@@ -274,7 +274,8 @@ public int PNH(char[] arr, int start, int end) {
 {% tab title="Q7 Answer" %}
 **Best Case:** $$\Theta(n\log(n))$$ If none of the characters in char\[\] is 'a', then each call to PNH does $$\Theta(n)$$ work. Total work per layer is always N, with logN layers total.
 
-**Worst Case:** $$\Theta(n!)$$ All of characters in char\[\] is 'a'. The rest is similar as Question 4.
+**Worst Case:** $$\Theta(n!)$$ All of characters in char\[\] is 'a'. In this case, the for loop recursive calls will dominate the runtime, because it'll be the main part of the recursive tree. The interval start to end is decreased by one in the for loop recursive calls, while that interval is halved in the return statement recursive calls. This means the return statement recursive calls will reach the base case in logn levels, while the recursive calls in the for loop will take n levels. Thus, we can proceed with the same analysis as question 4.
+
 {% endtab %}
 {% endtabs %}
 
