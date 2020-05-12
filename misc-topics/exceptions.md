@@ -16,7 +16,7 @@ This page is from my original notes and is not up to the latest quality standard
   * All checked exception must have `throws` in the method declaration. Example: `void test() throws IOException`
   * Parents must also declare throws if overriding a method that throws an exception
 
-![Some of the more common Exception types in Java.](../.gitbook/assets/image%20%2851%29.png)
+![Some of the more common Exception types in Java.](../.gitbook/assets/image%20%2854%29.png)
 
 ## Implicit Exception
 
@@ -35,8 +35,8 @@ Catching: TBD
 * Alternate to custom exceptions is to handle exception cases.
   * Example: Make code "null-safe" by checking to make sure inputs are not null before accessing them
 
-
 ## Example:
+
 This example illustrates the order in which blocks are executed in a try-catch block.
 
 ```java
@@ -52,10 +52,8 @@ static String tryCatchFinally() {
         }
     }
 ```
-  
-- System.out.println(tryCatchFinally()) prints trying, catching, finally, done catch
-- If the try block throws an uncaught Exception (i.e. if catch block does not exist or catch block does not handle the type of Exception that is thrown in the try block), Java halts execution of the try block, **executes the finally block**, then raises a runtime error 
-- **Important:** finally is always called!!
 
-
+* System.out.println\(tryCatchFinally\(\)\) prints trying, catching, finally, done catch
+* If the try block throws an uncaught Exception \(i.e. if catch block does not exist or catch block does not handle the type of Exception that is thrown in the try block\), Java halts execution of the try block, **executes the finally block**, then raises a runtime error 
+* **Important:** finally is always called!!
 

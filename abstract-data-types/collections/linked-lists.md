@@ -17,7 +17,7 @@ The linked list is an extremely common recursive data structure that allows stor
 7. **Doubly Linked:** Nodes have both first and last pointers for even faster traversal.
 8. **Circular list:** Sentinel last pointer points to the last value in the node, allowing for fast removeLast\(\).
 
-![An illustration of an effective linked list.](../../.gitbook/assets/image%20%2845%29.png)
+![An illustration of an effective linked list.](../../.gitbook/assets/image%20%2848%29.png)
 
 ## Method List
 
