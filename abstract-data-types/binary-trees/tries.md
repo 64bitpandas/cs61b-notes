@@ -18,7 +18,7 @@ This is great because it makes the `add()` and `contains()` functions run in $$\
 
 We can improve this data structure a lot- for instance, we can condense the leaves to reduce the number of nodes like this:
 
-![](../../.gitbook/assets/image%20%2852%29.png)
+![](../../.gitbook/assets/image%20%2855%29.png)
 
 I won't go into too much detail on how to optimize it further, or how to implement the actual functions efficiently, but hopefully you'll have a good sense of how to do it yourself after learning about concepts like [Hashing and Hash Tables](../hashing.md) or [Sets](../collections/sets.md) etc.
 

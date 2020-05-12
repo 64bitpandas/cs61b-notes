@@ -20,11 +20,11 @@ The most important heap algorithm is **heapify**, which converts any non-heap li
 
 Start with the element in the middle of the array \(which is the root of the heap\).
 
-![](../../.gitbook/assets/image%20%2856%29.png)
+![](../../.gitbook/assets/image%20%2860%29.png)
 
 If the root is smaller than either of its children \(larger for a min-heap\), swap it with its largest child \(smallest for a max-heap\).
 
-![](../../.gitbook/assets/image%20%2851%29.png)
+![](../../.gitbook/assets/image%20%2854%29.png)
 
 
 
@@ -32,7 +32,7 @@ If the root was swapped, recursively call heapify on the new position. Otherwise
 
 After heapify is complete, it should look like this:
 
-![](../../.gitbook/assets/image%20%2873%29.png)
+![](../../.gitbook/assets/image%20%2877%29.png)
 
 ## Practical Applications
 

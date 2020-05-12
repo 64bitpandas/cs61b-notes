@@ -12,17 +12,17 @@ The Minimax algorithm is often used for making AI's for turn-based games. It rel
 
 Minimax is quite difficult to understand just by studying its rules. In order to really know what's going on, we need to know why we have all of these rules and what everything represents. Here's how I think about it:
 
-![](../.gitbook/assets/image%20%2862%29.png)
+![](../.gitbook/assets/image%20%2866%29.png)
 
-![](../.gitbook/assets/image%20%2838%29.png)
+![](../.gitbook/assets/image%20%2840%29.png)
 
 ![](../.gitbook/assets/image%20%287%29.png)
 
-![](../.gitbook/assets/image%20%2860%29.png)
+![](../.gitbook/assets/image%20%2864%29.png)
 
-![](../.gitbook/assets/image%20%2837%29.png)
+![](../.gitbook/assets/image%20%2839%29.png)
 
-![](../.gitbook/assets/image%20%2826%29.png)
+![](../.gitbook/assets/image%20%2827%29.png)
 
 ![](../.gitbook/assets/image%20%2820%29.png)
 
@@ -38,13 +38,13 @@ Here's a tree. Figure out:
 * Which branches are pruned
 * The alpha and beta values at each visited node
 
-![](../.gitbook/assets/image%20%2863%29.png)
+![](../.gitbook/assets/image%20%2867%29.png)
 {% endtab %}
 
 {% tab title="Q1 Answer" %}
 Here's my answer! The green arrows denote the order in which the nodes are visited. Note that the branches are pruned every time **alpha is greater than beta.** 
 
-![](../.gitbook/assets/image%20%2874%29.png)
+![](../.gitbook/assets/image%20%2878%29.png)
 {% endtab %}
 {% endtabs %}
 
