@@ -32,7 +32,7 @@ If the root was swapped, recursively call heapify on the new position. Otherwise
 
 After heapify is complete, it should look like this:
 
-![](../../.gitbook/assets/image%20%2885%29.png)
+![](../../.gitbook/assets/image%20%2886%29.png)
 
 ## Practical Applications
 

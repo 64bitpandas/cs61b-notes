@@ -8,7 +8,7 @@ This concept is a big reason why a strong math background is helpful for compute
 
 The term **asymptotics,** or **asymptotic analysis,** refers to the idea of **analyzing functions when their inputs get really big.** This is like the **asymptotes** you might remember learning in math classes, where functions approach a value when they get very large inputs.
 
-![](../.gitbook/assets/image%20%2876%29.png)
+![](../.gitbook/assets/image%20%2877%29.png)
 
 Here, we can see that $$ y= \dfrac{x^3}{x^2 + 1}$$ looks basically identical to $$y = x$$ when x gets really big. Asymptotics is all about reducing functions to their eventual behaviors exactly like this!
 

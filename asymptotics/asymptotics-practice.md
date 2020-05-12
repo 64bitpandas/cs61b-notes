@@ -37,7 +37,7 @@ $$
 
 **Explanation:** The method `throwItem()` runs `n/2` times. Using the simplification rules, we can extract the constant `1/2` to simply get `n`.
 
-![Keep the change, ya filthy animal.](../.gitbook/assets/image%20%2880%29.png)
+![Keep the change, ya filthy animal.](../.gitbook/assets/image%20%2881%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -94,7 +94,7 @@ $$
 
 **Explanation:** Even though `stacksToLoot` is a user input, we're only concerned about finding the runtime for `n` so `stacksToLoot` can be treated like a constant! Therefore, we now have $$\Theta(n * s* 64)$$ where `s = stacksToLoot` which simplifies into `n`.
 
-![ok now this is getting a bit overboard](../.gitbook/assets/image%20%2875%29.png)
+![ok now this is getting a bit overboard](../.gitbook/assets/image%20%2876%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -239,7 +239,7 @@ void digDirts(int n, boolean isTNT) {
 
 **Worst Case:** $$\Theta(n)$$if n is odd. See the tree below for an illustration of what happens in this case- hopefully the diagram will make it clearer as to why it's O\(n\).
 
-![A diagram of what happens in the worst and best cases.](../.gitbook/assets/image%20%2881%29.png)
+![A diagram of what happens in the worst and best cases.](../.gitbook/assets/image%20%2882%29.png)
 
 ![don&apos;t play with tnt, kids](../.gitbook/assets/image%20%2834%29.png)
 {% endtab %}

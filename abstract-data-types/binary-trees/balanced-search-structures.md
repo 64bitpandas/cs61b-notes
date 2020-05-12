@@ -47,7 +47,7 @@ In order to ensure that adding new nodes won't break the Red Black Tree structur
 
 A "left rotation on 7" looks like this:
 
-![](../../.gitbook/assets/image%20%2882%29.png)
+![](../../.gitbook/assets/image%20%2883%29.png)
 
 Notice that the **8** gets moved to be a **right child** of **7** after the rotation! This is necessary to preserve the binary tree structure.
 

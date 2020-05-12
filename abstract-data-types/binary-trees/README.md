@@ -14,7 +14,7 @@ Instead of starting at one end of the list, let's set our first pointer at the *
 
 Now, let's make new pointers going to the **center** of each **sublist** on the left and right of the center.
 
-![](../../.gitbook/assets/image%20%2878%29.png)
+![](../../.gitbook/assets/image%20%2879%29.png)
 
 Let's do it again!
 

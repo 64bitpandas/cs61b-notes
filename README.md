@@ -17,7 +17,7 @@ This guide is written to be as easy to follow and digestible as possible😀I've
 
 ### The 61B Concept Map
 
-![](.gitbook/assets/image%20%2871%29.png)
+![](.gitbook/assets/image%20%2872%29.png)
 
 ## Who is this for?
 
@@ -46,7 +46,7 @@ There are also plenty of practice problems to try out! Here's an non-exhaustive 
 
 Fork the [GitHub repository](https://github.com/64bitpandas/cs61b-notes) and create a pull request. All contributions are welcome! Pages are formatted in [Markdown syntax](https://docs.gitbook.com/editing-content/markdown). Please **edit existing pages only** unless you have [created an issue](https://github.com/64bitpandas/cs61b-notes/issues) and I have gotten back to you about making a new page. Thanks 😄
 
-The pages that could be most improved \(in no particular order\) are [Union Find \(Disjoint Sets\)](abstract-data-types/union-find-disjoint-sets.md), [Stacks and Queues](abstract-data-types/collections/stacks-and-queues.md), [Linked Lists](abstract-data-types/collections/linked-lists.md), [Sets](abstract-data-types/collections/sets.md), [Sorting](sorting/sorting-basics.md), [Binary Search](algorithms/searching/binary-search.md), [Shortest Paths](algorithms/shortest-paths/), and [Exceptions](misc-topics/exceptions.md). Feel free to add whatever content you like \(explanations, examples, practice problems, memes...\) to these!
+The pages that could be most improved \(in no particular order\) are [Union Find \(Disjoint Sets\)](abstract-data-types/union-find-disjoint-sets.md), [Stacks and Queues](abstract-data-types/collections/stacks-and-queues.md), [Linked Lists](abstract-data-types/collections/linked-lists.md), [Sets](abstract-data-types/collections/sets.md), [Sorting](sorting/sorting-basics.md), [Searching](algorithms/searching/), [Binary Search](algorithms/searching/binary-search.md), [Shortest Paths](algorithms/shortest-paths/), and [Exceptions](misc-topics/exceptions.md). Feel free to add whatever content you like \(explanations, examples, practice problems, memes...\) to these!
 
 Additionally, there are plenty of topics \(Regex, Testing, Files/Scanners, Ranges, GUI just to name a few\) that aren't currently covered in this guide. If you want to add one of these topics, please create an issue first but it will almost certainly be approved.
 

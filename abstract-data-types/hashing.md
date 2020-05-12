@@ -22,7 +22,7 @@ For instance, let's use the **first letter of a word** as the hash code. We have
 
 While this solution is great, it still has another **major drawback**, which can be illustrated with this example:
 
-![](../.gitbook/assets/image%20%2873%29.png)
+![](../.gitbook/assets/image%20%2874%29.png)
 
 In the worst case, this just turns back into a **linked list!** That means the runtime just went from O\(1\) to O\(n\), and that's no good.
 
