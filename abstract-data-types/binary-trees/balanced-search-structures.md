@@ -18,7 +18,7 @@ Adding values to a B Tree can be a bit tricky because we need to make sure all t
 
 If a node already has 2 or more children, place the new value in one of its existing children.
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2848%29.png)
 
 If a node is full \(reaches the limit\), we must **split the node** by **moving one value up to the parent** and **creating another child node**. Here, we'll use a limit of **3**.
 
@@ -37,7 +37,7 @@ If a node is full \(reaches the limit\), we must **split the node** by **moving 
 
 **Black nodes** are just like any normal binary tree node, but **Red nodes** represent the nodes in B Trees that have **more than one value.** For example, let's convert the B Tree we were working with before into a RB Tree.
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2868%29.png)
 
 In order to make our lives easier, we'll restrict our Red Black trees into **left leaning red black trees** which can **only have red nodes on the left.** 
 
@@ -47,7 +47,7 @@ In order to ensure that adding new nodes won't break the Red Black Tree structur
 
 A "left rotation on 7" looks like this:
 
-![](../../.gitbook/assets/image%20%2896%29.png)
+![](../../.gitbook/assets/image%20%28100%29.png)
 
 Notice that the **8** gets moved to be a **right child** of **7** after the rotation! This is necessary to preserve the binary tree structure.
 

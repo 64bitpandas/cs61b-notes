@@ -18,6 +18,32 @@ In order to optimally check if adding an edge to our MST creates a cycle, we wil
 
 To run the algorithm, we start by adding all the edges into a [PriorityQueue](../../abstract-data-types/collections/stacks-and-queues.md). This gives us our edges in sorted order. Now, we iterate through the PriorityQueue by removing the edge with highest priority, checking if adding it forms a cycle, and adding it to our MST if it doesn't form a cycle.
 
+Let's see an example of Kruskal's Algorithm in action!
+
+Here, we start with a simple graph and have sorted all of its edges into a priority queue.
+
+![](../../.gitbook/assets/image%20%2834%29.png)
+
+Since the edge **DE** is the shortest, we'll add that to our UnionFind first. In the process, we'll **remove DE from the priority queue.**
+
+![](../../.gitbook/assets/image%20%28102%29.png)
+
+We'll do the same thing with the next shortest path, **DC.**
+
+![](../../.gitbook/assets/image%20%2850%29.png)
+
+Now, let's move on to **AB.** Notice that this time, connecting A and B creates another **disjoint set!** Unlike Prim's Algorithm, Kruskal's Algorithm does not guarantee that a solution will form a tree structure until the very end.
+
+![](../../.gitbook/assets/image%20%2870%29.png)
+
+Now, let's connect **BC.**
+
+![](../../.gitbook/assets/image%20%2899%29.png)
+
+Since **CE** and **BD** would both form cycles if connected, **we are done 😄** Here's the final tree:
+
+![](../../.gitbook/assets/image%20%28103%29.png)
+
 ## PseudoCode
 
 ```java

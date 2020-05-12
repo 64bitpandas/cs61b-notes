@@ -13,19 +13,19 @@ The scores themselves are generated using a **heuristic function** that assesses
 
 In most games, you and your opponent will take turns, so each layer will alternate node type, like this:
 
-![](../.gitbook/assets/image%20%2835%29.png)
+![](../.gitbook/assets/image%20%2836%29.png)
 
 In most games, this tree will spiral out of control because there are far too many nodes to possibly analyze \(maybe even an infinite number\)! Therefore, we need to set a **depth** to stop searching and compute a heuristic. For example, if the depth is **3**, it'll look something like this:
 
-![](../.gitbook/assets/image%20%2864%29.png)
+![](../.gitbook/assets/image%20%2866%29.png)
 
 Now that the tree has bottomed out at the heuristic layer, we can start going back up to figure out which move we should make! The rules are simple: **min-nodes take the smallest of the values** while **max-nodes take the largest of the values.** Here's the first layer, for example:
 
-![](../.gitbook/assets/image%20%2843%29.png)
+![](../.gitbook/assets/image%20%2844%29.png)
 
 Here's the entire tree filled out:
 
-![](../.gitbook/assets/image%20%2840%29.png)
+![](../.gitbook/assets/image%20%2841%29.png)
 
 ## **Alpha-Beta Pruning** 
 
@@ -46,15 +46,15 @@ This is a pretty tough concept to grasp, and that's why I've illustrated how it 
 
 Minimax is quite difficult to understand just by studying its rules. In order to really know what's going on, we need to know why we have all of these rules and what everything represents. Here's how I think about it:
 
-![](../.gitbook/assets/image%20%2885%29.png)
+![](../.gitbook/assets/image%20%2888%29.png)
 
-![](../.gitbook/assets/image%20%2850%29.png)
+![](../.gitbook/assets/image%20%2852%29.png)
 
 ![](../.gitbook/assets/image%20%289%29.png)
 
-![](../.gitbook/assets/image%20%2882%29.png)
+![](../.gitbook/assets/image%20%2885%29.png)
 
-![](../.gitbook/assets/image%20%2849%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
 ![](../.gitbook/assets/image%20%2831%29.png)
 
@@ -72,13 +72,13 @@ Here's a tree. Figure out:
 * Which branches are pruned
 * The alpha and beta values at each visited node
 
-![](../.gitbook/assets/image%20%2887%29.png)
+![](../.gitbook/assets/image%20%2890%29.png)
 {% endtab %}
 
 {% tab title="Q1 Answer" %}
 Here's my answer! The green arrows denote the order in which the nodes are visited. Note that the branches are pruned every time **alpha is greater than beta.** 
 
-![](../.gitbook/assets/image%20%28100%29.png)
+![](../.gitbook/assets/image%20%28106%29.png)
 {% endtab %}
 {% endtabs %}
 

@@ -16,7 +16,7 @@ This page is from my original notes and is not up to the latest quality standard
   * All checked exception must have `throws` in the method declaration. Example: `void test() throws IOException`
   * Parents must also declare throws if overriding a method that throws an exception
 
-![Some of the more common Exception types in Java.](../.gitbook/assets/image%20%2865%29.png)
+![Some of the more common Exception types in Java.](../.gitbook/assets/image%20%2867%29.png)
 
 ## Implicit Exception
 
