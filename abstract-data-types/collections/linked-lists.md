@@ -83,7 +83,9 @@ The linked list is an extremely common recursive data structure that allows stor
       <td style="text-align:left"></td>
     </tr>
   </tbody>
-</table>## Limitation: Arbitrary Retrieval
+</table>
+
+## Limitation: Arbitrary Retrieval
 
 You may have noticed in the chart above that it takes $$\Theta(n)$$  time to retrieve arbitrary values from the list. This will get really slow if the list is large! If arbitrary values need to be accessed frequently, [Arrays](arrays.md) are much better.
 

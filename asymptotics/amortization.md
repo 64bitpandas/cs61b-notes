@@ -37,7 +37,7 @@ Finally, we can add in the new element!
 
 ### **What if we doubled the size instead of adding one?**
 
-* A single resizing will take $$\Theta(2n)$$ time _\*\*_which simplifies into $$\Theta(n)$$ time.
+* A single resizing will take $$\Theta(2n)$$ time \_\*\*\_which simplifies into $$\Theta(n)$$ time.
   * We do this every time the array hits a power of 2 \(2, 4, 8, 16, 32 ...\). 
 * Adding a single element will take $$\Theta(1)$$ time.
   * We do this every time we add a new element, so in all we add n elements. Therefore, this is an 
@@ -61,7 +61,11 @@ $$
 
 Which simplifies to $$2n$$if you recall your power series properties . **Therefore, this approach is** $$\Theta(n)$$ **!!**
 
-![Runtime graph for increasing values of n when doubling.](../.gitbook/assets/image%20%2862%29.png)
+![](../.gitbook/assets/image%20%28115%29.png)
 
-\*\*\*\*
+
+
+
+
+
 
