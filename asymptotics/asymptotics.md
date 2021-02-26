@@ -48,7 +48,7 @@ There are **three** important types of runtime bounds that can be used to descri
 
 **Big O** is an **upper bound** for a function growth rate. That means that **the function grows slower or the same rate as the Big O function.** For example, a valid Big O bound for $$log(n) + n$$ is $$O(n^2) $$ since $$n^2$$ grows at a faster rate.
 
-**Big Omega** is a **lower bound** for a function growth rate. That means that **the function grows faster or the same rate as the Big Omega function.** For example, a valid Big Omega bound for  $$log(n) + n$$ is $$\Omega(log(n)) $$ since $$1$$ \(a constant\) grows at a slower rate.
+**Big Omega** is a **lower bound** for a function growth rate. That means that **the function grows faster or the same rate as the Big Omega function.** For example, a valid Big Omega bound for  $$log(n) + n$$ is $$\Omega(1) $$ since $$1$$ \(a constant\) grows at a slower rate.
 
 **Big Theta** is a **middle ground** that describes the function that grows at the **same rate** as the actual function. **Big Theta only exists if there is a valid Big O that is equal to a valid Big Omega.** For example, a valid Big Theta bound for  $$log(n) + n$$ is $$\Theta(n) $$ since $$n$$ grows at the same rate \(log n is much slower so it adds an insignificant amount\).
 
@@ -79,8 +79,8 @@ Don't worry about the examples you aren't familiar with- I will go into much mor
 
 1. Identify the function that needs to be analyzed.
 2. Identify the parameter to use as $$n$$.
-3. Identify the measurement that needs to be taken.
+3. Identify the measurement that needs to be taken. \(Time, space, etc.\)
 4. Generate a function that represents the complexity. If you need help with this step, [try some problems!](asymptotics-practice.md)
-5. [Simply](asymptotics.md#simplifying-functions) the function.
-6. Select the correct bounds.
+5. [Simplify](asymptotics.md#simplifying-functions) the function \(remove constants, smaller terms, and other variables\).
+6. Select the correct bounds \(O, Omega, Theta\) for particular cases \(best, worst, overall\).
 
