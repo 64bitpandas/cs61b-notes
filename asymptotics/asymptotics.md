@@ -42,6 +42,11 @@ Since we **only care about the general shape of the function,** we can keep thin
 * **Remove all constants.** For example,  $$5log(3n)$$ can just be simplified to $$log(n)$$since constants don't change the overall shape of a function.
 * **Remove all other variables.** If a function is really $$log(n + m) $$ but we only care about n, then we can simply it into  $$log(n)$$.
 
+There are two cases where we can't remove other variables and constants though, and they are:
+
+* A polynomial term $$n^c$$\(because $$n^2$$grows slower than $$n^3$$, for example\), and
+* An exponential term $$c^n$$\(because $$2^n$$grows slower than $$3^n$$, for example\).
+
 ## The Big Bounds
 
 There are **three** important types of runtime bounds that can be used to describe functions. These bounds put restrictions on how slow or fast we can expect that function to grow!
