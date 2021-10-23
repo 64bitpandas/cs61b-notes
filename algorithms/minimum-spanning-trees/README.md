@@ -8,9 +8,9 @@ description: Special thanks to Arin for writing this page!
 
 A **spanning tree** T is a subgraph of a graph G where T:
 
-* Is connected \(there's a path to every vertex\)
-* Is acyclic \(no cycles\)
-* Includes every vertex \(spanning property\)
+* Is connected (there's a path to every vertex)
+* Is acyclic (no cycles)
+* Includes every vertex (spanning property)
 
 **Notice:** the first two properties defines a tree structure, and the last property makes the tree spanning.
 
@@ -28,11 +28,10 @@ If the edges of the graph are not unique, there’s a chance that the MST is not
 
 ## Cuts Property
 
-* A **cut** is defined as assigning the nodes in a graph into two sets. 
+* A **cut** is defined as assigning the nodes in a graph into two sets.&#x20;
 * A **crossing edge** is an edge that connects two nodes that are in different sets
 * The smallest crossing edge is the crossing edge with smallest weight
 
 The **Cut Property** states that the smallest crossing edge is always going to be in the MST, no matter how the cut is made.
 
-![](../../.gitbook/assets/image%20%2861%29.png)
-
+![](<../../.gitbook/assets/image (109).png>)

@@ -2,24 +2,24 @@
 
 ## What is Access Control?
 
-In Java, we can specify the **level of access** certain variables and methods have. With this power, we can show or hide these variables to other classes and references on demand!
+In Java, we can specify the **level of access **certain variables and methods have. With this power, we can show or hide these variables to other classes and references on demand!
 
 There are **4** modifier levels that get progressively more open:
 
-* **Private:** Only this class can see it.
-* **Package Protected \(the default level\):** All classes in the **same package** can see it.
-* **Protected: Subclasses** \(that inherit from the parent\) can also see it.
-* **Public:** All classes in the program can see it.
+* **Private: **Only this class can see it.
+* **Package Protected (the default level): **All classes in the **same package** can see it.
+* **Protected: Subclasses **(that inherit from the parent) can also see it.
+* **Public: **All classes in the program can see it.
 
-![A chart comparing the different access modifiers. The black bar is the default \(&quot;package protected&quot;\).](../.gitbook/assets/image%20%2887%29.png)
+![A chart comparing the different access modifiers. The black bar is the default ("package protected").](<../.gitbook/assets/image (5).png>)
 
 ## Why do we need access control?
 
 Access control works really well with other OOP concepts to help structure programs better and make them easier to understand. Here are some of the major benefits:
 
-* Access control is **self documenting.** Usually, there's a reason for making certain variables private and others public, and no more needs to be said for that to be understood.
-* **It's safe to change private methods without worrying about breaking things.** If a method is private, we know that the only references are within the same class, so we can edit them however we want without making other classes error as well.
-* **Private/protected variables don't need to be understood by users.** If someone needs to use your program, they don't need to learn how to use any private methods since those will be hidden to them.
+* Access control is **self documenting. **Usually, there's a reason for making certain variables private and others public, and no more needs to be said for that to be understood.
+* **It's safe to change private methods without worrying about breaking things. **If a method is private, we know that the only references are within the same class, so we can edit them however we want without making other classes error as well.
+* **Private/protected variables don't need to be understood by users. **If someone needs to use your program, they don't need to learn how to use any private methods since those will be hidden to them.
 
 ## Practice
 
@@ -72,4 +72,3 @@ Which variables can be accessed in NestedA?
 None of them, because NestedA is static and cannot reference any non-static variables.
 {% endtab %}
 {% endtabs %}
-

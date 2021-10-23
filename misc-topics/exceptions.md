@@ -16,7 +16,7 @@ This page is from my original notes and is not up to the latest quality standard
   * All checked exception must have `throws` in the method declaration. Example: `void test() throws IOException`
   * Parents must also declare throws if overriding a method that throws an exception
 
-![Some of the more common Exception types in Java.](../.gitbook/assets/image%20%2871%29.png)
+![Some of the more common Exception types in Java.](<../.gitbook/assets/image (4).png>)
 
 ## Implicit Exception
 
@@ -53,7 +53,6 @@ static String tryCatchFinally() {
     }
 ```
 
-* System.out.println\(tryCatchFinally\(\)\) prints trying, catching, finally, done catch
-* If the try block throws an uncaught Exception \(i.e. if catch block does not exist or catch block does not handle the type of Exception that is thrown in the try block\), Java halts execution of the try block, **executes the finally block**, then raises a runtime error 
+* System.out.println(tryCatchFinally()) prints trying, catching, finally, done catch
+* If the try block throws an uncaught Exception (i.e. if catch block does not exist or catch block does not handle the type of Exception that is thrown in the try block), Java halts execution of the try block, **executes the finally block**, then raises a runtime error&#x20;
 * **Important:** finally is always called!!
-

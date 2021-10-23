@@ -2,9 +2,9 @@
 
 ## Welcome to 64bitpanda's CS61B Guide!
 
-\(If you are looking at this in github, go to [cs61b.bencuan.me](https://cs61b.bencuan.me) for a much better experience!\)
+(If you are looking at this in github, go to [cs61b.bencuan.me](https://cs61b.bencuan.me) for a much better experience!)
 
-This is a **non-comprehensive** guide to data structures written with an intention to supplement learning and reviewing of Berkeley's [CS61B](https://inst.eecs.berkeley.edu/~cs61b) material. Main topics include:
+This is a **non-comprehensive** guide to data structures written with an intention to supplement learning and reviewing of Berkeley's [CS61B](https://inst.eecs.berkeley.edu/\~cs61b) material. Main topics include:
 
 * Object oriented programming basics
 * Abstract data types
@@ -17,15 +17,15 @@ This guide is written to be as easy to follow and digestible as possible😀I've
 
 ### The 61B Concept Map
 
-![](.gitbook/assets/image%20%2891%29.png)
+![](<.gitbook/assets/image (6).png>)
 
 ## Who is this for?
 
 Mostly me; making unnecessarily detailed guides is my goto method of making sure I understand everything😁But you are welcome to use it as well for reviewing for 61B exams, touching up on data structures knowledge, or whatever you want!\*
 
-**Do note that basic knowledge gained from** [**CS61A**](https://cs61a.org/) **or equivalent is assumed.** [Click here](https://64bitpandas.github.io/cs61a) for my notes for that!
+**Do note that basic knowledge gained from** [**CS61A**](https://cs61a.org) **or equivalent is assumed.** [Click here](https://64bitpandas.github.io/cs61a) for my notes for that!
 
-\*Must comply with [WTF license terms](https://github.com/64bitpandas/cs61b-notes/blob/master/LICENSE.md)
+\*Must comply with [WTF license terms](LICENSE.md)
 
 ## How to use this guide
 
@@ -59,12 +59,11 @@ Here's a list of the most complete, well-written pages that I would trust to enh
 
 Fork the [GitHub repository](https://github.com/64bitpandas/cs61b-notes) and create a pull request. All contributions are welcome! Pages are formatted in [Markdown syntax](https://docs.gitbook.com/editing-content/markdown). Please **edit existing pages only** unless you have [created an issue](https://github.com/64bitpandas/cs61b-notes/issues) and I have gotten back to you about making a new page. Thanks 😄
 
-The pages that could be most improved \(in no particular order\) are [Union Find \(Disjoint Sets\)](abstract-data-types/union-find-disjoint-sets.md), [Stacks and Queues](abstract-data-types/collections/stacks-and-queues.md), [Linked Lists](abstract-data-types/collections/linked-lists.md), [Sets](abstract-data-types/collections/sets.md), [Sorting](sorting/sorting-basics.md), [Searching](algorithms/searching/), [Binary Search](algorithms/searching/binary-search.md), [Shortest Paths](algorithms/shortest-paths/), and [Exceptions](misc-topics/exceptions.md). Feel free to add whatever content you like \(explanations, examples, practice problems, memes...\) to these!
+The pages that could be most improved (in no particular order) are [Union Find (Disjoint Sets)](abstract-data-types/union-find-disjoint-sets.md), [Stacks and Queues](abstract-data-types/collections/stacks-and-queues.md), [Linked Lists](abstract-data-types/collections/linked-lists.md), [Sets](abstract-data-types/collections/sets.md), [Sorting](sorting/sorting-basics.md), [Searching](algorithms/searching/), [Binary Search](algorithms/searching/binary-search.md), [Shortest Paths](algorithms/shortest-paths/), and [Exceptions](misc-topics/exceptions.md). Feel free to add whatever content you like (explanations, examples, practice problems, memes...) to these!
 
-Additionally, there are plenty of topics \(Regex, Testing, Files/Scanners, Ranges, GUI just to name a few\) that aren't currently covered in this guide. If you want to add one of these topics, please create an issue first but it will almost certainly be approved.
+Additionally, there are plenty of topics (Regex, Testing, Files/Scanners, Ranges, GUI just to name a few) that aren't currently covered in this guide. If you want to add one of these topics, please create an issue first but it will almost certainly be approved.
 
 ### Credits
 
-* [Ben Cuan \(64bitpandas\)](https://github.com/64bitpandas)
+* [Ben Cuan (64bitpandas)](https://github.com/64bitpandas)
 * [Arin Chang](https://github.com/arinchang)
-

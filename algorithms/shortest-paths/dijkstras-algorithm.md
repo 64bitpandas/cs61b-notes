@@ -16,44 +16,44 @@ Visit vertices in order of best-known distance from source; on visit, relax ever
 
 Djikstras uses a **PriorityQueue** to maintain the path with lowest cost from the starting node to every other node, an **edgeTo** array to keep track of the best known predecessor for each vertex, and a **distTo** array to keep track of the best known distance from the source vertex to every other vertex.
 
-**Relaxing** the edges of a vertex v just refers to the process of updating edgeTo\[n\] for each neighbor n to v.
+**Relaxing** the edges of a vertex v just refers to the process of updating edgeTo\[n] for each neighbor n to v.
 
 You'll see in the pseudocode and diagrams below that succesful relaxation only occurs when the edge connecting the vertex being visited to one of its neighbors yields a smaller total distance than the current shortest path to that neighboring vertex that the algorithm has seen.
 
 Now, here's a demonstration on how it works! Let's start out with this graph:
 
-![](../../.gitbook/assets/image%20%2824%29.png)
+![](<../../.gitbook/assets/image (92).png>)
 
 We'll start at node A and try to figure out the shortest path from A to each node. Since we have no idea how far each node is, we'll take the conservative guess that everything is infinitely far away ♾😎
 
-The first thing we have to do is update A's adjacent nodes, which are **B** and **D**. Since there's only one known path to each, it shouldn't be too hard to see why we need to update the values below. One thing to note is that the priority queue **sorts the vertices by the distance it takes to get there.** 
+The first thing we have to do is update A's adjacent nodes, which are **B **and **D**. Since there's only one known path to each, it shouldn't be too hard to see why we need to update the values below. One thing to note is that the priority queue **sorts the vertices by the distance it takes to get there. **
 
-![](../../.gitbook/assets/image%20%2880%29.png)
+![](<../../.gitbook/assets/image (93).png>)
 
-Now, we have a choice to move on to either **B** or **D**. Since B has a **shorter distance,** we'll move on to that first. When we move on, we have to **remove that value from the priority queue** and **update all of its neighbors.** Here, we see that going from **B to D** is **shorter** than **A to D**, so we have to **update distTo AND edgeTo of D** to reflect this new, shorter path. **This process** \(updating each adjacent node\) **is called relaxing the edges of a node.** 
+Now, we have a choice to move on to either **B **or **D**. Since B has a **shorter distance, **we'll move on to that first. When we move on, we have to **remove that value from the priority queue **and **update all of its neighbors. **Here, we see that going from **B to D **is **shorter **than **A to D**, so we have to **update distTo AND edgeTo of D **to reflect this new, shorter path. **This process **(updating each adjacent node) **is called relaxing the edges of a node. **
 
-![](../../.gitbook/assets/image%20%2857%29.png)
+![](<../../.gitbook/assets/image (94).png>)
 
-Now, let's move onto **D** since it has the next shortest path. Again, we **remove D from the priority queue** and **relax C** since we found a shorter path.
+Now, let's move onto **D** since it has the next shortest path. Again, we **remove D from the priority queue **and **relax C **since we found a shorter path.
 
-![](../../.gitbook/assets/image%20%2856%29.png)
+![](<../../.gitbook/assets/image (95).png>)
 
 Finally, we'll move onto **C** as that has the next shortest path in the priority queue. This will reveal our final node, **E**.
 
-![](../../.gitbook/assets/image%20%2863%29.png)
+![](<../../.gitbook/assets/image (96).png>)
 
-Since **the priority queue is now empty,** our search is done! 😄 Here's what the final solution looks like **in a tree form**:
+Since **the priority queue is now empty, **our search is done! 😄 Here's what the final solution looks like **in a tree form**:
 
-![Dijkstra&apos;s Algorithm ALWAYS produces a solution in a tree format.](../../.gitbook/assets/image%20%2843%29.png)
+![Dijkstra's Algorithm ALWAYS produces a solution in a tree format.](<../../.gitbook/assets/image (98).png>)
 
-It's a very spindly tree indeed, but hopefully it demonstrates that the result is **acyclic**. 
+It's a very spindly tree indeed, but hopefully it demonstrates that the result is **acyclic**.&#x20;
 
 ## Properties of Dijkstra's Algorithm
 
-**Dijkstra's Algorithm has some invariants \(things that must always be true\):**
+**Dijkstra's Algorithm has some invariants (things that must always be true):**
 
-1. edgeTo\[v\] always contains best known predecessor for v
-2. distTo\[v\] contains best known distance from source to v
+1. edgeTo\[v] always contains best known predecessor for v
+2. distTo\[v] contains best known distance from source to v
 3. PQ contains all unvisited vertices in order of distTo
 
 **Additionally, there are some properties that are good to know:**
@@ -115,9 +115,8 @@ $$
 
 **Explanation:**
 
-* each add operation to PQ takes log\(V\), and perform this V times
-* each removeFirst operation to PQ takes log\(V\) and perform this V times
-* each change priority operation to PQ takes log\(V\), perform this at most as many times as there are edges
-* everything else = O\(1\)
+* each add operation to PQ takes log(V), and perform this V times
+* each removeFirst operation to PQ takes log(V) and perform this V times
+* each change priority operation to PQ takes log(V), perform this at most as many times as there are edges
+* everything else = O(1)
 * usually, there are more or equal edges compared to the number of vertices.
-

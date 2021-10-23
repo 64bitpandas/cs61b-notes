@@ -20,4 +20,3 @@ public BST find(BST T, Key sk) {
     }
 }
 ```
-

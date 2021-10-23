@@ -2,11 +2,15 @@
 
 This section will cover some ways to find values in a set.
 
-{% page-ref page="binary-search.md" %}
+{% content-ref url="binary-search.md" %}
+[binary-search.md](binary-search.md)
+{% endcontent-ref %}
 
-{% page-ref page="depth-first-search-dfs.md" %}
+{% content-ref url="depth-first-search-dfs.md" %}
+[depth-first-search-dfs.md](depth-first-search-dfs.md)
+{% endcontent-ref %}
 
-{% page-ref page="breadth-first-search-bfs.md" %}
-
-
+{% content-ref url="breadth-first-search-bfs.md" %}
+[breadth-first-search-bfs.md](breadth-first-search-bfs.md)
+{% endcontent-ref %}
 

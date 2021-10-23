@@ -95,4 +95,3 @@ The biggest limitation is that **primitive types cannot be used as generic types
 One workaround to this is to use the reference-type counterparts to primitives, such as `Integer`, `Boolean`, `Character` and so on. However, converting between these types and primitive types, which is called **autoboxing,** has significant performance penalties that must be taken into consideration.
 
 Another limitation is that **instanceof** does not work properly with generic types. For instance, `new List<X>() instanceof List<Y>` will always be true regardless of what types X and Y are.
-

@@ -11,7 +11,7 @@ Asymptotics is a very intuition-based concept that often doesn't have a set algo
 With that said, here are some problems of increasing difficulty for you to enjoy 😊
 
 {% hint style="info" %}
-For all of the below problems, assume that all undefined functions have a constant O\(1\) complexity.
+For all of the below problems, assume that all undefined functions have a constant O(1) complexity.
 {% endhint %}
 
 ## Loops
@@ -37,7 +37,7 @@ $$
 
 **Explanation:** The method `throwItem()` runs `n/2` times. Using the simplification rules, we can extract the constant `1/2` to simply get `n`.
 
-![Keep the change, ya filthy animal.](../.gitbook/assets/image%20%28100%29.png)
+![Keep the change, ya filthy animal.](<../.gitbook/assets/image (40).png>)
 {% endtab %}
 {% endtabs %}
 
@@ -63,10 +63,10 @@ $$
 \Theta(n^2)
 $$
 
-**Explanation:** There are **three** nested loops in this problem. Whenever there are nested loops whose runtimes are independent of each other, we need to **multiply** the runtimes in each loop.  
+**Explanation:** There are **three** nested loops in this problem. Whenever there are nested loops whose runtimes are independent of each other, we need to **multiply** the runtimes in each loop.\
 So, we get: $$\Theta(n * n * 64)$$ which simplifies into `n^2`
 
-![That&apos;s a lot of items to loot...](../.gitbook/assets/image%20%2825%29.png)
+![That's a lot of items to loot...](<../.gitbook/assets/image (41).png>)
 {% endtab %}
 {% endtabs %}
 
@@ -94,13 +94,13 @@ $$
 
 **Explanation:** Even though `stacksToLoot` is a user input, we're only concerned about finding the runtime for `n` so `stacksToLoot` can be treated like a constant! Therefore, we now have $$\Theta(n * s* 64)$$ where `s = stacksToLoot` which simplifies into `n`.
 
-![ok now this is getting a bit overboard](../.gitbook/assets/image%20%2895%29.png)
+![ok now this is getting a bit overboard](<../.gitbook/assets/image (42).png>)
 {% endtab %}
 {% endtabs %}
 
 ## Recursion
 
-The following two problems are inspired by [this worksheet](https://inst.eecs.berkeley.edu/~cs61b/sp20/materials/disc/discussion8.pdf).
+The following two problems are inspired by [this worksheet](https://inst.eecs.berkeley.edu/\~cs61b/sp20/materials/disc/discussion8.pdf).
 
 {% tabs %}
 {% tab title="Question 3" %}
@@ -124,7 +124,7 @@ $$
 
 **Explanation:** This tree recursion creates a tree with `n` layers. Each layer you go down, the number of calls multiplies by 4!
 
-![Tree diagram for method calls.](../.gitbook/assets/image%20%2866%29.png)
+![Tree diagram for method calls.](<../.gitbook/assets/image (48).png>)
 
 This means that the number of calls in total will look like this:
 
@@ -134,7 +134,7 @@ $$
 
 And if you remember your power series, you'll know that this sum is equal to $$4^{n+1}-1$$ which simplifies into the final answer.
 
-![an image that makes you long for TreeCapacitator](../.gitbook/assets/image%20%2810%29.png)
+![an image that makes you long for TreeCapacitator](<../.gitbook/assets/image (49).png>)
 {% endtab %}
 {% endtabs %}
 
@@ -160,7 +160,7 @@ $$
 
 **Explanation:** This tree recursion creates a tree with `n` layers. Each layer you go down, the number of calls multiplies by `n-1`...
 
-![What a mess \(!\)](../.gitbook/assets/image%20%2868%29.png)
+![What a mess (!)](<../.gitbook/assets/image (51).png>)
 
 This means that the number of calls in total will look like this:
 
@@ -182,7 +182,7 @@ Hey, that looks a lot like the Taylor series for $$e$$! Since `e` is a constant,
 
 {% tabs %}
 {% tab title="Question 5" %}
-Here's a case where the best case and worst case runtimes are different. Can you figure out what they are? \(Let `n = items.length`\).
+Here's a case where the best case and worst case runtimes are different. Can you figure out what they are? (Let `n = items.length`).
 
 ```java
 Item[] hopperSort(Item[] items) {
@@ -207,7 +207,7 @@ Item[] hopperSort(Item[] items) {
 
 **Note:** HopperSort is literally just Insertion Sort 😎🤣
 
-![hoppers rate 64/64](../.gitbook/assets/image%20%2860%29.png)
+![hoppers rate 64/64](<../.gitbook/assets/image (45).png>)
 {% endtab %}
 {% endtabs %}
 
@@ -237,17 +237,17 @@ void digDirts(int n, boolean isTNT) {
 {% tab title="Q6 Answer" %}
 **Best Case:** $$\Theta(\log(n))$$ if n is even. This will result in n being halved every function call.
 
-**Worst Case:** $$\Theta(n)$$if n is odd. See the tree below for an illustration of what happens in this case- hopefully the diagram will make it clearer as to why it's O\(n\).
+**Worst Case:** $$\Theta(n)$$if n is odd. See the tree below for an illustration of what happens in this case- hopefully the diagram will make it clearer as to why it's O(n).
 
-![A diagram of what happens in the worst and best cases.](../.gitbook/assets/image%20%28101%29.png)
+![A diagram of what happens in the worst and best cases.](<../.gitbook/assets/image (46).png>)
 
-![don&apos;t play with tnt, kids](../.gitbook/assets/image%20%2838%29.png)
+![don't play with tnt, kids](<../.gitbook/assets/image (47).png>)
 {% endtab %}
 {% endtabs %}
 
 ## Challenge Problems
 
-These problems are quite difficult. Don't be concerned if you don't feel confident in solving them \(I certainly don't\).
+These problems are quite difficult. Don't be concerned if you don't feel confident in solving them (I certainly don't).
 
 {% tabs %}
 {% tab title="Question 7" %}
@@ -276,9 +276,9 @@ public int PNH(char[] arr, int start, int end) {
 {% endtab %}
 
 {% tab title="Q7 Answer" %}
-**Best Case:** $$\Theta(n\log(n))$$ If none of the characters in char\[\] is 'a', then each call to PNH does $$\Theta(n)$$ work. Total work per layer is always N, with logN layers total.
+**Best Case:** $$\Theta(n\log(n))$$ If none of the characters in char\[] is 'a', then each call to PNH does $$\Theta(n)$$ work. Total work per layer is always N, with logN layers total.
 
-**Worst Case:** $$\Theta(n!)$$ All of characters in char\[\] is 'a'. In this case, the for loop recursive calls will dominate the runtime, because it'll be the main part of the recursive tree. The interval start to end is decreased by one in the for loop recursive calls, while that interval is halved in the return statement recursive calls. This means the return statement recursive calls will reach the base case in logn levels, while the recursive calls in the for loop will take n levels. Thus, we can proceed with the same analysis as question 4.
+**Worst Case:** $$\Theta(n!)$$ All of characters in char\[] is 'a'. In this case, the for loop recursive calls will dominate the runtime, because it'll be the main part of the recursive tree. The interval start to end is decreased by one in the for loop recursive calls, while that interval is halved in the return statement recursive calls. This means the return statement recursive calls will reach the base case in logn levels, while the recursive calls in the for loop will take n levels. Thus, we can proceed with the same analysis as question 4.
 {% endtab %}
 {% endtabs %}
 
@@ -310,7 +310,6 @@ public int lastOne(char[] arr, int start, int end) {
 {% tab title="Q8 Answer" %}
 **Best Case:** $$\Theta(n)$$ if the else if case is always true. This will produce a tree with height n/2, where each height does constant work.
 
-**Worst Case:** $$\Theta(3^n)$$ if else if case is never true. Sorry no diagram yet :\(\(
+**Worst Case:** $$\Theta(3^n)$$ if else if case is never true. Sorry no diagram yet :((
 {% endtab %}
 {% endtabs %}
-

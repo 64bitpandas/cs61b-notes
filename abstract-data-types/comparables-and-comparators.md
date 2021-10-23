@@ -2,7 +2,7 @@
 
 ## What is it?
 
-A **Comparable** is a **generic type** that allows standardized comparisons between objects. 
+A** Comparable **is a **generic type** that allows standardized comparisons between objects.&#x20;
 
 In other words, anything that has a `compareTo()` method can be a Comparable!
 
@@ -13,7 +13,7 @@ Many Java libraries already use Comparable without you knowing! Some of the more
 There are some very specific properties CompareTo needs to have! Usually, we take them for granted but might forget about them when making our own.
 
 * If `x` and `y` are the **same object**, `y.compareTo(x)` must return **0.**
-* `x.compareTo(y)` must return the **negative** of `y.compareTo(x)`. \(if one throws an error, the other must too!\)
+* `x.compareTo(y)` must return the **negative** of `y.compareTo(x)`. (if one throws an error, the other must too!)
 * If `x` and `y` are the **same object**, `x.compareTo(z)` must **equal** `y.compareTo(z)` **for all z.**
 
 ### Defining a Comparable subclass
@@ -50,7 +50,5 @@ public interface Comparable<T> {
 
 ### How is it different from Comparables???
 
-Comparable is used to compare **itself** to **other objects**; a Comparator compares **two other objects but not itself.**
-
-
+Comparable is used to compare **itself** to** other objects**; a Comparator compares **two other objects but not itself.**
 

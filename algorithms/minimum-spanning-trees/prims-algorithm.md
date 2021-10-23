@@ -16,9 +16,9 @@ Now, the edges taken into consideration include all immediate neighbors of every
 
 ## Detailed Breakdown
 
-The way Prim's algorithm is usually implemented is via [PriorityQueue](../../abstract-data-types/collections/stacks-and-queues.md), `edgeTo` array, and `distTo` array. You will soon see its similarities to [Dijkstra's](../shortest-paths/dijkstras-algorithm.md).
+The way Prim's algorithm is usually implemented is via [PriorityQueue](../../abstract-data-types/collections/stacks-and-queues.md), `edgeTo` array, and` distTo` array. You will soon see its similarities to [Dijkstra's](../shortest-paths/dijkstras-algorithm.md).
 
-First, insert all vertices into the PriorityQueue, storing vertices in order of **distance from MST**. Then, remove vertex with highest priority in the PriorityQueue and relax its edges. In each of these iterations, the distTo and edgeTo arrays will be updated for each vertex v if the **weight of the edge is smaller than the current value in distTo\[v\]**. In other words, only update if the distance from the MST to the vertex is the best seen so far. This is a very important point, and is one of the subtleties that makes Prim's algorithm fundamentally different from Dijkstra's.
+First, insert all vertices into the PriorityQueue, storing vertices in order of **distance from MST**. Then, remove vertex with highest priority in the PriorityQueue and relax its edges. In each of these iterations, the distTo and edgeTo arrays will be updated for each vertex v if the **weight of the edge is smaller than the current value in distTo\[v]**. In other words, only update if the distance from the MST to the vertex is the best seen so far. This is a very important point, and is one of the subtleties that makes Prim's algorithm fundamentally different from Dijkstra's.
 
 ## Useful Properties/Invariants
 
@@ -81,13 +81,12 @@ $$
 
 **Explanation:**
 
-* each add operation to PQ takes log\(V\), and perform this V times
-* each removeFirst operation to PQ takes log\(V\) and perform this V times
-* each change priority operation to PQ takes log\(V\), perform this at most as many times as there are edges
-* everything else = O\(1\)
+* each add operation to PQ takes log(V), and perform this V times
+* each removeFirst operation to PQ takes log(V) and perform this V times
+* each change priority operation to PQ takes log(V), perform this at most as many times as there are edges
+* everything else = O(1)
 * usually, there are more or equal edges compared to the number of vertices.
 
 ## Demo
 
-[https://docs.google.com/presentation/d/1GPizbySYMsUhnXSXKvbqV4UhPCvrt750MiqPPgU-eCY/edit\#slide=id.g9a60b2f52\_0\_0](https://docs.google.com/presentation/d/1GPizbySYMsUhnXSXKvbqV4UhPCvrt750MiqPPgU-eCY/edit#slide=id.g9a60b2f52_0_0)
-
+[https://docs.google.com/presentation/d/1GPizbySYMsUhnXSXKvbqV4UhPCvrt750MiqPPgU-eCY/edit#slide=id.g9a60b2f52\_0\_0](https://docs.google.com/presentation/d/1GPizbySYMsUhnXSXKvbqV4UhPCvrt750MiqPPgU-eCY/edit#slide=id.g9a60b2f52\_0\_0)

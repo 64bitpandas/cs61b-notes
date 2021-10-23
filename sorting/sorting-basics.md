@@ -1,28 +1,28 @@
 # Sorting
 
 {% hint style="info" %}
-This page is from my original notes, but will likely not upgrade it in the near future because I wrote a [20-page guide on sorting](https://docs.google.com/document/d/1dUfzdh5V3okrwFbB9o0PgtEBaLHyCqJFwpQWyQ53IeU/edit) that covers all of the sorts in far greater detail 🙂
+This page is from my original notes, but will likely not upgrade it in the near future because I wrote a [guide on sorting](https://docs.google.com/document/d/1dUfzdh5V3okrwFbB9o0PgtEBaLHyCqJFwpQWyQ53IeU/edit) that covers all of the sorts in far greater detail 🙂
 {% endhint %}
 
 ## Why sorting?
 
-* Easier for searching \(e.g. binary search\)
-* Easy to see if two items in list are equal \(just compare neighbors\)
+* Easier for searching (e.g. binary search)
+* Easy to see if two items in list are equal (just compare neighbors)
 * Get nearest neighbors
 
 ## Properties of a Sorting Algorithm
 
 * Changes a sequence based on a **total order**
-* A sorting algorithm could be **stable**: does not change relative order of equivalent entries
+*   A sorting algorithm could be **stable**: does not change relative order of equivalent entries
 
-  * Example: dictionary can have multiple definitions for a single word
+    * Example: dictionary can have multiple definitions for a single word
 
-  A total order is:
+    A total order is:
 
-  * **Total:** All items can be compared with one another
-  * **Reflexive:** An item can be compared to itself
-  * **Antisymmetric:** x &lt;= y AND y &lt;= x IFF y == x
-  * **Transitive:** If x &lt;= y and y &lt;= z, then x must be &lt;= z
+    * **Total:** All items can be compared with one another
+    * **Reflexive:** An item can be compared to itself
+    * **Antisymmetric:** x <= y AND y <= x IFF y == x
+    * **Transitive:** If x <= y and y <= z, then x must be <= z
 
 ## Sorting Algorithm Classifications
 
@@ -47,9 +47,8 @@ Arrays.sort(x, 0, 2) // sorts the first two elements, leaving the rest unchanged
 
 * Used as a measure for how sorted a list is
 * 0 inversion = perfectly sorted
-* N\*\(N-1\)/2 inversions = reversed
+* N\*(N-1)/2 inversions = reversed
 
 ## The Guide to Sorting Algorithms
 
 [A comprehensive guide to sorting algorithms, now with memes!](https://docs.google.com/document/d/1dUfzdh5V3okrwFbB9o0PgtEBaLHyCqJFwpQWyQ53IeU/edit)
-
