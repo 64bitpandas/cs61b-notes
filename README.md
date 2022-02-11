@@ -23,7 +23,7 @@ This guide is written to be as easy to follow and digestible as possible😀I've
 
 Mostly me; making unnecessarily detailed guides is my goto method of making sure I understand everything😁But you are welcome to use it as well for reviewing for 61B exams, touching up on data structures knowledge, or whatever you want!\*
 
-**Do note that basic knowledge gained from** [**CS61A**](https://cs61a.org) **or equivalent is assumed.** [Click here](https://64bitpandas.github.io/cs61a) for my notes for that!
+**Do note that basic knowledge gained from** [**CS61A**](https://cs61a.org) **or equivalent is assumed.** [Click here](https://cs61a.bencuan.me) for my notes for that!
 
 \*Must comply with [WTF license terms](LICENSE.md)
 
