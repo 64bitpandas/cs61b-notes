@@ -135,7 +135,7 @@ Conversely, `Shiba` is the **dynamic type:** it gets assigned during runtime.
 
 ### The type rules
 
-It's easy to remember: **like chooses like.** If a method is **static**, then choose the method from the **static type.** Likewise, if a method is **not static,** choose the corresponding method from the **dynamic type.**&#x20;
+Just remember: **like chooses like.** If a method is **static**, then choose the method from the **static type.** Likewise, if a method is **not static,** choose the corresponding method from the **dynamic type.**&#x20;
 
 Let's try some examples!
 
