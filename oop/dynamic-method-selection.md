@@ -137,6 +137,10 @@ Conversely, `Shiba` is the **dynamic type: **it gets assigned during runtime.
 
 It's easy to remember: **like chooses like. **If a method is **static**, then choose the method from the **static type. **Likewise, if a method is **not static, **choose the corresponding method from the **dynamic type. **
 
+### Casting
+
+An object's static type can be temporarily cast as something other than its assigned static type. Syntactically, this is done by placing the cast type in parentheses in front of the object's name (as in `(cast) object`). The compiler will treat the object as though its static type is the cast type, but this will only work if the cast type is the same as or a parent of the dynamic type. However, relative to the assigned static type, the cast type could be a child of the static type (downcasting) or a parent of the static type (upcasting).
+
 Let's try some examples!
 
 ```java
