@@ -28,13 +28,14 @@ You may have noticed that strings are not on this list. That is because unlike i
 
 ## Type Conversion
 
-Java will automatically convert between primitive types if **no information is lost** (e.g. from byte to int).
+Java will automatically convert between primitive types if **no information is lost** (
+from byte to int).
 
-If converting the other direction (from a larger to smaller container), an explicit cast is required (e.g. `(char)int`).
+Conversion in the other direction (from a larger to smaller container) requires an explicit cast (e.g., `(char) int`). The compiler will treat a cast object as though its static type is the cast type, but this will only work if the cast type is the same as or a parent of the dynamic type. However, relative to the assigned static type, the cast type could be a child of the static type or a parent of the static type.
 
-**Assignment statements are an exception to this**: `aByte = 10` is fine even though 10 is an int literal. This is because arithmetic operations (+, \*, ...) automatically \_\_promote operands (e.g. `'A' + 2` is equivalent to `(int)'A' + 2`)
+**Assignment statements are an exception to this**: `aByte = 10` is fine even though 10 is an int literal. This is because arithmetic operations (+, \*, ...) automatically promote operands (e.g., `'A' + 2` is equivalent to `(int)'A' + 2`)
 
-However, **this doesn't work if you are trying to add a larger type to a smaller type** (e.g. `aByte = aByte + 1` since operands become an int type which cannot be set equal to a byte type. **But += works**!
+However, **this doesn't work if you are trying to add a larger type to a smaller type** (e.g., `aByte = aByte + 1` since operands become an int type which cannot be set equal to a byte type. **But += works**!
 
 ## Reference Types
 
@@ -67,7 +68,7 @@ By mutating, I mean changing the **internals** of an object (for example, access
 
 In Java, **all objects inherit from the master Object class.** Here are some important properties of Object that will be useful to know:
 
-* `String toString()`: By default, this prints out the class name followed by the memory address (e.g. `Object@192c38f`). This can be overridden to make more user-friendly names for objects.
+* `String toString()`: By default, this prints out the class name followed by the memory address (e.g., `Object@192c38f`). This can be overridden to make more user-friendly names for objects.
 * `boolean equals(Object obj)`: By default, this checks if the two objects are actually the same object (same memory address). This can be overridden to check if specific contents of objects are the same, rather than checking if they are literally the same object. (Like `"foo"` should equal `new String("foo")`)
 * `int hashCode()`: Returns a numeric hash code for the object that should differentiate it from other objects. **This should be overridden if** **`equals()` is overridden** since `x.hashCode()` should equal `y.hashCode()` if `x.equals(y)` is true!
 * `Class<?> getClass()`: Returns the class of this object.
