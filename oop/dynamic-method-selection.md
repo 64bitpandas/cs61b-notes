@@ -34,7 +34,7 @@ rarePupper.eat();
 {% endtab %}
 
 {% tab title="Q1 Answer" %}
-Of course, it's A 😛 Dog doesn't know anything about `Shiba` or any other classes, so we can just look at the Dog.
+It's **A** :dog: Dog doesn't know anything about `Shiba` or any other classes, so we can just look at the Dog.
 {% endtab %}
 {% endtabs %}
 
@@ -49,7 +49,7 @@ rarePupper.eat();
 {% endtab %}
 
 {% tab title="Q2 Answer" %}
-This calls C! This should make intuitive sense because `Shiba` overrides `Dog` so all `Shibas` will use C instead of A.
+This calls **C**! This works intuitively because `Shiba` overrides `Dog` so all `Shibas` will use C instead of A.
 
 ![](<../.gitbook/assets/image (8).png>)
 {% endtab %}
@@ -65,9 +65,9 @@ Dog confuzzled = new Shiba();
 
 What??? Shouldn't this error because `Dog` is incompatible with `Shiba`?&#x20;
 
-It turns out that **subclasses can be assigned to superclasses. **In other words, `Parent p = new Child()` works fine. This is really useful for things like [Interfaces](inheritance.md#interfaces) and generic [Collections](../abstract-data-types/collections/) because we might only care about using generic methods, and not the specific implementation that users chose to provide.
+It turns out that **subclasses can be assigned to superclasses.** In other words, `Parent p = new Child()` works fine. This is really useful for things like [Interfaces](inheritance.md#interfaces) and generic [Collections](../abstract-data-types/collections/) because we might only care about using generic methods, and not the specific implementation that users chose to provide.
 
-However, **it is important to note that it doesn't work the other way. **`Child c = new Parent()` will error because the child might have new methods that don't exist in the parent.
+However, **it is important to note that it doesn't work the other way.** `Child c = new Parent()` will error because the child might have new methods that don't exist in the parent.
 
 **Let's see how this makes inheritance really tricky:**
 
@@ -96,7 +96,7 @@ rarePupper.playWith(rarePupper); // aww rarePupper is lonely :(
 {% endtab %}
 
 {% tab title="Q3 Answer" %}
-**E **is called! What happens is that the **dynamic type** is chosen to **select the method from, **but the **static type** is used to **select the parameters. **`rarePupper`'s** **dynamic type is `Shiba` but its static type is `Dog` so `Shiba.playWith(Dog)` is chosen as the method.
+**E** is called! What happens is that the **dynamic type** is chosen to **select the method from,** but the **static type** is used to **select the parameters.** `rarePupper`'s **** dynamic type is `Shiba` but its static type is `Dog` so `Shiba.playWith(Dog)` is chosen as the method.
 
 ![rarePupper in action](<../.gitbook/assets/image (10).png>)
 {% endtab %}
@@ -114,10 +114,10 @@ rarePupper.playWith(doge); // rarePupper is happy :) borks all around
 {% endtab %}
 
 {% tab title="Q4 Answer" %}
-**E **is called again! Bet ya didn't see that coming 😎
+**E** is called again! Bet ya didn't see that coming 😎
 
-**Why is it not F? I thought doge and rarePupper were both **`Shiba`**?**\
-****When the compiler chooses a method, it **always **starts at the **static method. **Then, it keeps going down the inheritance tree until it hits the **dynamic method. **Since F has a **different signature **than D, it isn't an **overriding method** and thus the compiler won't see it. But E is (since it has the same signature as D), so that is why it is chosen instead.
+**Why is it not F? I thought doge and rarePupper were both** `Shiba`**?**\
+****When the compiler chooses a method, it **always** starts at the **static method.** Then, it keeps going down the inheritance tree until it hits the **dynamic method.** Since F has a **different signature** than D, it isn't an **overriding method** and thus the compiler won't see it. But E is (since it has the same signature as D), so that is why it is chosen instead.
 
 ![bork bork bork :DDD](<../.gitbook/assets/image (11).png>)
 {% endtab %}
@@ -131,11 +131,11 @@ You may have noticed that there are **two** type specifiers in an instantiation.
 
 Here, `Dog` is the **static type** of `s`: it's what the compiler believes the type should be when the program is compiled. Since the program hasn't run yet, Java doesn't know what exactly it is- it just knows it has to be some type of `Dog`.
 
-Conversely, `Shiba` is the **dynamic type: **it gets assigned during runtime.
+Conversely, `Shiba` is the **dynamic type:** it gets assigned during runtime.
 
 ### The type rules
 
-It's easy to remember: **like chooses like. **If a method is **static**, then choose the method from the **static type. **Likewise, if a method is **not static, **choose the corresponding method from the **dynamic type. **
+Just remember: **like chooses like.** If a method is **static**, then choose the method from the **static type.** Likewise, if a method is **not static,** choose the corresponding method from the **dynamic type.**&#x20;
 
 ### Casting
 
@@ -188,7 +188,7 @@ System.out.println(s);
 {% endtab %}
 
 {% tab title="Q6 Answer" %}
-`cute doggo` also gets printed!! This is because static methods **cannot be overridden. **When `toString()` is called in `Dog`, it doesn't choose `Shiba`'s `getType()` because `getType()` is static and the static type is `Dog`.
+`cute doggo` also gets printed!! This is because static methods **cannot be overridden.** When `toString()` is called in `Dog`, it doesn't choose `Shiba`'s `getType()` because `getType()` is static and the static type is `Dog`.
 {% endtab %}
 {% endtabs %}
 
@@ -203,12 +203,12 @@ System.out.println(((Shiba)d).getType());
 {% endtab %}
 
 {% tab title="Q7 Answer" %}
-This time, `shiba inu` gets printed. This is because casting temporarily changes the **static type: **since the static type of `d` is ** **`Shiba` in line 2, it chooses the `getType()` from `Shiba`.
+This time, `shiba inu` gets printed. This is because casting temporarily changes the **static type:** since the static type of `d` is **** `Shiba` in line 2, it chooses the `getType()` from `Shiba`.
 {% endtab %}
 {% endtabs %}
 
 ## That's all, folks!
 
-If you want some **even harder **problems, [check this out](https://inst.eecs.berkeley.edu/\~cs61b/sp20/materials/disc/examprep5.pdf) and also [this](https://inst.eecs.berkeley.edu/\~cs61b/sp20/materials/disc/examprep6.pdf).
+If you want some **even harder** problems, [check this out](https://inst.eecs.berkeley.edu/\~cs61b/sp20/materials/disc/examprep5.pdf) and also [this](https://inst.eecs.berkeley.edu/\~cs61b/sp20/materials/disc/examprep6.pdf).
 
 ![bai bai!](<../.gitbook/assets/image (12).png>)
