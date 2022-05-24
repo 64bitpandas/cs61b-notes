@@ -1,28 +1,26 @@
 # Sorting
 
 {% hint style="info" %}
-This page is from my original notes, but will likely not upgrade it in the near future because I wrote a [guide on sorting](https://docs.google.com/document/d/1dUfzdh5V3okrwFbB9o0PgtEBaLHyCqJFwpQWyQ53IeU/edit) that covers all of the sorts in far greater detail 🙂
+For more information about specific sorting algorithms covered in 61B, see my [guide on sorting](https://docs.google.com/document/d/1dUfzdh5V3okrwFbB9o0PgtEBaLHyCqJFwpQWyQ53IeU/edit) that covers all of the sorts in far greater detail 🙂
 {% endhint %}
 
-## Why sorting?
+## Why sort?
 
-* Easier for searching (e.g. binary search)
-* Easy to see if two items in list are equal (just compare neighbors)
-* Get nearest neighbors
+* It makes searching for a specific value much faster (e.g. binary search). Typically, searching through an unsorted list requires a full scan ($$\Theta(N)$$​ runtime).
+* It's easy to see if two items in list are equal: just compare to see if any neighboring values are the same.
 
 ## Properties of a Sorting Algorithm
 
-* Changes a sequence based on a **total order**
-*   A sorting algorithm could be **stable**: does not change relative order of equivalent entries
+A sorting algorithm changes a sequence based on a **total order.** A total order is:
 
-    * Example: dictionary can have multiple definitions for a single word
+* **Total:** All items can be compared with one another
+* **Reflexive:** An item can be compared to itself
+* **Antisymmetric:** x <= y AND y <= x IFF y == x
+* **Transitive:** If x <= y and y <= z, then x must be <= z
 
-    A total order is:
+A sorting algorithm could be **stable** if it does not change relative order of equivalent entries. For example, if Bob and I both owned Toyota Corollas, and the list of cars were sorted by model, if Bob's car came before mine originally it must also come before mine in the sorted list after a stable sort.
 
-    * **Total:** All items can be compared with one another
-    * **Reflexive:** An item can be compared to itself
-    * **Antisymmetric:** x <= y AND y <= x IFF y == x
-    * **Transitive:** If x <= y and y <= z, then x must be <= z
+
 
 ## Sorting Algorithm Classifications
 
@@ -35,6 +33,8 @@ This page is from my original notes, but will likely not upgrade it in the near 
 
 ## Sorting in Java
 
+Java automatically chooses the best sorting algorithm for a given list if you call the `Arrays.sort` method.
+
 ```java
 String[] x = new String[] {"Vat", "Bat", "Cat"};
 
@@ -45,9 +45,11 @@ Arrays.sort(x, 0, 2) // sorts the first two elements, leaving the rest unchanged
 
 ## Inversions
 
-* Used as a measure for how sorted a list is
-* 0 inversion = perfectly sorted
-* N\*(N-1)/2 inversions = reversed
+Inversions are used as a measure for how sorted a list is. For every two elements that are swapped compared to a sorted list, we add one inversion.&#x20;
+
+* As an example, if `1 2 3 4 5` is a sorted list, `1 4 3 2 5` would have one inversion (`4` and `2` are swapped).
+* 0 inversions mean a list is perfectly sorted.
+* In the worst case, a reversed list will have $$(N \cdot (N-1))/2$$ inversions.&#x20;
 
 ## The Guide to Sorting Algorithms
 
