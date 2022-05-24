@@ -1,43 +1,61 @@
 # Exceptions
 
-{% hint style="warning" %}
-This page is from my original notes and is not up to the latest quality standards. Read with care or [help make it better!](https://github.com/64bitpandas/cs61b-notes/pulls)
-{% endhint %}
-
 ## Basics
 
-* An **exception** occurs when something unintended occurs and the interpreter must exit. Causes the normal flow of code to stop
-* Can throw custom exceptions
-* All objects thrown must be a subtype of Throwable
-* All `Error` or `RuntimeException` are **unchecked**
-  * Example: Index out of bounds, runtime casting errors
-* All other exceptions are **checked**
-  * Example: Opening a file that does not exist
-  * All checked exception must have `throws` in the method declaration. Example: `void test() throws IOException`
-  * Parents must also declare throws if overriding a method that throws an exception
+An **exception** occurs when something unintended occurs and the interpreter must exit.&#x20;
+
+While this might sound like a bad thing, we can often throw our own exceptions to handle known errors or edge cases more gracefully.&#x20;
+
+### Exceptions in Java
+
+In Java, there are two types of exceptions: **checked** and **unchecked.**
+
+**Checked** exceptions are handled during compile time, and are included in the method declaration. As an example:
+
+```java
+public void openFile() throws IOException {
+    ...
+}
+```
+
+* All children that override this method must also throw the same exceptions.
+
+**Unchecked** exceptions are not handled during compile time, and thus are thrown during runtime. All `Error` or `RuntimeException` types are unchecked; all other exceptions are checked. Some examples of unchecked exceptions are dividing by zero (`ArithmeticException`), or accessing an index that doesn't exist (`IndexOutOfBoundsException`).
 
 ![Some of the more common Exception types in Java.](<../.gitbook/assets/image (4).png>)
 
-## Implicit Exception
-
-* Also known as "accidental" or "incidental" exception
-
 ## Creating Custom Exceptions
 
-Throwing:
+We can use the `throw` keyword to create exceptions with custom error messages as follows:
 
 ```java
-throw new Exception("Error Message")
+public void divide(int a, int b) {
+    if (b == 0) {
+        throw new Exception("Error Message");
+    } else {
+        return a / b;
+    }
+}
 ```
 
-Catching: TBD
+This is often used within a `try catch` block, as such:
 
-* Alternate to custom exceptions is to handle exception cases.
-  * Example: Make code "null-safe" by checking to make sure inputs are not null before accessing them
+```java
+public void divide2() {
+    int a = 0;
+    try {
+        return 10 / 0;
+    } catch(Exception e) {
+        System.out.println("oops!");
+    }
+ }
+```
 
-## Example:
+An alternate to custom exceptions is to simply handle exception cases. For example, we can add a check to make sure a number is not zero before running a division operation.
 
-This example illustrates the order in which blocks are executed in a try-catch block.
+## Try/Catch/Finally Example
+
+Let's check your understanding of exception handling!
 
 ```java
 static String tryCatchFinally() {
@@ -53,6 +71,42 @@ static String tryCatchFinally() {
     }
 ```
 
-* System.out.println(tryCatchFinally()) prints trying, catching, finally, done catch
-* If the try block throws an uncaught Exception (i.e. if catch block does not exist or catch block does not handle the type of Exception that is thrown in the try block), Java halts execution of the try block, **executes the finally block**, then raises a runtime error&#x20;
-* **Important:** finally is always called!!
+{% tabs %}
+{% tab title="Q1" %}
+What will be printed (and in what order) when `tryCatchFinally()` is run?
+{% endtab %}
+
+{% tab title="Q1 Answer" %}
+First, `trying` will be printed.
+
+Since an Exception is thrown, the catch block will run next, so `catching` is printed next.
+
+Since finally blocks _always_ run regardless of result, `finally` is printed last.
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Q2" %}
+Suppose the same code were run, but without the `catch` block. What would this code do?
+
+```java
+static String tryFinally() {
+        try {
+            System.out.println("trying");
+            throw new Exception();
+        } finally {
+            System.out.println("finally");
+        }
+}
+```
+{% endtab %}
+
+{% tab title="Q2 Answer" %}
+If the try block throws an uncaught Exception (i.e. if catch block does not exist or catch block does not handle the type of Exception that is thrown in the try block), Java halts execution of the try block, **executes the finally block**, then raises a runtime error.\
+\
+So, the following sequence would occur:\
+1\. `trying` is printed.\
+2\. `finally` is printed.\
+3\. The program exits with a `RuntimeException`.
+{% endtab %}
+{% endtabs %}
