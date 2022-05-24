@@ -6,20 +6,21 @@ This page is from my original notes and is not up to the latest quality standard
 
 ## Basics
 
-* Stores a set of values with **no duplicates**
-* No order
-* Functions:
-  * add(T x)
-  * contains(T x)
-  * size()
-* Can be iterated over
+A Set stores a collection of values with **no duplicates.** Sets have no inherent order, so you can't rely on expecting any value to come before any other value when iterating through them.
+
+Some set functions include:
+
+* `add(T x)`
+* `contains(T x)`
+* `size()`
 
 ## ArraySet
 
-* Array-based solution to set implementation
-* Objects get added to an array that gets resized when too full
-* **How to enable iteration:**
-  *   One method is to use **iterators** which work very similarly to Python iterators
+An ArraySet is an array-based solution to a set implementation.&#x20;
+
+* Objects get added to an array that gets [resized](../../asymptotics/amortization.md) when it's too full.
+* In order to allow for iteration, we can use one of two methods:
+  *   One method is to use **iterators** which work very similarly to Python iterators:
 
       ```java
       Iterator<Integer> seer = set.iterator();
@@ -27,7 +28,7 @@ This page is from my original notes and is not up to the latest quality standard
         System.out.println(seer.next());
       }
       ```
-  * Another method is to implement the `Iterator` and `Iterable` interface
+  * Another method is to implement the `Iterator` and `Iterable` interface.
     * Iterator must implement `hasNext()` and `next()` methods
     * Requires generic type
     * Iterable must implement `iterator()` method which returns the Iterable object
