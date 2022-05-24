@@ -21,11 +21,9 @@ This guide is written to be as easy to follow and digestible as possible😀I've
 
 ## Who is this for?
 
-Mostly me; making unnecessarily detailed guides is my goto method of making sure I understand everything😁But you are welcome to use it as well for reviewing for 61B exams, touching up on data structures knowledge, or whatever you want!\*
+Mostly me; making unnecessarily detailed guides is my goto method of making sure I understand everything😁But you are welcome to use it as well for reviewing for 61B exams, touching up on data structures knowledge, or whatever you want!
 
-**Do note that basic knowledge gained from** [**CS61A**](https://cs61a.org) **or equivalent is assumed.** [Click here](https://cs61a.bencuan.me) for my notes for that!
-
-\*Must comply with [WTF license terms](LICENSE.md)
+**Basic knowledge gained from** [**CS61A**](https://cs61a.org/) **or equivalent is assumed.** [Click here](https://cs61a.bencuan.me) for my notes for that!
 
 ## How to use this guide
 
@@ -41,19 +39,6 @@ There are also plenty of practice problems to try out! Here's an non-exhaustive 
 * [Dynamic Method Selection](oop/dynamic-method-selection.md)
 * [Generic Types](oop/generics.md#generic-subtypes)
 * [Asymptotics Practice](asymptotics/asymptotics-practice.md)
-
-### Best pages!
-
-Here's a list of the most complete, well-written pages that I would trust to enhance your understanding and intuition the most. If you're feeling pretty good about these topics already, these will definitely be worth it to read!
-
-* [Inheritance](oop/inheritance.md)
-* [Dynamic Method Selection](oop/dynamic-method-selection.md)
-* [Asymptotic Analysis Basics](asymptotics/asymptotics.md)
-* [Asymptotics Practice](asymptotics/asymptotics-practice.md)
-* [Binary Trees](abstract-data-types/binary-trees/)
-* [Sorting](sorting/sorting-basics.md)
-* [Minimax Algorithm](algorithms/minimax.md)
-* [Dijkstra's Algorithm](algorithms/shortest-paths/dijkstras-algorithm.md)
 
 ## How to contribute
 
