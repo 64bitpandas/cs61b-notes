@@ -2,9 +2,9 @@
 
 ## Main Ideas
 
-A **trie **is a specific implementation of a set and is short for **retrieval tree. **
+A **trie** is a specific implementation of a set and is short for **retrieval tree.**&#x20;
 
-It only works on sets with a **finite alphabet**, like digits or ASCII characters, for example. The idea is that each node can act like an **array containing all characters in the alphabet **and we can just access the branches super fast by indexing into them!
+It only works on sets with a **finite alphabet**, like digits or ASCII characters, for example. The idea is that each node can act like an **array containing all characters in the alphabet** and we can just access the branches super fast by indexing into them!
 
 Tries are fantastic for searching to see if a word is contained in a set. Here's an example:
 

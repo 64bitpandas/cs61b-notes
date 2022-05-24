@@ -2,7 +2,7 @@
 
 ## What is inheritance?
 
-Essentially, it's a way of putting similar objects together to **generalize behavior. **Inheritance is best used with relating **subtypes** to larger categories. For example, an :tangerine:orange **is a** fruit (so it's a **subtype** of fruit).&#x20;
+Essentially, it's a way of putting similar objects together to **generalize behavior.** Inheritance is best used with relating **subtypes** to larger categories. For example, an :tangerine:orange **is a** fruit (so it's a **subtype** of fruit).&#x20;
 
 Let's say that a supermarket named _Jrader Toe's_ asks us to simulate fruits for them in an online system. We could do it like this:
 
@@ -57,7 +57,7 @@ With only those 4 lines, :tangerine:Orange now has all of the same methods and p
 
 ## Implementation Inheritance ("Extends")
 
-You may have noticed the `extends` keyword being used to specify that an object** inherits** from another object. This is called **implementation inheritance** since an object takes all of the behaviors from its parent and can use them like its own.
+You may have noticed the `extends` keyword being used to specify that an object **inherits** from another object. This is called **implementation inheritance** since an object takes all of the behaviors from its parent and can use them like its own.
 
 When `extends` is used, these are the things that are inherited:
 
@@ -72,14 +72,14 @@ These are **not** inherited:
 
 {% hint style="info" %}
 **Quick sidenote!**\
-****All objects automatically extend the `Object` class whether you like it or not. See [References, Objects, and Types in Java](objects.md)** **for more about this behavior.
+****All objects automatically extend the `Object` class whether you like it or not. See [References, Objects, and Types in Java](objects.md) **** for more about this behavior.
 {% endhint %}
 
 ### Constructor magic 🏗
 
-When an object `extends` another object, its constructor will **automatically call the parent's constructor. **However, this does have some limitations:
+When an object `extends` another object, its constructor will **automatically call the parent's constructor.** However, this does have some limitations:
 
-* It will only call the **default **(no-argument) constructor in the parent.
+* It will only call the **default** (no-argument) constructor in the parent.
 * Calling the constructor is the **first thing that is done** in the child constructor.
 
 But what if we want to call another constructor? That's where the `super` keyword comes in! When `super` is called, Java will know to **not** call the default constructor anymore. Here's an example:
@@ -130,11 +130,11 @@ public class PromoPear extends Pear {
 }   
 ```
 
-The `@Override` tag is technically optional, but it's highly suggested because it makes sure that you are indeed overriding something and not just making a new method! (Remember, it has to have the** same name and parameters as a method in one of its parents**.)
+The `@Override` tag is technically optional, but it's highly suggested because it makes sure that you are indeed overriding something and not just making a new method! (Remember, it has to have the **same name and parameters as a method in one of its parents**.)
 
 ## **Method Overloading**
 
-Sometimes, you want to take in **different parameters **into the **same method.** For instance, what if we wanted to create a method `getCount(Fruit fruit)` that counts how many fruits of that type we have? We might also want to allow users to pass in the name of the fruit to do the same thing- `getCount(String fruit)`. Java will allow us to make **both** of these methods in the same class!
+Sometimes, you want to take in **different parameters** into the **same method.** For instance, what if we wanted to create a method `getCount(Fruit fruit)` that counts how many fruits of that type we have? We might also want to allow users to pass in the name of the fruit to do the same thing- `getCount(String fruit)`. Java will allow us to make **both** of these methods in the same class!
 
 However, this has some major downsides that should be considered.&#x20;
 
@@ -148,17 +148,17 @@ We'll discuss better solutions further down the page as well as in the [Generic 
 
 They have very similar names but pretty different uses!
 
-Overriding is for methods of the same name, **same parameters**, and **different classes. **If you can remember when you use the `@Override` tag, you can relate it back to this concept!
+Overriding is for methods of the same name, **same parameters**, and **different classes.** If you can remember when you use the `@Override` tag, you can relate it back to this concept!
 
 Overloading is for methods of the same name, **different parameters**, in the **same class**.&#x20;
 
 ## Interfaces
 
-Interfaces are like **blueprints 📘 **for objects- they tell you what an object needs, but not how to implement them.&#x20;
+Interfaces are like **blueprints 📘** for objects- they tell you what an object needs, but not how to implement them.&#x20;
 
 They are very similar to normal classes except for some major differences:
 
-* **All variables are constants **(public static final).
+* **All variables are constants** (public static final).
 * **Methods have no body**- just a signature (like `void doStuff();`)
 * **Classes can inherit from multiple interfaces.**
 
@@ -198,14 +198,14 @@ public class MainClass {
 
 ## Abstract Classes
 
-Abstract classes live in the place** in between** interfaces and concrete classes. In a way, they get the best of both worlds- you can implement whichever methods you want, and leave the rest as **abstract** methods (same behavior as interface methods)!&#x20;
+Abstract classes live in the place **in between** interfaces and concrete classes. In a way, they get the best of both worlds- you can implement whichever methods you want, and leave the rest as **abstract** methods (same behavior as interface methods)!&#x20;
 
 Here are some properties:
 
 * **Variables behave just like a concrete class.**
 * **Normal methods can be created like any other concrete class.**
-* **Abstract methods **(`abstract void doSomething()`) **behave just like methods in interfaces.**
-* Classes can only inherit from** one **abstract class.
+* **Abstract methods** (`abstract void doSomething()`) **behave just like methods in interfaces.**
+* Classes can only inherit from **one** abstract class.
 
 Here's the same example from the interfaces section, but implemented using an abstract class.
 

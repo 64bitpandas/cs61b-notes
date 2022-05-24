@@ -1,6 +1,6 @@
 # Stacks and Queues
 
-Stacks and queues are two very common data structures used for a variety of applications from [CPU processes](https://www.tutorialspoint.com/operating\_system/os\_processes.htm) to [finding shortest paths using Dijkstra's Algorithm](../../algorithms/shortest-paths/dijkstras-algorithm.md). Fundamentally, they are very similar in structure and** only differ by the order in which items are popped from them**.
+Stacks and queues are two very common data structures used for a variety of applications from [CPU processes](https://www.tutorialspoint.com/operating\_system/os\_processes.htm) to [finding shortest paths using Dijkstra's Algorithm](../../algorithms/shortest-paths/dijkstras-algorithm.md). Fundamentally, they are very similar in structure and **only differ by the order in which items are popped from them**.
 
 ## Pushing and Popping
 
@@ -20,14 +20,14 @@ On the other hand, you can think of a queue like lining up for a ride at Disneyl
 
 Taking an item out of a stack or queue is called **popping.**
 
-Stacks are **last in, first out (LIFO). **That means the last item that you put in will be the first item that gets popped.
+Stacks are **last in, first out (LIFO).** That means the last item that you put in will be the first item that gets popped.
 
-Queues are **first in, first out (FIFO). **That means that the first item that you put in will be the first item that gets popped.
+Queues are **first in, first out (FIFO).** That means that the first item that you put in will be the first item that gets popped.
 
 ## Priority Queues
 
 Let's say you bought a VIP pass and get to cut to the front of the line for your favorite Disneyland ride! Well, a normal Queue won't be able to model this behavior since it puts everything in the back by default.
 
-A priority queue will solve this design need by introducing a new **priority** **tracking system **for each item in the queue! **If an item has a lower priority number, it will get to go first. **
+A priority queue will solve this design need by introducing a new **priority** **tracking system** for each item in the queue! **If an item has a lower priority number, it will get to go first.**&#x20;
 
 ![gotta grab those fastpasses yEEt 🎟](<../../.gitbook/assets/image (53).png>)

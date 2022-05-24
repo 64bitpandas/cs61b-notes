@@ -95,4 +95,4 @@ Just looking at these obscure operations, it may be unclear as to why we need to
 
 Well, [here's a massive list of bit twiddling hacks](https://graphics.stanford.edu/\~seander/bithacks.html) that should demonstrate plenty of ways to use these simple operations to do some things really efficiently.
 
-These operations are also the **building blocks for almost all operations done by a computer.** You'll see firsthand how these are used to construct ALU's in [61C](https://cs61c.org).
+These operations are also the **building blocks for almost all operations done by a computer.** You'll see firsthand how these are used to construct ALU's in [61C](https://cs61c.org/).

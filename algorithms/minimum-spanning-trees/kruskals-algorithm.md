@@ -14,7 +14,7 @@ Kruskal's algorithm is another optimal way to construct a **minimum spanning tre
 
 ## Detailed Breakdown
 
-In order to optimally check if adding an edge to our MST creates a cycle, we will use a **WeightedQuickUnion** object. (See [Union Find (Disjoint Sets)](../../abstract-data-types/union-find-disjoint-sets.md) for a recap on what this is.) This is used because checking if a cycle exists using a WeightedUnionFind object boils down to one `isConnected() `call, which we know takes $$\Theta(\log(N))$$.
+In order to optimally check if adding an edge to our MST creates a cycle, we will use a **WeightedQuickUnion** object. (See [Union Find (Disjoint Sets)](../../abstract-data-types/union-find-disjoint-sets.md) for a recap on what this is.) This is used because checking if a cycle exists using a WeightedUnionFind object boils down to one `isConnected()` call, which we know takes $$\Theta(\log(N))$$.
 
 To run the algorithm, we start by adding all the edges into a [PriorityQueue](../../abstract-data-types/collections/stacks-and-queues.md). This gives us our edges in sorted order. Now, we iterate through the PriorityQueue by removing the edge with highest priority, checking if adding it forms a cycle, and adding it to our MST if it doesn't form a cycle.
 
@@ -32,7 +32,7 @@ We'll do the same thing with the next shortest path, **DC.**
 
 ![](<../../.gitbook/assets/image (105).png>)
 
-Now, let's move on to **AB. **Notice that this time, connecting A and B creates another **disjoint set! **Unlike Prim's Algorithm, Kruskal's Algorithm does not guarantee that a solution will form a tree structure until the very end.
+Now, let's move on to **AB.** Notice that this time, connecting A and B creates another **disjoint set!** Unlike Prim's Algorithm, Kruskal's Algorithm does not guarantee that a solution will form a tree structure until the very end.
 
 ![](<../../.gitbook/assets/image (106).png>)
 
@@ -40,7 +40,7 @@ Now, let's connect **BC.**
 
 ![](<../../.gitbook/assets/image (107).png>)
 
-Since **CE **and **BD **would both form cycles if connected, **we are done 😄 **Here's the final tree:
+Since **CE** and **BD** would both form cycles if connected, **we are done 😄** Here's the final tree:
 
 ![](<../../.gitbook/assets/image (108).png>)
 

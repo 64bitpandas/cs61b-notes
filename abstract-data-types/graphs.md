@@ -2,14 +2,14 @@
 
 ## Introduction
 
-Graphs are simply a collection of **vertices **connected by **edges.** They're very similar to trees, but are much more versatile and don't require hierarchical relationships like trees do.
+Graphs are simply a collection of **vertices** connected by **edges.** They're very similar to trees, but are much more versatile and don't require hierarchical relationships like trees do.
 
 ![A very simple graph.](<../.gitbook/assets/image (55).png>)
 
 For most purposes, we will be working with **simple graphs** that follow two rules:
 
 * There are **no loops** (a connection of a node to itself).
-* There are **no parallel edges **(two edges that connect the same two vertices).
+* There are **no parallel edges** (two edges that connect the same two vertices).
 
 ![Don't make these graphs pls. Keep life simple!](<../.gitbook/assets/image (56).png>)
 
@@ -17,17 +17,17 @@ For most purposes, we will be working with **simple graphs** that follow two rul
 
 Graphs can be described by some properties that they could have. Here are the important ones:
 
-A graph can be **directed **if edges are arrows and have a direction, or **undirected** if you can cross edges in any direction.
+A graph can be **directed** if edges are arrows and have a direction, or **undirected** if you can cross edges in any direction.
 
-A graph is **cyclic **if the edges form a loop, or **acyclic **if there are no loops (like in a tree).
+A graph is **cyclic** if the edges form a loop, or **acyclic** if there are no loops (like in a tree).
 
 ![Direction vs. Cycles](<../.gitbook/assets/image (57).png>)
 
-Graphs can have **edge labels **if edges are numbered (great for distances). They can also have **vertex weights **if vertices are numbered (great for priorities or costs).
+Graphs can have **edge labels** if edges are numbered (great for distances). They can also have **vertex weights** if vertices are numbered (great for priorities or costs).
 
 ![Edge labels vs. Weights](<../.gitbook/assets/image (58).png>)
 
-Graphs are **connected **if all of the vertices are connected with edges, such that you can freely move from one vertex to any other vertex.
+Graphs are **connected** if all of the vertices are connected with edges, such that you can freely move from one vertex to any other vertex.
 
 ![](<../.gitbook/assets/image (59).png>)
 

@@ -26,15 +26,15 @@ Now, here's a demonstration on how it works! Let's start out with this graph:
 
 We'll start at node A and try to figure out the shortest path from A to each node. Since we have no idea how far each node is, we'll take the conservative guess that everything is infinitely far away ♾😎
 
-The first thing we have to do is update A's adjacent nodes, which are **B **and **D**. Since there's only one known path to each, it shouldn't be too hard to see why we need to update the values below. One thing to note is that the priority queue **sorts the vertices by the distance it takes to get there. **
+The first thing we have to do is update A's adjacent nodes, which are **B** and **D**. Since there's only one known path to each, it shouldn't be too hard to see why we need to update the values below. One thing to note is that the priority queue **sorts the vertices by the distance it takes to get there.**&#x20;
 
 ![](<../../.gitbook/assets/image (93).png>)
 
-Now, we have a choice to move on to either **B **or **D**. Since B has a **shorter distance, **we'll move on to that first. When we move on, we have to **remove that value from the priority queue **and **update all of its neighbors. **Here, we see that going from **B to D **is **shorter **than **A to D**, so we have to **update distTo AND edgeTo of D **to reflect this new, shorter path. **This process **(updating each adjacent node) **is called relaxing the edges of a node. **
+Now, we have a choice to move on to either **B** or **D**. Since B has a **shorter distance,** we'll move on to that first. When we move on, we have to **remove that value from the priority queue** and **update all of its neighbors.** Here, we see that going from **B to D** is **shorter** than **A to D**, so we have to **update distTo AND edgeTo of D** to reflect this new, shorter path. **This process** (updating each adjacent node) **is called relaxing the edges of a node.**&#x20;
 
 ![](<../../.gitbook/assets/image (94).png>)
 
-Now, let's move onto **D** since it has the next shortest path. Again, we **remove D from the priority queue **and **relax C **since we found a shorter path.
+Now, let's move onto **D** since it has the next shortest path. Again, we **remove D from the priority queue** and **relax C** since we found a shorter path.
 
 ![](<../../.gitbook/assets/image (95).png>)
 
@@ -42,7 +42,7 @@ Finally, we'll move onto **C** as that has the next shortest path in the priorit
 
 ![](<../../.gitbook/assets/image (96).png>)
 
-Since **the priority queue is now empty, **our search is done! 😄 Here's what the final solution looks like **in a tree form**:
+Since **the priority queue is now empty,** our search is done! 😄 Here's what the final solution looks like **in a tree form**:
 
 ![Dijkstra's Algorithm ALWAYS produces a solution in a tree format.](<../../.gitbook/assets/image (98).png>)
 

@@ -2,7 +2,7 @@
 
 ## What is it?
 
-A** Comparable **is a **generic type** that allows standardized comparisons between objects.&#x20;
+A **Comparable** is a **generic type** that allows standardized comparisons between objects.&#x20;
 
 In other words, anything that has a `compareTo()` method can be a Comparable!
 
@@ -50,5 +50,5 @@ public interface Comparable<T> {
 
 ### How is it different from Comparables???
 
-Comparable is used to compare **itself** to** other objects**; a Comparator compares **two other objects but not itself.**
+Comparable is used to compare **itself** to **other objects**; a Comparator compares **two other objects but not itself.**
 

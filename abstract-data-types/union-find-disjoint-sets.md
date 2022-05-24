@@ -9,15 +9,15 @@ The Union Find data structure is a way of representing a bunch of nodes that are
 
 Union Find is named as such because it supports two functions, **find** (which returns the group that a value is contained in), and **union** (which connects two values to form a single group).
 
-Union Find tracks each set with an ID, typically **the value of the root of each set. **In the sections below, we'll discuss how to add an item to a set, as well as figure out which set an existing item is in.
+Union Find tracks each set with an ID, typically **the value of the root of each set.** In the sections below, we'll discuss how to add an item to a set, as well as figure out which set an existing item is in.
 
 ## Union
 
-In order to **join two values together, **we need to use the **union** function. Let's see what it does visually:
+In order to **join two values together,** we need to use the **union** function. Let's see what it does visually:
 
 ![Calling union(1,2).](<../.gitbook/assets/image (78).png>)
 
-There are lots of ways to represent this behavior. One possible method is to keep an **array of parent values **corresponding to each actual value. In the example above, for instance, we can choose 1 as our parent and make 2 fall under that. Let's see how this might work:
+There are lots of ways to represent this behavior. One possible method is to keep an **array of parent values** corresponding to each actual value. In the example above, for instance, we can choose 1 as our parent and make 2 fall under that. Let's see how this might work:
 
 ![Parents list.](<../.gitbook/assets/image (79).png>)
 
@@ -27,11 +27,11 @@ Now, let's say we call `union(3,2)`. We can just set the parent of 3 to 2, as to
 
 This looks a lot like a tree!&#x20;
 
-You might have noticed that this looks like a **spindly tree **though, which is bad for runtime! Perhaps we can convert it to the equivalent of a bushy tree- the union function can be made much more efficient using tricks such as WeightedQuickUnion and Path Compression. Watch [this playlist](https://www.youtube.com/watch?v=JNa8BRRs8L4\&list=PL8FaHk7qbOD59HbdZE3x52KOhJJS54BlT\&index=1) for more information!
+You might have noticed that this looks like a **spindly tree** though, which is bad for runtime! Perhaps we can convert it to the equivalent of a bushy tree- the union function can be made much more efficient using tricks such as WeightedQuickUnion and Path Compression. Watch [this playlist](https://www.youtube.com/watch?v=JNa8BRRs8L4\&list=PL8FaHk7qbOD59HbdZE3x52KOhJJS54BlT\&index=1) for more information!
 
 ## Find
 
-First, let's explore how to implement an efficient way to **find which set a value is in. **Using the union function from above, we can do this pretty easily with this simple algorithm:&#x20;
+First, let's explore how to implement an efficient way to **find which set a value is in.** Using the union function from above, we can do this pretty easily with this simple algorithm:&#x20;
 
 * If the parent is 0, simply return the value.
 * If the parent is not 0, return the result of calling the function on the parent value.

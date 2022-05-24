@@ -12,11 +12,11 @@ In order to understand A\*, you'll need to review [Dijkstra's Algorithm](dijkstr
 
 The A\* Search Algorithm is **incredibly similar to Dijkstra's Algorithm** with one addition: a **heuristic function.**
 
-This heuristic function calculates weights of a path **from a vertex to a goal vertex. **This way, we can help bias our algorithm in the right direction so that it doesn’t make a bunch of bad moves.
+This heuristic function calculates weights of a path **from a vertex to a goal vertex.** This way, we can help bias our algorithm in the right direction so that it doesn’t make a bunch of bad moves.
 
-This has an important implication: **not all vertices get visited. **The algorithm only cares about finding the best path to the goal, and not any other vertex (assuming we design our heuristic well).
+This has an important implication: **not all vertices get visited.** The algorithm only cares about finding the best path to the goal, and not any other vertex (assuming we design our heuristic well).
 
-The **order **that the vertices get visited is lowest **distance + heuristic**. This is basically the same as Dijkstra's, just with that added heuristic term.
+The **order** that the vertices get visited is lowest **distance + heuristic**. This is basically the same as Dijkstra's, just with that added heuristic term.
 
 ## What's a good heuristic?
 
