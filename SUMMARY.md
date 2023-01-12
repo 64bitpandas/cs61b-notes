@@ -1,8 +1,8 @@
 # Table of contents
 
-* [Welcome](README.md)
+* [This site is now deprecated](README.md)
 
-## Object Oriented Programming <a id="oop"></a>
+## Object Oriented Programming <a href="#oop" id="oop"></a>
 
 * [Inheritance](oop/inheritance.md)
 * [Access Control](oop/access-control.md)
@@ -29,7 +29,7 @@
   * [Tries](abstract-data-types/binary-trees/tries.md)
 * [Graphs](abstract-data-types/graphs.md)
 * [Hashing and Hash Tables](abstract-data-types/hashing.md)
-* [Union Find \(Disjoint Sets\)](abstract-data-types/union-find-disjoint-sets.md)
+* [Union Find (Disjoint Sets)](abstract-data-types/union-find-disjoint-sets.md)
 * [Comparables and Comparators](abstract-data-types/comparables-and-comparators.md)
 
 ## Sorting
@@ -41,8 +41,8 @@
 * [Minimax Algorithm](algorithms/minimax.md)
 * [Searching](algorithms/searching/README.md)
   * [Binary Search](algorithms/searching/binary-search.md)
-  * [Depth First Search \(DFS\)](algorithms/searching/depth-first-search-dfs.md)
-  * [Breadth First Search \(BFS\)](algorithms/searching/breadth-first-search-bfs.md)
+  * [Depth First Search (DFS)](algorithms/searching/depth-first-search-dfs.md)
+  * [Breadth First Search (BFS)](algorithms/searching/breadth-first-search-bfs.md)
 * [Shortest Paths](algorithms/shortest-paths/README.md)
   * [Dijkstra's Algorithm](algorithms/shortest-paths/dijkstras-algorithm.md)
   * [A\* Search](algorithms/shortest-paths/a-search.md)
@@ -55,4 +55,3 @@
 * [Modular Arithmetic and Bit Manipulation](misc-topics/modular-arithmetic.md)
 * [Exceptions](misc-topics/exceptions.md)
 * [More Resources](misc-topics/more-resources.md)
-
